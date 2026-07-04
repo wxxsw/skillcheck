@@ -4,6 +4,23 @@ Safety-scored, evidence-backed agent skills.
 
 SkillCheck is not another giant list of agent skills. It is a quality layer for the agent-skills ecosystem: scan a skill repo, explain the risks, and show whether it is safe, documented, portable, and worth installing.
 
+> Like `npm audit`, but for AI agent skills.
+
+## TL;DR
+
+| Use SkillCheck to | Status |
+| --- | --- |
+| Browse a curated skills gallery | MVP in `apps/web` |
+| Scan local or public GitHub skill repos | MVP in `packages/cli` |
+| Explain safety, docs, and portability risks | MVP in `packages/core` |
+| Host the HTML gallery on GitHub Pages | Ready via `.github/workflows/pages.yml` |
+
+After this repository is pushed to GitHub, the HTML gallery can be hosted at:
+
+```txt
+https://wxxsw.github.io/skillcheck/
+```
+
 ## Why this exists
 
 Agent skills are becoming the new package ecosystem for coding agents. A skill can be a simple Markdown instruction, but it can also pull dependencies, run scripts, read files, patch code, call remote APIs, or ask for credentials.
@@ -45,6 +62,17 @@ Scan a public GitHub repo:
 npm run scan -- owner/repo
 npm run scan -- https://github.com/owner/repo -- --json
 ```
+
+## GitHub Pages
+
+The web app is static and can be hosted on GitHub Pages.
+
+1. Push this repo to `wxxsw/skillcheck`.
+2. In GitHub, open Settings -> Pages.
+3. Choose "GitHub Actions" as the source.
+4. Push to `main`; the `Pages` workflow builds `apps/web/dist`.
+
+The Pages workflow sets `SKILLCHECK_BASE=/skillcheck/` so Vite emits asset URLs that work under the repository subpath.
 
 ## Example output
 
