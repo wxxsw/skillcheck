@@ -1,5 +1,7 @@
 # SkillCheck
 
+[English](README.md) | [中文](README.zh-CN.md)
+
 [![CI](https://github.com/wxxsw/skillcheck/actions/workflows/ci.yml/badge.svg)](https://github.com/wxxsw/skillcheck/actions/workflows/ci.yml)
 [![Pages](https://github.com/wxxsw/skillcheck/actions/workflows/pages.yml/badge.svg)](https://github.com/wxxsw/skillcheck/actions/workflows/pages.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-171915.svg)](LICENSE)
@@ -18,6 +20,7 @@ SkillCheck is not another giant list of agent skills. It is a quality layer for 
 | Use SkillCheck to | Status |
 | --- | --- |
 | Browse a curated 20-skill gallery | MVP in `apps/web` |
+| Switch the gallery between English and Chinese | Live in `apps/web` |
 | Scan local or public GitHub skill repos | MVP in `packages/cli` |
 | Explain safety, docs, and portability risks | MVP in `packages/core` |
 | Host the HTML gallery on GitHub Pages | Live via the `gh-pages` branch |
@@ -147,10 +150,14 @@ npm run scan -- https://github.com/owner/repo -- --json
 
 The web app is static and can be hosted on GitHub Pages.
 
-1. Push this repo to `wxxsw/skillcheck`.
-2. In GitHub, open Settings -> Pages.
-3. Choose "GitHub Actions" as the source.
-4. Push to `main`; the `Pages` workflow builds `apps/web/dist`.
+This repository publishes through the `gh-pages` branch:
+
+1. Push to `main`.
+2. The `Pages` workflow builds `apps/web/dist`.
+3. The workflow force-pushes the static output to `gh-pages`.
+4. GitHub Pages serves the `gh-pages` branch.
+
+For a fresh fork, open Settings -> Pages and choose "Deploy from a branch", then select `gh-pages` and `/`.
 
 The Pages workflow sets `SKILLCHECK_BASE=/skillcheck/` so Vite emits asset URLs that work under the repository subpath.
 
