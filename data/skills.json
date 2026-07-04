@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Awesome Agent Skills",
+    "repo": "VoltAgent/awesome-agent-skills",
+    "category": "Directory",
+    "score": 88,
+    "safety": "A",
+    "docs": "A",
+    "portability": "A"
+  },
+  {
+    "name": "Awesome Claude Skills",
+    "repo": "ComposioHQ/awesome-claude-skills",
+    "category": "Directory",
+    "score": 82,
+    "safety": "A",
+    "docs": "A",
+    "portability": "C"
+  },
+  {
+    "name": "Agent Skills",
+    "repo": "addyosmani/agent-skills",
+    "category": "Engineering",
+    "score": 86,
+    "safety": "B",
+    "docs": "A",
+    "portability": "B"
+  }
+]
