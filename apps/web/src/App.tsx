@@ -33,12 +33,12 @@ const copy = {
       github: "GitHub"
     },
     hero: {
-      eyebrow: "Safety-scored agent skills",
-      title: "Install skills with evidence, not vibes.",
-      lede: "SkillCheck turns agent skill repos into comparable safety, documentation, portability, and evidence reports.",
+      eyebrow: "Agent skills, reviewed before install",
+      title: "Find skills you can trust.",
+      lede: "SkillCheck reviews agent skill repos and shows the risks, docs, platform support, and proof in one simple scorecard.",
       browse: "Browse 20 reviewed skills",
       star: "Star the project",
-      trust: ["Static risk scan", "Human review lens", "Cross-agent portability"]
+      trust: ["Risk scan", "Human review", "Works across agents"]
     },
     terminal: {
       aria: "SkillCheck CLI example",
@@ -58,27 +58,27 @@ const copy = {
     },
     radar: {
       eyebrow: "Risk radar",
-      title: "Trust signals beat star counts.",
+      title: "Stars show popularity. SkillCheck shows risk.",
       manual: {
-        label: "Needs manual review",
-        text: "Skills with B/C safety grades because they touch code, APIs, hooks, files, or credentials."
+        label: "Review before use",
+        text: "Skills graded B or C often touch code, APIs, hooks, files, or credentials."
       },
       external: {
         label: "External services",
-        text: "Repos that mention APIs, auth, paid services, social sources, or web research."
+        text: "Skills that may call APIs, need auth, use paid services, or browse the web."
       },
       local: {
-        label: "Local data surface",
-        text: "Skills that index, persist, or modify local project, vault, context, or plan files."
+        label: "Local data",
+        text: "Skills that read, index, save, or change project files and knowledge bases."
       },
       portable: {
-        label: "Portable candidates",
-        text: "Skills claiming support across three or more agent clients."
+        label: "Portable picks",
+        text: "Skills that appear to work with three or more agent clients."
       }
     },
     directory: {
       eyebrow: "Directory",
-      title: "Ranked by trust signals",
+      title: "Reviewed skills, sorted by trust",
       note: (shown: number, total: number) => `${shown} of ${total} reviewed skills shown`,
       method: "Scoring method",
       searchLabel: "Search skills",
@@ -89,7 +89,7 @@ const copy = {
       allPlatforms: "All platforms",
       safetyOnly: "Safety A only",
       emptyTitle: "No skills match those filters.",
-      emptyText: "Try clearing the search, switching platform, or turning off Safety A only."
+      emptyText: "Try a broader search, another platform, or turn off Safety A only."
     },
     card: {
       safety: "Safety",
@@ -100,23 +100,23 @@ const copy = {
     },
     method: {
       eyebrow: "Method",
-      title: "What the score checks",
+      title: "What each score means",
       items: [
         {
           title: "Safety",
-          text: "Command execution, network calls, file writes, dependency scripts, and credential handling."
+          text: "Does it run commands, call the network, write files, or ask for secrets?"
         },
         {
           title: "Documentation",
-          text: "Canonical SKILL.md, trigger description, README, examples, install notes, and license."
+          text: "Is there a clear SKILL.md, README, example, install note, and license?"
         },
         {
           title: "Portability",
-          text: "Whether the skill can travel across Claude, Codex, Cursor, Gemini, Copilot, or OpenCode."
+          text: "Can it work outside one agent app, or is it locked to a single client?"
         },
         {
           title: "Evidence",
-          text: "Every badge should come from a scanned file, a reproducible benchmark, or a manual review note."
+          text: "Can the claim be traced to files, examples, benchmarks, or review notes?"
         }
       ]
     }
@@ -132,12 +132,12 @@ const copy = {
       github: "GitHub"
     },
     hero: {
-      eyebrow: "经过安全评分的 Agent 技能",
-      title: "用证据安装 Skill，而不是凭感觉。",
-      lede: "SkillCheck 把 Agent 技能仓库转成可比较的安全、文档、可迁移性和证据报告。",
+      eyebrow: "安装前先审查 Agent Skill",
+      title: "找到更值得信任的 Skill。",
+      lede: "SkillCheck 会审阅 Agent Skill 仓库，把风险、文档、平台支持和证据整理成一张简单评分卡。",
       browse: "浏览 20 个已审阅技能",
       star: "给项目 Star",
-      trust: ["静态风险扫描", "人工审查视角", "跨 Agent 可迁移性"]
+      trust: ["风险扫描", "人工审查", "跨 Agent 可用"]
     },
     terminal: {
       aria: "SkillCheck CLI 示例",
@@ -157,27 +157,27 @@ const copy = {
     },
     radar: {
       eyebrow: "风险雷达",
-      title: "信任信号比 Star 数更重要。",
+      title: "Star 看热度，SkillCheck 看风险。",
       manual: {
-        label: "需要人工审查",
-        text: "安全等级为 B/C 的技能，通常会触达代码、API、hooks、文件或凭证。"
+        label: "使用前再看一眼",
+        text: "安全等级为 B/C 的技能，往往会接触代码、API、hooks、文件或凭证。"
       },
       external: {
         label: "外部服务",
-        text: "提到 API、认证、付费服务、社交来源或网页研究的仓库。"
+        text: "可能调用 API、需要登录、使用付费服务，或进行网页研究。"
       },
       local: {
-        label: "本地数据面",
-        text: "会索引、持久化或修改本地项目、知识库、上下文或计划文件的技能。"
+        label: "本地数据",
+        text: "会读取、索引、保存或修改项目文件和知识库。"
       },
       portable: {
         label: "可迁移候选",
-        text: "声称支持三个或更多 Agent 客户端的技能。"
+        text: "看起来能在三个或更多 Agent 客户端中使用。"
       }
     },
     directory: {
       eyebrow: "目录",
-      title: "按信任信号排序",
+      title: "按可信度整理的 Skill",
       note: (shown: number, total: number) => `显示 ${shown} / ${total} 个已审阅技能`,
       method: "查看评分方法",
       searchLabel: "搜索技能",
@@ -188,7 +188,7 @@ const copy = {
       allPlatforms: "全部平台",
       safetyOnly: "仅看安全 A 级",
       emptyTitle: "没有技能匹配当前筛选。",
-      emptyText: "可以清空搜索、切换平台，或关闭“仅看安全 A 级”。"
+      emptyText: "可以放宽关键词、换个平台，或关闭“仅看安全 A 级”。"
     },
     card: {
       safety: "安全",
@@ -199,23 +199,23 @@ const copy = {
     },
     method: {
       eyebrow: "方法",
-      title: "评分检查什么",
+      title: "每个分数代表什么",
       items: [
         {
           title: "安全",
-          text: "命令执行、网络调用、文件写入、依赖脚本和凭证处理。"
+          text: "它会不会运行命令、联网、写文件，或要求密钥？"
         },
         {
           title: "文档",
-          text: "标准 SKILL.md、触发说明、README、示例、安装说明和许可证。"
+          text: "有没有清楚的 SKILL.md、README、示例、安装说明和许可证？"
         },
         {
           title: "可迁移性",
-          text: "技能是否能在 Claude、Codex、Cursor、Gemini、Copilot 或 OpenCode 之间迁移。"
+          text: "能不能离开单一 Agent 客户端，在其他工具里复用？"
         },
         {
           title: "证据",
-          text: "每个 badge 都应来自扫描文件、可复现实验，或人工审查备注。"
+          text: "每个判断能不能追溯到文件、示例、测试或审查记录？"
         }
       ]
     }

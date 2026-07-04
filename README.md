@@ -7,9 +7,9 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-171915.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/reviewed_skills-20-e8f15a.svg)](#curated-skill-analysis)
 
-Safety-scored, evidence-backed agent skills.
+Find agent skills that are safer to install.
 
-SkillCheck is not another giant list of agent skills. It is a quality layer for the agent-skills ecosystem: scan a skill repo, explain the risks, and show whether it is safe, documented, portable, and worth installing.
+SkillCheck reviews agent skill repositories and turns them into simple scorecards: what the skill does, what it may touch, how portable it is, and what a human should check before installing it.
 
 > Like `npm audit`, but for AI agent skills.
 
@@ -19,10 +19,10 @@ SkillCheck is not another giant list of agent skills. It is a quality layer for 
 
 | Use SkillCheck to | Status |
 | --- | --- |
-| Browse a curated 20-skill gallery | MVP in `apps/web` |
+| Browse 20 reviewed agent skills | MVP in `apps/web` |
 | Switch the gallery between English and Chinese | Live in `apps/web` |
 | Scan local or public GitHub skill repos | MVP in `packages/cli` |
-| Explain safety, docs, and portability risks | MVP in `packages/core` |
+| See safety, docs, and portability signals | MVP in `packages/core` |
 | Host the HTML gallery on GitHub Pages | Live via the `gh-pages` branch |
 
 The HTML gallery is hosted at:
@@ -31,42 +31,42 @@ The HTML gallery is hosted at:
 https://wxxsw.github.io/skillcheck/
 ```
 
-## Why star this repo
+## Why Star
 
-- It tracks the emerging `SKILL.md` ecosystem before it hardens into package-manager chaos.
-- It turns "awesome list" discovery into install-time trust metadata.
-- It gives skill authors a concrete quality bar: docs, safety, portability, examples, and evidence.
-- It starts with 20 real high-signal repos instead of placeholder data.
-- It is small enough to fork, extend, and turn into a badge/API later.
+- Agent skills are becoming a new package ecosystem.
+- Most directories help you find skills. SkillCheck helps you decide whether to trust them.
+- Every entry has a score, safety grade, review notes, and platform signals.
+- The first corpus uses 20 real high-signal repos, not placeholder data.
+- The project is small enough to fork, extend, or turn into a badge/API later.
 
 ## Why this exists
 
-Agent skills are becoming the new package ecosystem for coding agents. A skill can be a simple Markdown instruction, but it can also pull dependencies, run scripts, read files, patch code, call remote APIs, or ask for credentials.
+An agent skill can be a simple Markdown instruction. It can also install dependencies, run scripts, read files, patch code, call APIs, or ask for credentials.
 
 Most directories answer: "What exists?"
 
 SkillCheck answers:
 
 - Should I install this?
-- What can it do on my machine?
-- Does it work outside one agent client?
-- Is there evidence that it improves outcomes?
+- What could it touch on my machine?
+- Does it work outside one agent app?
+- Is there proof behind the claims?
 
 ## What makes it different
 
-Most skill directories optimize for volume. SkillCheck optimizes for reviewability.
+Most skill directories optimize for more links. SkillCheck optimizes for easier review.
 
 | Instead of | SkillCheck focuses on |
 | --- | --- |
 | More links | Fewer, inspected entries |
 | Stars only | Safety, docs, portability, and evidence |
 | Platform-specific claims | Cross-agent compatibility signals |
-| Trusting install scripts | Calling out command execution, hooks, APIs, and credentials |
-| Static curation | A path toward reproducible scans, badges, and benchmarks |
+| Trusting install scripts | Calling out commands, hooks, APIs, and credentials |
+| Static curation | Scans, badges, and benchmarks over time |
 
 ## Curated skill analysis
 
-This project started by reviewing 20 high-signal agent skill repositories. Stars are approximate GitHub counts checked on 2026-07-04. This is not an endorsement list; it is the initial corpus used to shape what SkillCheck should score and what the gallery now displays.
+This project started with 20 high-signal agent skill repos. Stars are approximate GitHub counts checked on 2026-07-04. This is not an endorsement list. It is the first corpus used to shape what SkillCheck scores.
 
 ### Methodology and workflow skills
 
@@ -110,11 +110,11 @@ This project started by reviewing 20 high-signal agent skill repositories. Stars
 
 ### Patterns from the review
 
-- The best skill repos package a repeatable workflow, not just a clever prompt.
-- Domain packs need provenance checks: citations, source freshness, data licenses, and clear disclaimers.
-- Risk rises sharply when a skill includes installers, hooks, MCP servers, browser automation, cloud APIs, or credentials.
-- Multi-platform support is becoming a real differentiator, but many repos claim compatibility without tests.
-- The missing layer is not discovery. It is trust metadata: safety, portability, maintenance, examples, and evidence.
+- Good skill repos package repeatable workflows, not just clever prompts.
+- Domain skills need source checks: citations, freshness, data licenses, and disclaimers.
+- Risk rises when a skill includes installers, hooks, MCP servers, browser automation, cloud APIs, or credentials.
+- Multi-platform support matters, but many repos still claim compatibility without tests.
+- The missing layer is trust metadata: safety, portability, maintenance, examples, and evidence.
 
 ## What is included
 
@@ -198,9 +198,9 @@ Read the details in [docs/scoring.md](docs/scoring.md).
 - Add semantic search by "what I want my agent to do"
 - Add a curated unsafe-pattern corpus for better static checks
 
-## Project status
+## Project Status
 
-This is an MVP. The scanner is intentionally conservative and static. A warning does not mean a skill is malicious; it means humans should review that behavior before installing it into an agent runtime.
+This is an MVP. The scanner is intentionally conservative and static. A warning does not mean a skill is malicious. It means someone should review that behavior before installing it into an agent runtime.
 
 ## License
 

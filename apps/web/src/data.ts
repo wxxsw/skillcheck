@@ -62,12 +62,12 @@ export const skills: SkillEntry[] = [
     stars: "245k",
     category: "workflow",
     summary: {
-      en: "Agentic skills framework and software-development methodology.",
-      zh: "把 Agent 技能组织成软件开发方法论的框架。"
+      en: "A skill framework for running a repeatable software workflow.",
+      zh: "用一套技能跑完整的软件开发流程。"
     },
     signal: {
-      en: "Methodology as skills",
-      zh: "把方法论封装成技能"
+      en: "Repeatable workflow",
+      zh: "可重复的工作流"
     },
     platforms: ["Claude", "Codex", "Cursor", "OpenCode"],
     score: 84,
@@ -81,8 +81,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Review installer behavior and local file changes",
-        zh: "需要审查安装器行为和本地文件改动"
+        en: "Check what the installer changes on your machine",
+        zh: "先看安装器会改哪些本地文件"
       }
     ]
   },
@@ -94,12 +94,12 @@ export const skills: SkillEntry[] = [
     stars: "77k",
     category: "engineering",
     summary: {
-      en: "Builds a queryable knowledge graph from code, schemas, docs, and media.",
-      zh: "从代码、Schema、文档和媒体生成可查询知识图谱。"
+      en: "Turns a repo into a graph you can search and ask questions about.",
+      zh: "把仓库变成可搜索、可提问的知识图谱。"
     },
     signal: {
-      en: "Repo context engine",
-      zh: "代码仓库上下文引擎"
+      en: "Repo context",
+      zh: "仓库上下文"
     },
     platforms: ["Claude", "Codex", "Cursor", "Gemini", "OpenCode"],
     score: 81,
@@ -113,8 +113,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Check indexing footprint, parser dependencies, and data retention",
-        zh: "检查索引占用、解析器依赖和数据保留方式"
+        en: "Review index size, parser dependencies, and where data is kept",
+        zh: "检查索引大小、解析器依赖和数据保存位置"
       }
     ]
   },
@@ -126,12 +126,12 @@ export const skills: SkillEntry[] = [
     stars: "68k",
     category: "engineering",
     summary: {
-      en: "Production-grade engineering skills for coding agents.",
-      zh: "面向编程 Agent 的生产级工程技能。"
+      en: "Practical coding-agent skills for everyday engineering work.",
+      zh: "适合日常工程工作的编程 Agent 技能。"
     },
     signal: {
-      en: "Practical engineering playbooks",
-      zh: "实用工程手册"
+      en: "Engineering playbooks",
+      zh: "工程手册"
     },
     platforms: ["Claude", "Cursor"],
     score: 86,
@@ -145,8 +145,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "May include executable workflows",
-        zh: "可能包含可执行工作流"
+        en: "Review any scripts before running them",
+        zh: "运行前先审查脚本"
       }
     ]
   },
@@ -158,12 +158,12 @@ export const skills: SkillEntry[] = [
     stars: "55k",
     category: "design",
     summary: {
-      en: "A focused skill for improving AI design taste and reducing generic output.",
-      zh: "聚焦提升 AI 设计品味，减少模板化输出。"
+      en: "A design-taste guide that helps agents avoid generic UI output.",
+      zh: "帮助 Agent 少做模板化 UI，多一点设计判断。"
     },
     signal: {
-      en: "Memorable, narrow promise",
-      zh: "清晰且容易记住的承诺"
+      en: "Clear design promise",
+      zh: "清楚的设计承诺"
     },
     platforms: ["Claude", "Codex"],
     score: 83,
@@ -177,8 +177,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Needs evidence that guidance improves outputs across models",
-        zh: "需要证明这些指导能跨模型改善输出"
+        en: "Needs examples that prove the design advice works",
+        zh: "需要示例证明设计建议真的有效"
       }
     ]
   },
@@ -190,12 +190,12 @@ export const skills: SkillEntry[] = [
     stars: "48k",
     category: "research",
     summary: {
-      en: "Recency research across social, prediction, video, HN, and the web.",
-      zh: "面向社交、预测市场、视频、HN 和网页的近期信息研究技能。"
+      en: "Researches what changed recently across social sites and the web.",
+      zh: "追踪社交平台和网页上的近期变化。"
     },
     signal: {
-      en: "Freshness-aware research",
-      zh: "重视时效性的研究"
+      en: "Recent-source research",
+      zh: "近期来源研究"
     },
     platforms: ["Claude", "OpenClaw"],
     score: 76,
@@ -209,8 +209,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Check external calls, API keys, rate limits, and citations",
-        zh: "检查外部调用、API Key、限流和引用来源"
+        en: "Check API keys, rate limits, and source citations",
+        zh: "检查 API Key、限流和引用来源"
       }
     ]
   },
@@ -222,8 +222,8 @@ export const skills: SkillEntry[] = [
     stars: "39k",
     category: "knowledge",
     summary: {
-      en: "Teaches agents to use Obsidian CLI and open Markdown/Canvas formats.",
-      zh: "教 Agent 使用 Obsidian CLI 以及开放的 Markdown/Canvas 格式。"
+      en: "Helps agents work with Obsidian vaults and open note formats.",
+      zh: "帮助 Agent 处理 Obsidian 知识库和开放笔记格式。"
     },
     signal: {
       en: "Local knowledge workflows",
@@ -241,8 +241,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Review vault write behavior and permission boundaries",
-        zh: "审查知识库写入行为和权限边界"
+        en: "Check when it writes to your vault",
+        zh: "确认它什么时候会写入你的知识库"
       }
     ]
   },
@@ -254,12 +254,12 @@ export const skills: SkillEntry[] = [
     stars: "36k",
     category: "marketing",
     summary: {
-      en: "CRO, copywriting, SEO, analytics, and growth engineering skills.",
-      zh: "覆盖 CRO、文案、SEO、分析和增长工程的技能集合。"
+      en: "Marketing skills for CRO, copy, SEO, analytics, and growth work.",
+      zh: "覆盖转化优化、文案、SEO、分析和增长的营销技能。"
     },
     signal: {
-      en: "Go-to-market workflows",
-      zh: "GTM 增长工作流"
+      en: "Marketing workflows",
+      zh: "营销工作流"
     },
     platforms: ["Claude", "Codex"],
     score: 82,
@@ -273,8 +273,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Check analytics/API credentials and source assumptions",
-        zh: "检查分析/API 凭证和来源假设"
+        en: "Check analytics credentials and data-source assumptions",
+        zh: "检查分析工具凭证和数据来源假设"
       }
     ]
   },
@@ -286,12 +286,12 @@ export const skills: SkillEntry[] = [
     stars: "32k",
     category: "media",
     summary: {
-      en: "Agentic video-production system with pipelines, tools, and skills.",
-      zh: "包含管线、工具和技能的 Agent 视频制作系统。"
+      en: "A video-production system built from agent pipelines, tools, and skills.",
+      zh: "用 Agent 管线、工具和技能搭起来的视频制作系统。"
     },
     signal: {
-      en: "End-to-end creative pipeline",
-      zh: "端到端创作管线"
+      en: "Creative pipeline",
+      zh: "创作管线"
     },
     platforms: ["Claude", "Cursor", "Copilot"],
     score: 70,
@@ -305,8 +305,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Review AGPL terms, ffmpeg/assets, paid APIs, and generation costs",
-        zh: "审查 AGPL 条款、ffmpeg/素材、付费 API 和生成成本"
+        en: "Review license terms, media tools, paid APIs, and generation cost",
+        zh: "审查许可证、媒体工具、付费 API 和生成成本"
       }
     ]
   },
@@ -322,8 +322,8 @@ export const skills: SkillEntry[] = [
       zh: "面向生物、化学、医学和药物发现的研究技能。"
     },
     signal: {
-      en: "Domain evidence matters",
-      zh: "领域证据很关键"
+      en: "Evidence-heavy domain",
+      zh: "证据要求高"
     },
     platforms: ["Claude", "Codex", "Cursor"],
     score: 79,
@@ -337,8 +337,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Verify database provenance, citations, and domain disclaimers",
-        zh: "验证数据库来源、引用和领域免责声明"
+        en: "Verify databases, citations, and domain disclaimers",
+        zh: "核对数据库来源、引用和领域免责声明"
       }
     ]
   },
@@ -350,12 +350,12 @@ export const skills: SkillEntry[] = [
     stars: "24k",
     category: "workflow",
     summary: {
-      en: "Persistent Markdown plans for long-running agent tasks.",
-      zh: "为长任务保存持久化 Markdown 计划。"
+      en: "Keeps long agent tasks on track with Markdown plan files.",
+      zh: "用 Markdown 计划文件管理长任务。"
     },
     signal: {
-      en: "Crash-proof planning",
-      zh: "不怕中断的计划"
+      en: "Plans survive context loss",
+      zh: "计划不怕上下文丢失"
     },
     platforms: ["Claude", "Codex", "Cursor", "OpenCode"],
     score: 85,
@@ -369,8 +369,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Review plan file scope and deterministic completion gates",
-        zh: "审查计划文件范围和可判定的完成标准"
+        en: "Check where plan files are written",
+        zh: "确认计划文件会写到哪里"
       }
     ]
   },
@@ -382,12 +382,12 @@ export const skills: SkillEntry[] = [
     stars: "24k",
     category: "security",
     summary: {
-      en: "Cybersecurity skill set mapped to MITRE and NIST-style frameworks.",
-      zh: "映射到 MITRE/NIST 风格框架的网络安全技能集。"
+      en: "Cybersecurity skills organized around MITRE and NIST-style frameworks.",
+      zh: "按 MITRE/NIST 风格框架组织的网络安全技能。"
     },
     signal: {
-      en: "Dual-use discipline",
-      zh: "双用途风险管理"
+      en: "Dual-use review",
+      zh: "双用途审查"
     },
     platforms: ["Claude", "Codex", "Cursor", "Copilot", "Gemini"],
     score: 68,
@@ -401,8 +401,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Needs safe-lab assumptions and dangerous-command checks",
-        zh: "需要安全实验室假设和危险命令检查"
+        en: "Needs clear lab-only rules and dangerous-command checks",
+        zh: "需要明确实验环境规则和危险命令检查"
       }
     ]
   },
@@ -414,12 +414,12 @@ export const skills: SkillEntry[] = [
     stars: "22k",
     category: "product",
     summary: {
-      en: "Product management skills spanning discovery, strategy, execution, and launch.",
-      zh: "覆盖产品发现、战略、执行和发布的产品管理技能。"
+      en: "Product skills for discovery, strategy, execution, launch, and growth.",
+      zh: "覆盖发现、战略、执行、发布和增长的产品技能。"
     },
     signal: {
-      en: "Structured PM outputs",
-      zh: "结构化产品产出"
+      en: "Structured PM work",
+      zh: "结构化产品工作"
     },
     platforms: ["Claude", "Codex"],
     score: 87,
@@ -433,8 +433,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Some outputs require human validation",
-        zh: "部分输出仍需要人工判断"
+        en: "Use the outputs as drafts, not final decisions",
+        zh: "把输出当草稿，不要直接当最终决策"
       }
     ]
   },
@@ -446,12 +446,12 @@ export const skills: SkillEntry[] = [
     stars: "19k",
     category: "marketplace",
     summary: {
-      en: "Broad multi-domain library with agents, commands, scripts, and plugins.",
-      zh: "覆盖多领域的技能库，包含 agents、commands、scripts 和 plugins。"
+      en: "A large skill library that mixes agents, commands, scripts, and plugins.",
+      zh: "大型技能库，混合了 agents、commands、scripts 和 plugins。"
     },
     signal: {
-      en: "Marketplace stress test",
-      zh: "技能市场压力测试样本"
+      en: "Marketplace-scale library",
+      zh: "市场级技能库"
     },
     platforms: ["Claude", "Codex", "Cursor", "Gemini"],
     score: 72,
@@ -465,8 +465,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Check installer behavior, duplicate names, scripts, and per-skill licenses",
-        zh: "检查安装器行为、重名技能、脚本和单技能许可"
+        en: "Check installers, scripts, naming conflicts, and licenses",
+        zh: "检查安装器、脚本、重名冲突和许可证"
       }
     ]
   },
@@ -478,12 +478,12 @@ export const skills: SkillEntry[] = [
     stars: "18k",
     category: "context",
     summary: {
-      en: "Context-window optimization with memory, routing, MCP, and hooks.",
-      zh: "通过记忆、路由、MCP 和 hooks 优化上下文窗口。"
+      en: "Helps agents manage context with memory, routing, MCP, and hooks.",
+      zh: "用记忆、路由、MCP 和 hooks 帮 Agent 管理上下文。"
     },
     signal: {
-      en: "Token and memory control",
-      zh: "Token 与记忆控制"
+      en: "Context control",
+      zh: "上下文控制"
     },
     platforms: ["Claude", "Codex", "Cursor", "Copilot", "OpenCode"],
     score: 74,
@@ -497,8 +497,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Review hook permissions, persistence paths, and sandboxing claims",
-        zh: "审查 hook 权限、持久化路径和沙箱声明"
+        en: "Review hook permissions and saved memory locations",
+        zh: "审查 hook 权限和记忆保存位置"
       }
     ]
   },
@@ -510,12 +510,12 @@ export const skills: SkillEntry[] = [
     stars: "17k",
     category: "research",
     summary: {
-      en: "Unofficial NotebookLM API, CLI, and agentic skill surface.",
-      zh: "非官方 NotebookLM API、CLI 与 Agent 技能接口。"
+      en: "An unofficial NotebookLM API and CLI that agents can use.",
+      zh: "给 Agent 使用的非官方 NotebookLM API 和 CLI。"
     },
     signal: {
-      en: "Unofficial API wrapper",
-      zh: "非官方 API 封装"
+      en: "Unofficial API",
+      zh: "非官方 API"
     },
     platforms: ["Claude", "Codex", "OpenClaw"],
     score: 71,
@@ -529,8 +529,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Check account risk, auth handling, and data export behavior",
-        zh: "检查账号风险、认证处理和数据导出行为"
+        en: "Check account risk, auth handling, and data export",
+        zh: "检查账号风险、认证处理和数据导出"
       }
     ]
   },
@@ -542,8 +542,8 @@ export const skills: SkillEntry[] = [
     stars: "10k",
     category: "frontend",
     summary: {
-      en: "Official skills for using GSAP animation patterns and plugins correctly.",
-      zh: "官方维护的 GSAP 动画模式与插件使用技能。"
+      en: "Official GSAP skills for animation patterns and plugin usage.",
+      zh: "官方 GSAP 技能，覆盖动画模式和插件用法。"
     },
     signal: {
       en: "Vendor-authored skill",
@@ -561,8 +561,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Keep API guidance aligned with GSAP versions",
-        zh: "确保 API 指南与 GSAP 版本保持一致"
+        en: "Keep examples aligned with current GSAP versions",
+        zh: "让示例跟当前 GSAP 版本保持一致"
       }
     ]
   },
@@ -574,8 +574,8 @@ export const skills: SkillEntry[] = [
     stars: "10k",
     category: "marketing",
     summary: {
-      en: "SEO suite with sub-skills, sub-agents, reports, and optional services.",
-      zh: "包含子技能、子 Agent、报告和可选服务的 SEO 套件。"
+      en: "An SEO toolkit with sub-skills, reports, and optional services.",
+      zh: "包含子技能、报告和可选服务的 SEO 工具包。"
     },
     signal: {
       en: "SEO operating system",
@@ -593,8 +593,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Review Google/DataForSEO/Firecrawl credentials and source freshness",
-        zh: "审查 Google/DataForSEO/Firecrawl 凭证和来源时效性"
+        en: "Review search-tool credentials and source freshness",
+        zh: "审查搜索工具凭证和来源时效性"
       }
     ]
   },
@@ -606,12 +606,12 @@ export const skills: SkillEntry[] = [
     stars: "3.5k",
     category: "workflow",
     summary: {
-      en: "Spec-driven development harness for autonomous implementation.",
-      zh: "面向自主实现的规格驱动开发工具链。"
+      en: "A spec-driven workflow for turning approved plans into code.",
+      zh: "把已批准计划转成代码的规格驱动工作流。"
     },
     signal: {
-      en: "Approved spec to code",
-      zh: "从批准规格到代码"
+      en: "Spec to code",
+      zh: "规格到代码"
     },
     platforms: ["Claude", "Codex", "Cursor", "Copilot", "Gemini", "OpenCode"],
     score: 84,
@@ -625,8 +625,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Check whether generated tasks remain tied to approved specs",
-        zh: "检查生成任务是否仍绑定到已批准规格"
+        en: "Check that generated tasks still match the approved spec",
+        zh: "检查生成任务是否仍符合已批准规格"
       }
     ]
   },
@@ -638,12 +638,12 @@ export const skills: SkillEntry[] = [
     stars: "3.5k",
     category: "design",
     summary: {
-      en: "Anti-slop design skill for Claude Code, Cursor, and Codex.",
-      zh: "面向 Claude Code、Cursor 和 Codex 的反模板化设计技能。"
+      en: "A design-quality skill for avoiding generic AI-built interfaces.",
+      zh: "帮助避免模板化 AI 界面的设计质量技能。"
     },
     signal: {
-      en: "Taste guardrails",
-      zh: "设计品味护栏"
+      en: "Design guardrails",
+      zh: "设计护栏"
     },
     platforms: ["Claude", "Codex", "Cursor"],
     score: 89,
@@ -657,8 +657,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Needs examples to prove design improvement across tasks",
-        zh: "需要示例证明能跨任务改善设计结果"
+        en: "Needs before-and-after examples",
+        zh: "需要前后对比示例"
       }
     ]
   },
@@ -670,12 +670,12 @@ export const skills: SkillEntry[] = [
     stars: "27k",
     category: "directory",
     summary: {
-      en: "Multi-platform directory for Claude Code, Codex, Gemini CLI, and Cursor.",
-      zh: "面向 Claude Code、Codex、Gemini CLI 和 Cursor 的多平台目录。"
+      en: "A directory of skills for Claude Code, Codex, Gemini CLI, and Cursor.",
+      zh: "面向 Claude Code、Codex、Gemini CLI 和 Cursor 的技能目录。"
     },
     signal: {
-      en: "Discovery benchmark",
-      zh: "发现体验基准"
+      en: "Discovery baseline",
+      zh: "发现基线"
     },
     platforms: ["Claude", "Codex", "Cursor", "Gemini"],
     score: 88,
@@ -689,8 +689,8 @@ export const skills: SkillEntry[] = [
     ],
     risks: [
       {
-        en: "Quality varies across linked projects",
-        zh: "链接项目质量参差不齐"
+        en: "Linked projects still need their own review",
+        zh: "链接项目仍然需要单独审查"
       }
     ]
   }
