@@ -519,7 +519,8 @@ select {
 
 .skillCard {
   display: flex;
-  min-height: 520px;
+  height: 100%;
+  min-height: 650px;
   flex-direction: column;
   padding: 18px;
   border: 1px solid var(--line);
@@ -552,6 +553,10 @@ select {
   text-transform: uppercase;
 }
 
+.skillCard h3 {
+  min-height: 50px;
+}
+
 .grade {
   border-radius: 999px;
   padding: 6px 9px;
@@ -580,7 +585,9 @@ select {
 }
 
 .repoLink {
+  align-items: flex-start;
   gap: 5px;
+  min-height: 36px;
   margin-bottom: 14px;
   color: var(--blue);
   font-size: 14px;
@@ -594,10 +601,15 @@ select {
   line-height: 1.45;
 }
 
+.summaryText {
+  min-height: 62px;
+}
+
 .signalLine {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 7px;
+  min-height: 38px;
   margin-bottom: 14px;
   color: #2454d6;
   font-size: 13px;
@@ -605,6 +617,7 @@ select {
 }
 
 .gradeRow {
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 2px;
   margin-bottom: 14px;
@@ -629,6 +642,7 @@ select {
 .intentBox {
   display: grid;
   gap: 4px;
+  min-height: 82px;
   margin-bottom: 14px;
   border-left: 4px solid #e8f15a;
   padding: 2px 0 2px 10px;
@@ -649,6 +663,8 @@ select {
 }
 
 .tagSection {
+  display: flex;
+  flex-direction: column;
   margin-top: 10px;
 }
 
@@ -666,17 +682,75 @@ select {
   gap: 7px;
 }
 
-.tagList span {
+.tagPill {
+  position: relative;
   display: inline-flex;
   align-items: center;
+  max-width: 100%;
   min-height: 28px;
   border-radius: 999px;
   padding: 5px 8px;
   font-size: 12px;
   font-weight: 700;
+  line-height: 1.25;
+  outline-offset: 3px;
+  overflow-wrap: anywhere;
+  text-align: left;
+  cursor: help;
 }
 
-.tagSectiongood .tagList span {
+.tagPill::before,
+.tagPill::after {
+  position: absolute;
+  left: 50%;
+  z-index: 30;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 6px);
+  transition: opacity 140ms ease, transform 140ms ease;
+}
+
+.tagPill::before {
+  bottom: calc(100% + 4px);
+  width: 10px;
+  height: 10px;
+  background: #171915;
+  content: "";
+  rotate: 45deg;
+}
+
+.tagPill::after {
+  bottom: calc(100% + 8px);
+  width: max-content;
+  max-width: min(280px, calc(100vw - 48px));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  padding: 10px 11px;
+  background: #171915;
+  box-shadow: 0 14px 30px rgba(23, 25, 21, 0.24);
+  color: #f6f8ee;
+  content: attr(data-tooltip);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.42;
+  text-align: left;
+  text-transform: none;
+  white-space: normal;
+}
+
+.tagPill:hover::before,
+.tagPill:hover::after,
+.tagPill:focus-visible::before,
+.tagPill:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.tagSectiongood {
+  min-height: 116px;
+}
+
+.tagSectiongood .tagPill {
   border: 1px solid rgba(47, 125, 79, 0.24);
   background: rgba(47, 125, 79, 0.08);
   color: #245d3d;
@@ -685,6 +759,7 @@ select {
 .tagSectionwatch {
   margin-top: auto;
   border-top: 1px solid var(--line);
+  min-height: 126px;
   padding-top: 12px;
 }
 
@@ -692,7 +767,7 @@ select {
   color: #8a410b;
 }
 
-.tagSectionwatch .tagList span {
+.tagSectionwatch .tagPill {
   border: 1px solid rgba(182, 95, 17, 0.26);
   background: rgba(182, 95, 17, 0.08);
   color: #783905;
