@@ -16,7 +16,16 @@ import {
   Star,
   Terminal
 } from "lucide-react";
-import { categories, categoryLabels, Language, LocalizedText, SkillEntry, skills } from "./data";
+import {
+  categories,
+  categoryDescriptions,
+  categoryLabels,
+  Language,
+  LocalizedText,
+  SkillEntry,
+  skillInsights,
+  skills
+} from "./data";
 
 const platformFilters = ["Claude", "Codex", "Cursor", "Gemini", "Copilot", "OpenCode", "OpenClaw"];
 const languageStorageKey = "skillcheck-language";
@@ -81,11 +90,13 @@ const copy = {
       title: "Reviewed skills, sorted by trust",
       note: (shown: number, total: number) => `${shown} of ${total} reviewed skills shown`,
       method: "Scoring method",
+      browseTitle: "Browse by goal",
       searchLabel: "Search skills",
       searchPlaceholder: "Search by task, repo, platform, or risk",
       categoryLabel: "Category",
       platformLabel: "Platform",
       allCategories: "All categories",
+      allDescription: "Everything in the reviewed gallery.",
       allPlatforms: "All platforms",
       safetyOnly: "Safety A only",
       emptyTitle: "No skills match those filters.",
@@ -96,7 +107,10 @@ const copy = {
       stars: "stars",
       docs: "Docs",
       portability: "Portability",
-      grades: "Grades"
+      grades: "Grades",
+      bestFor: "Best for",
+      goodSigns: "Good signs",
+      watchouts: "Watch"
     },
     method: {
       eyebrow: "Method",
@@ -180,11 +194,13 @@ const copy = {
       title: "按可信度整理的 Skill",
       note: (shown: number, total: number) => `显示 ${shown} / ${total} 个已审阅技能`,
       method: "查看评分方法",
+      browseTitle: "按目标浏览",
       searchLabel: "搜索技能",
       searchPlaceholder: "按任务、仓库、平台或风险搜索",
       categoryLabel: "分类",
       platformLabel: "平台",
       allCategories: "全部分类",
+      allDescription: "显示所有已审阅 Skill。",
       allPlatforms: "全部平台",
       safetyOnly: "仅看安全 A 级",
       emptyTitle: "没有技能匹配当前筛选。",
@@ -195,7 +211,10 @@ const copy = {
       stars: "stars",
       docs: "文档",
       portability: "可迁移",
-      grades: "等级"
+      grades: "等级",
+      bestFor: "适合",
+      goodSigns: "好信号",
+      watchouts: "注意风险"
     },
     method: {
       eyebrow: "方法",
@@ -346,6 +365,13 @@ ${t.terminal.testsRisk}`}</pre>
           </a>
         </div>
 
+        <CategoryBrowser
+          active={category}
+          language={language}
+          labels={t.directory}
+          onChange={setCategory}
+        />
+
         <div className="toolbar" role="search">
           <label className="searchBox">
             <Search size={18} aria-hidden="true" />
@@ -455,6 +481,56 @@ function RadarItem({ icon, label, value, text }: { icon: ReactNode; label: strin
   );
 }
 
+function CategoryBrowser({
+  active,
+  language,
+  labels,
+  onChange
+}: {
+  active: CategoryFilter;
+  language: Language;
+  labels: {
+    browseTitle: string;
+    allCategories: string;
+    allDescription: string;
+  };
+  onChange: (category: CategoryFilter) => void;
+}) {
+  return (
+    <div className="categoryBrowser" aria-label={labels.browseTitle}>
+      <div className="categoryBrowserHeader">
+        <Filter size={18} aria-hidden="true" />
+        <span>{labels.browseTitle}</span>
+      </div>
+      <div className="categoryChips">
+        <button
+          type="button"
+          className={active === "all" ? "active" : undefined}
+          aria-pressed={active === "all"}
+          onClick={() => onChange("all")}
+        >
+          <strong>{labels.allCategories}</strong>
+          <span>{labels.allDescription}</span>
+          <em>{skills.length}</em>
+        </button>
+        {categories.map((item) => (
+          <button
+            key={item}
+            type="button"
+            className={active === item ? "active" : undefined}
+            aria-pressed={active === item}
+            onClick={() => onChange(item)}
+          >
+            <strong>{categoryLabels[item][language]}</strong>
+            <span>{categoryDescriptions[item][language]}</span>
+            <em>{countByCategory(item)}</em>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function SkillCard({
   skill,
   language,
@@ -468,8 +544,17 @@ function SkillCard({
     docs: string;
     portability: string;
     grades: string;
+    bestFor: string;
+    goodSigns: string;
+    watchouts: string;
   };
 }) {
+  const insight = skillInsights[skill.id] ?? {
+    intent: skill.summary,
+    strengths: skill.badges,
+    watchouts: skill.risks
+  };
+
   return (
     <article className="skillCard">
       <div className="cardTop">
@@ -494,14 +579,53 @@ function SkillCard({
         <GradePill label={labels.docs} value={skill.docs} />
         <GradePill label={labels.portability} value={skill.portability} />
       </div>
-      <div className="badges">
-        {skill.badges.map((badge, index) => <span key={`${skill.id}-badge-${index}`}>{localize(badge, language)}</span>)}
+
+      <div className="intentBox">
+        <span>{labels.bestFor}</span>
+        <strong>{localize(insight.intent, language)}</strong>
       </div>
-      <div className="riskLine">
-        <BadgeCheck size={16} aria-hidden="true" />
-        <span>{localize(skill.risks[0], language)}</span>
-      </div>
+
+      <TagSection
+        icon={<BadgeCheck size={15} aria-hidden="true" />}
+        items={insight.strengths}
+        label={labels.goodSigns}
+        language={language}
+        tone="good"
+      />
+      <TagSection
+        icon={<AlertTriangle size={15} aria-hidden="true" />}
+        items={insight.watchouts}
+        label={labels.watchouts}
+        language={language}
+        tone="watch"
+      />
     </article>
+  );
+}
+
+function TagSection({
+  icon,
+  items,
+  label,
+  language,
+  tone
+}: {
+  icon: ReactNode;
+  items: LocalizedText[];
+  label: string;
+  language: Language;
+  tone: "good" | "watch";
+}) {
+  return (
+    <div className={`tagSection tagSection${tone}`}>
+      <div className="tagSectionLabel">
+        {icon}
+        <span>{label}</span>
+      </div>
+      <div className="tagList">
+        {items.map((item, index) => <span key={`${label}-${index}`}>{localize(item, language)}</span>)}
+      </div>
+    </div>
   );
 }
 
@@ -511,19 +635,29 @@ function hasSignal(skill: SkillEntry, terms: string[]): boolean {
 }
 
 function buildSearchText(skill: SkillEntry): string {
+  const insight = skillInsights[skill.id];
   return [
     skill.name,
     skill.repo,
     categoryLabels[skill.category].en,
     categoryLabels[skill.category].zh,
+    categoryDescriptions[skill.category].en,
+    categoryDescriptions[skill.category].zh,
     skill.summary.en,
     skill.summary.zh,
     skill.signal.en,
     skill.signal.zh,
     skill.platforms.join(" "),
     ...skill.badges.flatMap((badge) => [badge.en, badge.zh]),
-    ...skill.risks.flatMap((risk) => [risk.en, risk.zh])
+    ...skill.risks.flatMap((risk) => [risk.en, risk.zh]),
+    ...(insight ? [insight.intent.en, insight.intent.zh] : []),
+    ...(insight ? insight.strengths.flatMap((item) => [item.en, item.zh]) : []),
+    ...(insight ? insight.watchouts.flatMap((item) => [item.en, item.zh]) : [])
   ].join(" ").toLowerCase();
+}
+
+function countByCategory(category: SkillEntry["category"]): number {
+  return skills.filter((skill) => skill.category === category).length;
 }
 
 function localize(text: LocalizedText, language: Language): string {

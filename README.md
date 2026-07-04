@@ -20,6 +20,7 @@ SkillCheck reviews agent skill repositories and turns them into simple scorecard
 | Use SkillCheck to | Status |
 | --- | --- |
 | Browse 20 reviewed agent skills | MVP in `apps/web` |
+| Filter by goal and compare good/risk tags | Live in `apps/web` |
 | Switch the gallery between English and Chinese | Live in `apps/web` |
 | Scan local or public GitHub skill repos | MVP in `packages/cli` |
 | See safety, docs, and portability signals | MVP in `packages/core` |
@@ -35,7 +36,7 @@ https://wxxsw.github.io/skillcheck/
 
 - Agent skills are becoming a new package ecosystem.
 - Most directories help you find skills. SkillCheck helps you decide whether to trust them.
-- Every entry has a score, safety grade, review notes, and platform signals.
+- Every entry has a score, safety grade, category, good-signal tags, risk tags, and platform signals.
 - The first corpus uses 20 real high-signal repos, not placeholder data.
 - The project is small enough to fork, extend, or turn into a badge/API later.
 

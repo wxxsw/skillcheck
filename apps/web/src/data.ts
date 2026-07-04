@@ -36,6 +36,12 @@ export interface SkillEntry {
   risks: LocalizedText[];
 }
 
+export interface SkillInsight {
+  intent: LocalizedText;
+  strengths: LocalizedText[];
+  watchouts: LocalizedText[];
+}
+
 export const categoryLabels: Record<CategoryId, LocalizedText> = {
   workflow: { en: "Workflow", zh: "工作流" },
   engineering: { en: "Engineering", zh: "工程" },
@@ -51,6 +57,23 @@ export const categoryLabels: Record<CategoryId, LocalizedText> = {
   context: { en: "Context", zh: "上下文" },
   frontend: { en: "Frontend", zh: "前端" },
   directory: { en: "Directory", zh: "目录" }
+};
+
+export const categoryDescriptions: Record<CategoryId, LocalizedText> = {
+  workflow: { en: "Planning, specs, and long-running agent work.", zh: "计划、规格和长任务工作流。" },
+  engineering: { en: "Coding, repo context, and engineering playbooks.", zh: "编码、仓库上下文和工程手册。" },
+  design: { en: "UI quality, taste, and frontend polish.", zh: "UI 质量、设计品味和前端打磨。" },
+  research: { en: "Fresh information, sources, and research tools.", zh: "近期信息、来源和研究工具。" },
+  knowledge: { en: "Notes, vaults, and local knowledge workflows.", zh: "笔记、知识库和本地知识工作流。" },
+  marketing: { en: "SEO, copy, analytics, and growth work.", zh: "SEO、文案、分析和增长工作。" },
+  media: { en: "Video, assets, and creative pipelines.", zh: "视频、素材和创作管线。" },
+  science: { en: "Scientific research and evidence-heavy domains.", zh: "科学研究和高证据要求领域。" },
+  security: { en: "Security workflows with dual-use risk.", zh: "带双用途风险的安全工作流。" },
+  product: { en: "PM templates, discovery, strategy, and GTM.", zh: "产品模板、发现、战略和 GTM。" },
+  marketplace: { en: "Large packs, installers, and mixed skill libraries.", zh: "大型包、安装器和混合技能库。" },
+  context: { en: "Memory, routing, hooks, and context control.", zh: "记忆、路由、hooks 和上下文控制。" },
+  frontend: { en: "Frontend libraries, examples, and UI implementation.", zh: "前端库、示例和 UI 实现。" },
+  directory: { en: "Discovery lists and multi-platform indexes.", zh: "发现列表和多平台索引。" }
 };
 
 export const skills: SkillEntry[] = [
@@ -697,3 +720,258 @@ export const skills: SkillEntry[] = [
 ];
 
 export const categories = Array.from(new Set(skills.map((skill) => skill.category)));
+
+export const skillInsights: Record<string, SkillInsight> = {
+  "superpowers": {
+    intent: { en: "Run a stricter software-development workflow", zh: "运行更严格的软件开发流程" },
+    strengths: [
+      { en: "Repeatable process", zh: "流程可重复" },
+      { en: "Multi-platform", zh: "多平台可用" },
+      { en: "Strong methodology", zh: "方法论清晰" }
+    ],
+    watchouts: [
+      { en: "Installer behavior", zh: "安装器行为" },
+      { en: "Local file changes", zh: "本地文件改动" },
+      { en: "Shell scripts", zh: "Shell 脚本" }
+    ]
+  },
+  "graphify": {
+    intent: { en: "Ask questions across a large codebase", zh: "对大型代码库做问答" },
+    strengths: [
+      { en: "Knowledge graph", zh: "知识图谱" },
+      { en: "Repo-wide context", zh: "仓库级上下文" },
+      { en: "Multi-source parsing", zh: "多来源解析" }
+    ],
+    watchouts: [
+      { en: "Local index size", zh: "本地索引大小" },
+      { en: "Parser dependencies", zh: "解析器依赖" },
+      { en: "Data retention", zh: "数据保存位置" }
+    ]
+  },
+  "agent-skills": {
+    intent: { en: "Improve common coding-agent workflows", zh: "改进常见编程 Agent 工作流" },
+    strengths: [
+      { en: "Practical playbooks", zh: "实用手册" },
+      { en: "Engineering focus", zh: "工程导向" },
+      { en: "Clear examples", zh: "示例清楚" }
+    ],
+    watchouts: [
+      { en: "Executable steps", zh: "可执行步骤" },
+      { en: "Script review", zh: "脚本审查" }
+    ]
+  },
+  "taste-skill": {
+    intent: { en: "Make AI-built UI feel less generic", zh: "让 AI 生成 UI 少一点模板感" },
+    strengths: [
+      { en: "Narrow promise", zh: "目标很聚焦" },
+      { en: "Design taste", zh: "设计品味" },
+      { en: "Frontend-friendly", zh: "适合前端" }
+    ],
+    watchouts: [
+      { en: "Needs proof", zh: "需要效果证明" },
+      { en: "Subjective guidance", zh: "主观性较强" }
+    ]
+  },
+  "last30days-skill": {
+    intent: { en: "Research what changed recently", zh: "研究最近发生了什么" },
+    strengths: [
+      { en: "Fresh sources", zh: "来源新鲜" },
+      { en: "Web research", zh: "网页研究" },
+      { en: "Attribution focus", zh: "重视引用" }
+    ],
+    watchouts: [
+      { en: "API keys", zh: "API Key" },
+      { en: "Rate limits", zh: "限流" },
+      { en: "Citation quality", zh: "引用质量" }
+    ]
+  },
+  "obsidian-skills": {
+    intent: { en: "Work with a local Obsidian vault", zh: "处理本地 Obsidian 知识库" },
+    strengths: [
+      { en: "Open formats", zh: "开放格式" },
+      { en: "Local-first", zh: "本地优先" },
+      { en: "Markdown-native", zh: "Markdown 原生" }
+    ],
+    watchouts: [
+      { en: "Vault writes", zh: "知识库写入" },
+      { en: "Permission scope", zh: "权限范围" }
+    ]
+  },
+  "marketing-skills": {
+    intent: { en: "Draft growth, SEO, copy, and analytics work", zh: "生成增长、SEO、文案和分析工作草稿" },
+    strengths: [
+      { en: "Growth workflows", zh: "增长工作流" },
+      { en: "Reusable templates", zh: "可复用模板" },
+      { en: "Broad marketing coverage", zh: "营销覆盖广" }
+    ],
+    watchouts: [
+      { en: "Analytics credentials", zh: "分析工具凭证" },
+      { en: "Source assumptions", zh: "来源假设" },
+      { en: "Human validation", zh: "人工校验" }
+    ]
+  },
+  "openmontage": {
+    intent: { en: "Build agent-assisted video workflows", zh: "搭建 Agent 辅助视频工作流" },
+    strengths: [
+      { en: "Creative pipeline", zh: "创作管线" },
+      { en: "Media tooling", zh: "媒体工具" },
+      { en: "End-to-end system", zh: "端到端系统" }
+    ],
+    watchouts: [
+      { en: "Heavy dependencies", zh: "重依赖" },
+      { en: "Paid APIs", zh: "付费 API" },
+      { en: "License terms", zh: "许可证条款" }
+    ]
+  },
+  "scientific-agent-skills": {
+    intent: { en: "Support scientific literature and database research", zh: "辅助科学文献和数据库研究" },
+    strengths: [
+      { en: "Domain-specific", zh: "领域专用" },
+      { en: "Citation-aware", zh: "重视引用" },
+      { en: "Database links", zh: "数据库链接" }
+    ],
+    watchouts: [
+      { en: "Database provenance", zh: "数据库来源" },
+      { en: "Medical disclaimers", zh: "医学免责声明" },
+      { en: "Benchmark evidence", zh: "Benchmark 证据" }
+    ]
+  },
+  "planning-with-files": {
+    intent: { en: "Keep long tasks alive with plan files", zh: "用计划文件承接长任务" },
+    strengths: [
+      { en: "Context recovery", zh: "上下文恢复" },
+      { en: "Markdown plans", zh: "Markdown 计划" },
+      { en: "Completion gates", zh: "完成门槛" }
+    ],
+    watchouts: [
+      { en: "File write scope", zh: "文件写入范围" },
+      { en: "Plan location", zh: "计划文件位置" }
+    ]
+  },
+  "cybersecurity-skills": {
+    intent: { en: "Structure security analysis in controlled environments", zh: "在受控环境中组织安全分析" },
+    strengths: [
+      { en: "Framework mapped", zh: "框架映射" },
+      { en: "Security coverage", zh: "安全覆盖广" },
+      { en: "Authorization language", zh: "授权语言" }
+    ],
+    watchouts: [
+      { en: "Dual-use risk", zh: "双用途风险" },
+      { en: "Dangerous commands", zh: "危险命令" },
+      { en: "Lab-only rules", zh: "仅限实验环境" }
+    ]
+  },
+  "pm-skills": {
+    intent: { en: "Create structured product documents faster", zh: "更快产出结构化产品文档" },
+    strengths: [
+      { en: "PM templates", zh: "产品模板" },
+      { en: "Low execution risk", zh: "执行风险低" },
+      { en: "Clear outputs", zh: "输出清晰" }
+    ],
+    watchouts: [
+      { en: "Draft quality", zh: "草稿质量" },
+      { en: "Needs PM judgment", zh: "需要产品判断" }
+    ]
+  },
+  "claude-skills": {
+    intent: { en: "Explore a large mixed skill marketplace", zh: "浏览大型混合技能市场" },
+    strengths: [
+      { en: "Large library", zh: "库很大" },
+      { en: "Many domains", zh: "领域很多" },
+      { en: "Portability signals", zh: "有迁移信号" }
+    ],
+    watchouts: [
+      { en: "Installer review", zh: "安装器审查" },
+      { en: "Script execution", zh: "脚本执行" },
+      { en: "Per-skill licenses", zh: "单技能许可" }
+    ]
+  },
+  "context-mode": {
+    intent: { en: "Control context, memory, routing, and hooks", zh: "控制上下文、记忆、路由和 hooks" },
+    strengths: [
+      { en: "Context control", zh: "上下文控制" },
+      { en: "MCP-aware", zh: "支持 MCP" },
+      { en: "Memory workflows", zh: "记忆工作流" }
+    ],
+    watchouts: [
+      { en: "Hook permissions", zh: "Hook 权限" },
+      { en: "Persistence paths", zh: "持久化路径" },
+      { en: "Sandbox claims", zh: "沙箱声明" }
+    ]
+  },
+  "notebooklm-py": {
+    intent: { en: "Use NotebookLM-like workflows from scripts or agents", zh: "通过脚本或 Agent 使用 NotebookLM 类工作流" },
+    strengths: [
+      { en: "CLI surface", zh: "CLI 接口" },
+      { en: "Agent-ready", zh: "Agent 可用" },
+      { en: "Research workflow", zh: "研究工作流" }
+    ],
+    watchouts: [
+      { en: "Unofficial API", zh: "非官方 API" },
+      { en: "Account risk", zh: "账号风险" },
+      { en: "Auth handling", zh: "认证处理" }
+    ]
+  },
+  "gsap-skills": {
+    intent: { en: "Use GSAP correctly in frontend animation work", zh: "在前端动画中正确使用 GSAP" },
+    strengths: [
+      { en: "Official source", zh: "官方来源" },
+      { en: "Examples", zh: "示例" },
+      { en: "Low safety risk", zh: "安全风险低" }
+    ],
+    watchouts: [
+      { en: "Version drift", zh: "版本变化" },
+      { en: "Plugin availability", zh: "插件可用性" }
+    ]
+  },
+  "claude-seo": {
+    intent: { en: "Run SEO audits, briefs, and reporting workflows", zh: "执行 SEO 审计、Brief 和报告工作流" },
+    strengths: [
+      { en: "SEO workflows", zh: "SEO 工作流" },
+      { en: "Report output", zh: "报告输出" },
+      { en: "Sub-skill structure", zh: "子技能结构" }
+    ],
+    watchouts: [
+      { en: "Paid services", zh: "付费服务" },
+      { en: "Search credentials", zh: "搜索凭证" },
+      { en: "Freshness checks", zh: "时效性检查" }
+    ]
+  },
+  "cc-sdd": {
+    intent: { en: "Turn approved specs into implementation tasks", zh: "把批准后的规格转成实现任务" },
+    strengths: [
+      { en: "Spec traceability", zh: "规格可追溯" },
+      { en: "Multi-platform", zh: "多平台" },
+      { en: "Autonomy guardrails", zh: "自主性护栏" }
+    ],
+    watchouts: [
+      { en: "Spec drift", zh: "规格漂移" },
+      { en: "Generated task scope", zh: "生成任务范围" }
+    ]
+  },
+  "hallmark": {
+    intent: { en: "Improve visual quality in AI-built interfaces", zh: "提升 AI 生成界面的视觉质量" },
+    strengths: [
+      { en: "Design guardrails", zh: "设计护栏" },
+      { en: "No command execution", zh: "无命令执行" },
+      { en: "Portable guidance", zh: "指导可迁移" }
+    ],
+    watchouts: [
+      { en: "Needs examples", zh: "需要示例" },
+      { en: "Subjective taste", zh: "品味主观" }
+    ]
+  },
+  "awesome-agent-skills": {
+    intent: { en: "Discover skills across multiple agent clients", zh: "跨多个 Agent 客户端发现技能" },
+    strengths: [
+      { en: "Curated list", zh: "精选列表" },
+      { en: "Multi-platform", zh: "多平台" },
+      { en: "Low direct risk", zh: "直接风险低" }
+    ],
+    watchouts: [
+      { en: "Linked repo quality", zh: "链接仓库质量" },
+      { en: "Curation rules", zh: "收录规则" },
+      { en: "Skill vs app", zh: "Skill / App 边界" }
+    ]
+  }
+};
