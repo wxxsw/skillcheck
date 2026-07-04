@@ -1,5 +1,9 @@
 # SkillCheck
 
+[![CI](https://github.com/wxxsw/skillcheck/actions/workflows/ci.yml/badge.svg)](https://github.com/wxxsw/skillcheck/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-171915.svg)](LICENSE)
+[![Agent Skills](https://img.shields.io/badge/reviewed_skills-20-e8f15a.svg)](#curated-skill-analysis)
+
 Safety-scored, evidence-backed agent skills.
 
 SkillCheck is not another giant list of agent skills. It is a quality layer for the agent-skills ecosystem: scan a skill repo, explain the risks, and show whether it is safe, documented, portable, and worth installing.
@@ -10,16 +14,24 @@ SkillCheck is not another giant list of agent skills. It is a quality layer for 
 
 | Use SkillCheck to | Status |
 | --- | --- |
-| Browse a curated skills gallery | MVP in `apps/web` |
+| Browse a curated 20-skill gallery | MVP in `apps/web` |
 | Scan local or public GitHub skill repos | MVP in `packages/cli` |
 | Explain safety, docs, and portability risks | MVP in `packages/core` |
 | Host the HTML gallery on GitHub Pages | Ready via `.github/workflows/pages.yml` |
 
-After this repository is pushed to GitHub, the HTML gallery can be hosted at:
+When GitHub Pages is enabled, the HTML gallery can be hosted at:
 
 ```txt
 https://wxxsw.github.io/skillcheck/
 ```
+
+## Why star this repo
+
+- It tracks the emerging `SKILL.md` ecosystem before it hardens into package-manager chaos.
+- It turns "awesome list" discovery into install-time trust metadata.
+- It gives skill authors a concrete quality bar: docs, safety, portability, examples, and evidence.
+- It starts with 20 real high-signal repos instead of placeholder data.
+- It is small enough to fork, extend, and turn into a badge/API later.
 
 ## Why this exists
 
@@ -34,9 +46,21 @@ SkillCheck answers:
 - Does it work outside one agent client?
 - Is there evidence that it improves outcomes?
 
+## What makes it different
+
+Most skill directories optimize for volume. SkillCheck optimizes for reviewability.
+
+| Instead of | SkillCheck focuses on |
+| --- | --- |
+| More links | Fewer, inspected entries |
+| Stars only | Safety, docs, portability, and evidence |
+| Platform-specific claims | Cross-agent compatibility signals |
+| Trusting install scripts | Calling out command execution, hooks, APIs, and credentials |
+| Static curation | A path toward reproducible scans, badges, and benchmarks |
+
 ## Curated skill analysis
 
-This project started by reviewing 20 high-signal agent skill repositories. Stars are approximate GitHub counts checked on 2026-07-04. This is not an endorsement list; it is the initial corpus used to shape what SkillCheck should score.
+This project started by reviewing 20 high-signal agent skill repositories. Stars are approximate GitHub counts checked on 2026-07-04. This is not an endorsement list; it is the initial corpus used to shape what SkillCheck should score and what the gallery now displays.
 
 ### Methodology and workflow skills
 
@@ -91,7 +115,8 @@ This project started by reviewing 20 high-signal agent skill repositories. Stars
 - A Vite/React directory site in `apps/web`
 - A Node CLI in `packages/cli`
 - A reusable scoring engine in `packages/core`
-- Seeded skill entries and scoring method docs
+- 20 seeded skill entries in `data/skills.json`
+- Scoring method docs in `docs/scoring.md`
 - GitHub Actions for CI and GitHub Pages
 
 ## Quick start

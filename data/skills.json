@@ -1,29 +1,222 @@
 [
   {
-    "name": "Awesome Agent Skills",
-    "repo": "VoltAgent/awesome-agent-skills",
-    "category": "Directory",
-    "score": 88,
-    "safety": "A",
+    "name": "Superpowers",
+    "repo": "obra/superpowers",
+    "category": "Workflow",
+    "stars": "245k",
+    "score": 84,
+    "safety": "B",
     "docs": "A",
-    "portability": "A"
+    "portability": "A",
+    "review_focus": "Shell scripts, installer behavior, local file changes, and methodology portability."
   },
   {
-    "name": "Awesome Claude Skills",
-    "repo": "ComposioHQ/awesome-claude-skills",
-    "category": "Directory",
-    "score": 82,
-    "safety": "A",
+    "name": "Graphify",
+    "repo": "Graphify-Labs/graphify",
+    "category": "Engineering",
+    "stars": "77k",
+    "score": 81,
+    "safety": "B",
     "docs": "A",
-    "portability": "C"
+    "portability": "A",
+    "review_focus": "Parser dependencies, local indexing footprint, network usage, and data retention."
   },
   {
     "name": "Agent Skills",
     "repo": "addyosmani/agent-skills",
     "category": "Engineering",
+    "stars": "68k",
     "score": 86,
     "safety": "B",
     "docs": "A",
-    "portability": "B"
+    "portability": "B",
+    "review_focus": "Examples, concrete triggers, and safe execution boundaries."
+  },
+  {
+    "name": "Taste Skill",
+    "repo": "Leonxlnx/taste-skill",
+    "category": "Design",
+    "stars": "55k",
+    "score": 83,
+    "safety": "B",
+    "docs": "B",
+    "portability": "B",
+    "review_focus": "Evidence that design guidance improves outputs across models."
+  },
+  {
+    "name": "Last 30 Days Skill",
+    "repo": "mvanhorn/last30days-skill",
+    "category": "Research",
+    "stars": "48k",
+    "score": 76,
+    "safety": "B",
+    "docs": "B",
+    "portability": "B",
+    "review_focus": "External calls, API keys, source attribution, rate limits, and freshness claims."
+  },
+  {
+    "name": "Obsidian Skills",
+    "repo": "kepano/obsidian-skills",
+    "category": "Knowledge",
+    "stars": "39k",
+    "score": 88,
+    "safety": "A",
+    "docs": "B",
+    "portability": "A",
+    "review_focus": "Vault write behavior, Markdown/JSON Canvas handling, and permission boundaries."
+  },
+  {
+    "name": "Marketing Skills",
+    "repo": "coreyhaines31/marketingskills",
+    "category": "Marketing",
+    "stars": "36k",
+    "score": 82,
+    "safety": "B",
+    "docs": "A",
+    "portability": "B",
+    "review_focus": "Analytics/API credential handling and source assumptions."
+  },
+  {
+    "name": "OpenMontage",
+    "repo": "calesthio/OpenMontage",
+    "category": "Media",
+    "stars": "32k",
+    "score": 70,
+    "safety": "C",
+    "docs": "B",
+    "portability": "B",
+    "review_focus": "Heavy dependencies, media-generation APIs, license compatibility, and asset handling."
+  },
+  {
+    "name": "Scientific Agent Skills",
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "category": "Science",
+    "stars": "30k",
+    "score": 79,
+    "safety": "B",
+    "docs": "B",
+    "portability": "A",
+    "review_focus": "Citation requirements, database provenance, domain disclaimers, and benchmark evidence."
+  },
+  {
+    "name": "Planning With Files",
+    "repo": "OthmanAdi/planning-with-files",
+    "category": "Workflow",
+    "stars": "24k",
+    "score": 85,
+    "safety": "B",
+    "docs": "A",
+    "portability": "A",
+    "review_focus": "File write scope, plan-location defaults, and deterministic completion gates."
+  },
+  {
+    "name": "Cybersecurity Skills",
+    "repo": "mukul975/Anthropic-Cybersecurity-Skills",
+    "category": "Security",
+    "stars": "24k",
+    "score": 68,
+    "safety": "C",
+    "docs": "A",
+    "portability": "A",
+    "review_focus": "Dual-use risk, dangerous command patterns, authorization language, and safe-lab assumptions."
+  },
+  {
+    "name": "PM Skills Marketplace",
+    "repo": "phuryn/pm-skills",
+    "category": "Product",
+    "stars": "22k",
+    "score": 87,
+    "safety": "A",
+    "docs": "A",
+    "portability": "B",
+    "review_focus": "Template quality, output structure, and input requirements."
+  },
+  {
+    "name": "Claude Skills",
+    "repo": "alirezarezvani/claude-skills",
+    "category": "Marketplace",
+    "stars": "19k",
+    "score": 72,
+    "safety": "C",
+    "docs": "B",
+    "portability": "A",
+    "review_focus": "Installer behavior, duplicate skill names, scripts, and per-skill license clarity."
+  },
+  {
+    "name": "Context Mode",
+    "repo": "mksglu/context-mode",
+    "category": "Context",
+    "stars": "18k",
+    "score": 74,
+    "safety": "B",
+    "docs": "B",
+    "portability": "A",
+    "review_focus": "Hooks, sandboxing claims, persistence locations, and cross-platform configuration risk."
+  },
+  {
+    "name": "NotebookLM Py",
+    "repo": "teng-lin/notebooklm-py",
+    "category": "Research",
+    "stars": "17k",
+    "score": 71,
+    "safety": "C",
+    "docs": "B",
+    "portability": "B",
+    "review_focus": "Unofficial API fragility, auth handling, account risk, and data export behavior."
+  },
+  {
+    "name": "GSAP Skills",
+    "repo": "greensock/gsap-skills",
+    "category": "Frontend",
+    "stars": "10k",
+    "score": 91,
+    "safety": "A",
+    "docs": "A",
+    "portability": "A",
+    "review_focus": "Version alignment, API references, example coverage, and official-doc claims."
+  },
+  {
+    "name": "Claude SEO",
+    "repo": "AgriciDaniel/claude-seo",
+    "category": "Marketing",
+    "stars": "10k",
+    "score": 73,
+    "safety": "C",
+    "docs": "B",
+    "portability": "C",
+    "review_focus": "Google/DataForSEO/Firecrawl credentials, report generation, and source freshness."
+  },
+  {
+    "name": "CC SDD",
+    "repo": "gotalab/cc-sdd",
+    "category": "Workflow",
+    "stars": "3.5k",
+    "score": 84,
+    "safety": "B",
+    "docs": "A",
+    "portability": "A",
+    "review_focus": "Traceability between approved specs and generated implementation tasks."
+  },
+  {
+    "name": "Hallmark",
+    "repo": "Nutlope/hallmark",
+    "category": "Design",
+    "stars": "3.5k",
+    "score": 89,
+    "safety": "A",
+    "docs": "B",
+    "portability": "A",
+    "review_focus": "Scope clarity, portability, and proof that design output improves."
+  },
+  {
+    "name": "Awesome Agent Skills",
+    "repo": "VoltAgent/awesome-agent-skills",
+    "category": "Directory",
+    "stars": "27k",
+    "score": 88,
+    "safety": "A",
+    "docs": "A",
+    "portability": "A",
+    "review_focus": "Platform compatibility evidence, curation rules, and skill-vs-app distinction."
   }
 ]
