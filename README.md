@@ -34,6 +34,58 @@ SkillCheck answers:
 - Does it work outside one agent client?
 - Is there evidence that it improves outcomes?
 
+## Curated skill analysis
+
+This project started by reviewing 20 high-signal agent skill repositories. Stars are approximate GitHub counts checked on 2026-07-04. This is not an endorsement list; it is the initial corpus used to shape what SkillCheck should score.
+
+### Methodology and workflow skills
+
+| Repo | Stars | What makes it interesting | What SkillCheck should inspect |
+| --- | ---: | --- | --- |
+| [obra/superpowers](https://github.com/obra/superpowers) | 245k | Treats skills as a software-development methodology, not one-off prompts. | Shell scripts, installer behavior, local file changes, and whether the methodology is portable. |
+| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 68k | Production-oriented engineering skills from a recognizable practitioner. | Whether each skill has examples, concrete triggers, and safe execution boundaries. |
+| [OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files) | 24k | Uses durable Markdown plans to survive context loss and long-running tasks. | File write scope, plan-location defaults, and whether completion gates are deterministic. |
+| [gotalab/cc-sdd](https://github.com/gotalab/cc-sdd) | 3.5k | Brings spec-driven development into agent workflows across many clients. | Whether generated tasks remain traceable to approved specs and whether it assumes one agent runtime. |
+| [mksglu/context-mode](https://github.com/mksglu/context-mode) | 18k | Optimizes context windows with memory, routing, MCP, and hooks. | Hooks, sandboxing claims, persistence locations, and cross-platform configuration risk. |
+
+### Engineering and context skills
+
+| Repo | Stars | What makes it interesting | What SkillCheck should inspect |
+| --- | ---: | --- | --- |
+| [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) | 77k | Turns repos, schemas, docs, and media into a queryable code knowledge graph. | Tree-sitter/parsing dependencies, local indexing footprint, network usage, and data retention. |
+| [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | 55k | Narrow, memorable promise: improve AI design taste and reduce generic output. | Whether guidance is concrete enough to test, and whether examples prove better outputs. |
+| [Nutlope/hallmark](https://github.com/Nutlope/hallmark) | 3.5k | Focused anti-slop design skill for Claude Code, Cursor, and Codex. | Scope clarity, portability, and whether it avoids vague aesthetic rules. |
+| [greensock/gsap-skills](https://github.com/greensock/gsap-skills) | 10k | Official vendor skills for a specific frontend animation library. | Version alignment, API references, example coverage, and whether claims come from official docs. |
+| [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) | 39k | Teaches agents to work with Obsidian's open formats and CLI. | Vault write behavior, Markdown/JSON Canvas handling, and permission boundaries. |
+
+### Domain skill packs
+
+| Repo | Stars | What makes it interesting | What SkillCheck should inspect |
+| --- | ---: | --- | --- |
+| [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | 48k | Research skill built around recency across Reddit, X, YouTube, HN, Polymarket, and web sources. | External calls, API keys, source attribution, rate limits, and freshness claims. |
+| [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | 36k | Marketing, CRO, copywriting, SEO, analytics, and growth workflows in one pack. | Whether outputs are templates or executable workflows, plus analytics/API credential handling. |
+| [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) | 32k | Video-production system with pipelines, tools, and hundreds of agent skills. | Heavy dependencies, media-generation APIs, license compatibility, and local/remote asset handling. |
+| [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | 30k | Scientific skill library spanning biology, chemistry, medicine, and drug discovery. | Citation requirements, database provenance, domain disclaimers, and benchmark evidence. |
+| [mukul975/Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | 24k | Large cybersecurity skill set mapped to MITRE/NIST-style frameworks. | Dual-use risk, dangerous command patterns, authorization language, and safe-lab assumptions. |
+| [phuryn/pm-skills](https://github.com/phuryn/pm-skills) | 22k | Product-management skills from discovery through GTM and growth. | Template quality, output structure, and whether skills name the inputs they require. |
+| [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) | 10k | SEO skill suite with sub-skills, sub-agents, reporting, and optional external services. | Google/DataForSEO/Firecrawl credentials, report generation, and source freshness. |
+| [teng-lin/notebooklm-py](https://github.com/teng-lin/notebooklm-py) | 17k | Unofficial NotebookLM API plus CLI and agentic skill surface. | Unofficial API fragility, auth handling, account risk, and data export behavior. |
+
+### Directories, marketplaces, and installers
+
+| Repo | Stars | What makes it interesting | What SkillCheck should inspect |
+| --- | ---: | --- | --- |
+| [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | 19k | Broad multi-domain library with agents, commands, scripts, and plugins. | Installer behavior, duplicate skill names, script execution, and per-skill license clarity. |
+| [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) | 27k | Broad multi-platform directory for Claude Code, Codex, Gemini CLI, Cursor, and more. | Platform compatibility evidence, curation rules, and whether it distinguishes skills from apps. |
+
+### Patterns from the review
+
+- The best skill repos package a repeatable workflow, not just a clever prompt.
+- Domain packs need provenance checks: citations, source freshness, data licenses, and clear disclaimers.
+- Risk rises sharply when a skill includes installers, hooks, MCP servers, browser automation, cloud APIs, or credentials.
+- Multi-platform support is becoming a real differentiator, but many repos claim compatibility without tests.
+- The missing layer is not discovery. It is trust metadata: safety, portability, maintenance, examples, and evidence.
+
 ## What is included
 
 - A Vite/React directory site in `apps/web`
