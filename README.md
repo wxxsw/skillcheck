@@ -1,6 +1,7 @@
 # SkillCheck
 
 [![CI](https://github.com/wxxsw/skillcheck/actions/workflows/ci.yml/badge.svg)](https://github.com/wxxsw/skillcheck/actions/workflows/ci.yml)
+[![Pages](https://github.com/wxxsw/skillcheck/actions/workflows/pages.yml/badge.svg)](https://github.com/wxxsw/skillcheck/actions/workflows/pages.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-171915.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/reviewed_skills-20-e8f15a.svg)](#curated-skill-analysis)
 
@@ -10,6 +11,8 @@ SkillCheck is not another giant list of agent skills. It is a quality layer for 
 
 > Like `npm audit`, but for AI agent skills.
 
+**Live gallery:** https://wxxsw.github.io/skillcheck/
+
 ## TL;DR
 
 | Use SkillCheck to | Status |
@@ -17,9 +20,9 @@ SkillCheck is not another giant list of agent skills. It is a quality layer for 
 | Browse a curated 20-skill gallery | MVP in `apps/web` |
 | Scan local or public GitHub skill repos | MVP in `packages/cli` |
 | Explain safety, docs, and portability risks | MVP in `packages/core` |
-| Host the HTML gallery on GitHub Pages | Ready via `.github/workflows/pages.yml` |
+| Host the HTML gallery on GitHub Pages | Live via the `gh-pages` branch |
 
-When GitHub Pages is enabled, the HTML gallery can be hosted at:
+The HTML gallery is hosted at:
 
 ```txt
 https://wxxsw.github.io/skillcheck/
