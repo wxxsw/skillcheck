@@ -59,19 +59,19 @@ SkillCheck 回答：
 
 ## 已审阅技能样本
 
-Star 数为 2026-07-04 附近的近似值。这个列表不是背书，而是 SkillCheck 用来打磨评分维度的第一批样本。下面表格展示代表条目，完整 Top 100 在在线页面和 `data/skills.json`。
+Star 数为 2026-07-04 附近的近似值。这个列表不是背书，而是 SkillCheck 用来打磨评分维度的第一批样本。纯 awesome-list、链接目录和生态聚合站可以作为调研来源，但不进入主榜。下面表格展示代表条目，完整 Top 100 在在线页面和 `data/skills.json`。
 
 ### Top 100 筛选原则
 
 这个目录是有意筛过的，不是为了凑链接。一个仓库至少需要满足下面某个强信号：
 
 - 和 Agent Skill、SKILL.md、agent command 或 agent workflow 明确相关
-- Star 高，或在多个 Skill 目录中反复出现
+- Star 高，但必须先确认仓库里有具体 Skill、SKILL.md、命令包或 Agent 工作流
 - 有官方、作者、厂商或安全团队信号
 - 能补足分类多样性，而不是又一个普通 prompt 集
 - 能在用户安装前说清楚具体风险
 
-当前 100 个条目覆盖工程、工作流、目录、市场、产品、营销、研究、科学、安全、记忆、知识管理、设计、前端、测试、移动端、基础设施、媒体、写作、办公自动化和数据/金融。
+当前 100 个条目覆盖工程、工作流、产品、营销、研究、科学、安全、记忆、知识管理、设计、前端、测试、移动端、基础设施、媒体、写作、办公自动化和数据/金融。
 
 | Repo | Stars | 为什么有价值 | SkillCheck 重点检查 |
 | --- | ---: | --- | --- |
@@ -84,7 +84,7 @@ Star 数为 2026-07-04 附近的近似值。这个列表不是背书，而是 Sk
 | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | 36k | 覆盖 CRO、文案、SEO、分析和增长。 | 是否只是模板，还是会触发执行；分析/API 凭证处理。 |
 | [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) | 32k | 视频制作系统，包含管线、工具和大量 Agent Skills。 | 重依赖、媒体生成 API、许可和素材处理。 |
 | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | 30k | 覆盖生物、化学、医学和药物发现。 | 引用、数据库来源、领域免责声明和 benchmark 证据。 |
-| [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) | 27k | 多平台 Agent Skills 目录。 | 兼容性证据、收录规则，以及 skill/app 的边界。 |
+| [openai/skills](https://github.com/openai/skills) | 23k | Codex Skills Catalog，包含具体 SKILL.md 包和精选示例。 | Codex 专属假设、脚本、生成路径和示例可迁移性。 |
 | [OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files) | 24k | 用持久化 Markdown 计划承接长任务。 | 文件写入范围、计划位置和完成标准。 |
 | [mukul975/Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | 24k | 网络安全技能集，映射到 MITRE/NIST 风格框架。 | 双用途风险、危险命令、授权语言和安全实验室假设。 |
 | [phuryn/pm-skills](https://github.com/phuryn/pm-skills) | 22k | 产品管理技能，从发现到 GTM。 | 模板质量、产出结构和输入要求。 |
@@ -97,23 +97,26 @@ Star 数为 2026-07-04 附近的近似值。这个列表不是背书，而是 Sk
 | [Nutlope/hallmark](https://github.com/Nutlope/hallmark) | 3.5k | 面向 Claude Code、Cursor 和 Codex 的反模板化设计技能。 | 范围清晰度、可迁移性，以及是否有输出改善证据。 |
 | [anthropics/skills](https://github.com/anthropics/skills) | 158k | Anthropic 官方 Agent Skills 示例仓库。 | 示例脚本、许可证清晰度和 Claude 优先假设。 |
 | [mattpocock/skills](https://github.com/mattpocock/skills) | 156k | 来自真实编程 Agent 失败模式的工程技能。 | 路由时效、本地符号链接和个人工作流假设。 |
-| [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | 67k | 大型 Claude Skills 目录，包含很多文档/工作流示例。 | 单个 Skill 的安全性、许可覆盖和脚本假设。 |
-| [sickn33/antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) | 42k | 大型可安装多 Agent 目录，包含 bundles 和 plugins。 | 安装 CLI、插件来源和大量脚本。 |
+| [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) | 62k | 从 vibe coding 走向 agentic engineering 的实践型 Skills。 | 哪些是可迁移实践，哪些只是个人 Claude Code 约定。 |
+| [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills) | 26k | 面向 Nature 风格科研写作和科研绘图。 | 引用质量、期刊风格主张和学科适配。 |
 | [googleworkspace/cli](https://github.com/googleworkspace/cli) | 29k | Google 官方 Workspace 自动化 CLI，包含 Agent Skills。 | OAuth scope、管理员权限、写操作和 API 副作用。 |
-| [vercel-labs/skills](https://github.com/vercel-labs/skills) | 25k | 开放的 Skill 安装和发现工具。 | 包安装行为、生成路径和来源信任。 |
-| [agentskills/agentskills](https://github.com/agentskills/agentskills) | 22k | Agent Skills 格式规范和文档。 | 规范合规与运行时安全之间的边界。 |
+| [FrancyJGLisboa/agent-skill-creator](https://github.com/FrancyJGLisboa/agent-skill-creator) | 1.7k | 把可重复工作流转成可复用 Agent Skill。 | 生成 Skill 的质量、来源许可和平台路径。 |
 | [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | 11k | 优化可复用自然语言 Skill 的研究系统。 | 训练数据、评测流程、脚本和迁移性。 |
 | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs) | 10k | AI 研究和工程 Skill 库。 | 实验脚本、算力成本、引用质量和 benchmark 证据。 |
+| [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) | 13k | 面向自主机器学习研究循环和跨模型审查的 Markdown Skills。 | 算力成本、实验安全和结果核验。 |
 | [Jeffallan/claude-skills](https://github.com/Jeffallan/claude-skills) | 10k | 全栈开发 Skill 包。 | 框架时效、示例、Claude 特定表述和辅助脚本。 |
 | [deanpeters/Product-Manager-Skills](https://github.com/deanpeters/Product-Manager-Skills) | 5.6k | 将产品管理方法包装成可复用 Skills。 | 模板具体度、公司上下文要求和决策质量护栏。 |
 | [Agents365-ai/drawio-skill](https://github.com/Agents365-ai/drawio-skill) | 5.1k | 从自然语言和代码库上下文生成图表。 | 导出脚本、生成文件、素材许可和图表准确性。 |
 | [twostraws/SwiftUI-Agent-Skill](https://github.com/twostraws/SwiftUI-Agent-Skill) | 4.3k | 面向 Apple 应用开发的 SwiftUI 专用 Skill。 | SwiftUI 版本变化、Apple API 变化和项目假设。 |
+| [dpearson2699/swift-ios-skills](https://github.com/dpearson2699/swift-ios-skills) | 831 | 覆盖 iOS 26+、Swift、SwiftUI 和 Apple 框架的移动端 Skill 包。 | SDK 版本变化、目标系统适配和生成代码审查。 |
 | [SamurAIGPT/Generative-Media-Skills](https://github.com/SamurAIGPT/Generative-Media-Skills) | 3.7k | 图像、视频和音频多模态 Skill 包。 | 付费 API、媒体权利、提示词来源和生成成本。 |
 | [browser-act/skills](https://github.com/browser-act/skills) | 3.6k | 带人工接管和平行会话的浏览器自动化 Skills。 | 账号风险、凭证、反爬边界和外部副作用。 |
-| [runkids/skillshare](https://github.com/runkids/skillshare) | 2.4k | 在多个 AI CLI 工具之间为团队同步 Skills。 | 同步目标、覆盖行为、私有 Skill 和路径映射。 |
+| [awesome-skills/code-review-skill](https://github.com/awesome-skills/code-review-skill) | 1.3k | 单个模块化代码审查 Skill，覆盖多种语言和框架。 | 误报、框架时效和人工审查门槛。 |
+| [decebals/claude-code-java](https://github.com/decebals/claude-code-java) | 671 | 面向 Java 和企业开发流程的 Agent Skills。 | 框架版本、项目约定和生成代码审查。 |
+| [anasfik/FlutterGuard](https://github.com/anasfik/FlutterGuard) | 23 | 面向 Flutter APK/AAB 的移动应用安全 Skill。 | 仅限授权应用、逆向分析边界和敏感二进制处理。 |
 | [ciembor/agent-rules-books](https://github.com/ciembor/agent-rules-books) | 2.1k | 从经典软件工程书籍提炼出的 Agent 规则。 | 解读质量、版权边界和 benchmark 局限。 |
 | [zanwei/design-dna](https://github.com/zanwei/design-dna) | 975 | 从参考 UI 中提取可复用风格方向。 | 截图隐私、URL 抓取、素材权利和可复现性。 |
-| [aiskillstore/marketplace](https://github.com/aiskillstore/marketplace) | 380 | 主打安全审计 Skill 的市场型仓库。 | 审计标准、更新节奏、链接来源和安装流程。 |
+| [dbwls99706/ros2-engineering-skills](https://github.com/dbwls99706/ros2-engineering-skills) | 123 | 面向机器人 Agent 的生产级 ROS 2 开发 Skill。 | 硬件假设、安全约束和 ROS 发行版版本。 |
 | [testdino-hq/playwright-skill](https://github.com/testdino-hq/playwright-skill) | 297 | 聚焦 Playwright 测试最佳实践的 Skill。 | Playwright 版本变化、项目 fixtures、CI 差异和示例覆盖。 |
 
 ## 评审中看到的模式

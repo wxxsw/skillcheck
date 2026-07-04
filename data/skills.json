@@ -121,7 +121,7 @@
     "review_focus": "Dual-use risk, dangerous command patterns, authorization language, and safe-lab assumptions."
   },
   {
-    "name": "PM Skills Marketplace",
+    "name": "PM Skills",
     "repo": "phuryn/pm-skills",
     "category": "Product",
     "stars": "22k",
@@ -129,18 +129,18 @@
     "safety": "A",
     "docs": "A",
     "portability": "B",
-    "review_focus": "Template quality, output structure, and input requirements."
+    "review_focus": "Use the outputs as drafts, not final decisions"
   },
   {
     "name": "Claude Skills",
     "repo": "alirezarezvani/claude-skills",
-    "category": "Marketplace",
+    "category": "Skill Packs",
     "stars": "19k",
     "score": 72,
     "safety": "C",
     "docs": "B",
     "portability": "A",
-    "review_focus": "Installer behavior, duplicate skill names, scripts, and per-skill license clarity."
+    "review_focus": "Check installers, scripts, naming conflicts, and licenses"
   },
   {
     "name": "Context Mode",
@@ -209,37 +209,37 @@
     "review_focus": "Scope clarity, portability, and proof that design output improves."
   },
   {
-    "name": "Awesome Agent Skills",
-    "repo": "VoltAgent/awesome-agent-skills",
-    "category": "Directory",
-    "stars": "27k",
-    "score": 88,
+    "name": "OpenAI Skills",
+    "repo": "openai/skills",
+    "category": "Engineering",
+    "stars": "23k",
+    "score": 91,
     "safety": "A",
     "docs": "A",
-    "portability": "A",
-    "review_focus": "Platform compatibility evidence, curation rules, and skill-vs-app distinction."
+    "portability": "B",
+    "review_focus": "Review curated skill scripts, generated paths, and Codex-specific assumptions"
   },
   {
     "name": "Anthropic Skills",
     "repo": "anthropics/skills",
-    "category": "Marketplace",
+    "category": "Skill Packs",
     "stars": "158k",
     "score": 90,
     "safety": "B",
     "docs": "A",
     "portability": "B",
-    "review_focus": "Official examples, bundled scripts, license clarity, and Claude-first assumptions."
+    "review_focus": "Some examples include scripts, assets, or tool assumptions"
   },
   {
-    "name": "Vercel Skills",
-    "repo": "vercel-labs/skills",
-    "category": "Marketplace",
-    "stars": "25k",
-    "score": 84,
+    "name": "Agent Skill Creator",
+    "repo": "FrancyJGLisboa/agent-skill-creator",
+    "category": "Workflow",
+    "stars": "1.7k",
+    "score": 83,
     "safety": "B",
-    "docs": "A",
+    "docs": "B",
     "portability": "A",
-    "review_focus": "Package install behavior, generated skill paths, and trusted-source checks."
+    "review_focus": "Review generated skill quality, source licensing, and platform-specific paths"
   },
   {
     "name": "Matt Pocock Skills",
@@ -253,37 +253,37 @@
     "review_focus": "Router freshness, local symlinks, and personal workflow assumptions."
   },
   {
-    "name": "Awesome Claude Skills",
-    "repo": "ComposioHQ/awesome-claude-skills",
-    "category": "Directory",
-    "stars": "67k",
-    "score": 83,
+    "name": "Nature Skills",
+    "repo": "Yuan1z0825/nature-skills",
+    "category": "Science",
+    "stars": "26k",
+    "score": 82,
     "safety": "B",
     "docs": "A",
     "portability": "B",
-    "review_focus": "Per-skill review, license coverage, and script assumptions across a large catalog."
+    "review_focus": "Verify citations, journal-style claims, and whether examples fit your field"
   },
   {
-    "name": "Antigravity Awesome Skills",
-    "repo": "sickn33/antigravity-awesome-skills",
-    "category": "Directory",
-    "stars": "42k",
-    "score": 75,
-    "safety": "C",
+    "name": "Claude Code Best Practice",
+    "repo": "shanraisshan/claude-code-best-practice",
+    "category": "Workflow",
+    "stars": "62k",
+    "score": 85,
+    "safety": "B",
     "docs": "A",
-    "portability": "A",
-    "review_focus": "Installer CLI behavior, bundled plugins, script volume, and provenance by skill."
+    "portability": "B",
+    "review_focus": "Separate durable practices from personal Claude Code conventions"
   },
   {
-    "name": "Agent Skills Spec",
-    "repo": "agentskills/agentskills",
-    "category": "Context",
-    "stars": "22k",
-    "score": 92,
-    "safety": "A",
+    "name": "Claude Code Java",
+    "repo": "decebals/claude-code-java",
+    "category": "Engineering",
+    "stars": "671",
+    "score": 82,
+    "safety": "B",
     "docs": "A",
-    "portability": "A",
-    "review_focus": "Spec compliance boundaries and differences between format validity and runtime safety."
+    "portability": "B",
+    "review_focus": "Check project conventions, framework versions, and generated code review gates"
   },
   {
     "name": "Google Workspace CLI",
@@ -385,15 +385,15 @@
     "review_focus": "Browser automation side effects, account risk, credentials, and anti-bot boundaries."
   },
   {
-    "name": "Skillshare",
-    "repo": "runkids/skillshare",
-    "category": "Marketplace",
-    "stars": "2.4k",
-    "score": 81,
-    "safety": "B",
+    "name": "FlutterGuard",
+    "repo": "anasfik/FlutterGuard",
+    "category": "Mobile",
+    "stars": "23",
+    "score": 78,
+    "safety": "C",
     "docs": "B",
-    "portability": "A",
-    "review_focus": "Sync destinations, overwrite behavior, private skills, and path mapping."
+    "portability": "B",
+    "review_focus": "Keep analysis inside authorized apps and review any reverse-engineering steps"
   },
   {
     "name": "Agent Rules Books",
@@ -418,15 +418,15 @@
     "review_focus": "Screenshot privacy, URL fetching, asset rights, and reproducible style extraction."
   },
   {
-    "name": "AI Skill Store",
-    "repo": "aiskillstore/marketplace",
-    "category": "Marketplace",
-    "stars": "380",
-    "score": 85,
+    "name": "ROS2 Engineering Skills",
+    "repo": "dbwls99706/ros2-engineering-skills",
+    "category": "Engineering",
+    "stars": "123",
+    "score": 79,
     "safety": "B",
     "docs": "A",
-    "portability": "A",
-    "review_focus": "Audit criteria, update cadence, linked-skill provenance, and install flow."
+    "portability": "B",
+    "review_focus": "Check hardware assumptions, safety constraints, and ROS distribution versions"
   },
   {
     "name": "Playwright Skill",
@@ -495,48 +495,48 @@
     "review_focus": "Harness permissions, Local commands, Config complexity."
   },
   {
-    "name": "Awesome OpenClaw Skills",
-    "repo": "VoltAgent/awesome-openclaw-skills",
-    "category": "Directory",
-    "stars": "51k",
-    "score": 86,
-    "safety": "A",
-    "docs": "A",
-    "portability": "B",
-    "review_focus": "Linked repo review, Registry freshness, OpenClaw fit."
-  },
-  {
-    "name": "Awesome Claude Code",
-    "repo": "hesreallyhim/awesome-claude-code",
-    "category": "Directory",
-    "stars": "48k",
-    "score": 84,
-    "safety": "A",
-    "docs": "A",
-    "portability": "B",
-    "review_focus": "Not all are skills, Link rot, Per-project review."
-  },
-  {
-    "name": "Agents",
-    "repo": "wshobson/agents",
-    "category": "Marketplace",
-    "stars": "37k",
-    "score": 82,
-    "safety": "B",
-    "docs": "A",
-    "portability": "A",
-    "review_focus": "Install scripts, Role overlap, License review."
-  },
-  {
-    "name": "Awesome Copilot",
-    "repo": "github/awesome-copilot",
-    "category": "Directory",
-    "stars": "36k",
+    "name": "Swift iOS Skills",
+    "repo": "dpearson2699/swift-ios-skills",
+    "category": "Mobile",
+    "stars": "831",
     "score": 90,
     "safety": "A",
     "docs": "A",
     "portability": "B",
-    "review_focus": "Compatibility gaps, Linked project trust, Instruction drift."
+    "review_focus": "SDK version drift, Target OS fit, Generated code review"
+  },
+  {
+    "name": "ARIS Research Skills",
+    "repo": "wanshuiyin/Auto-claude-code-research-in-sleep",
+    "category": "Research",
+    "stars": "13k",
+    "score": 73,
+    "safety": "C",
+    "docs": "B",
+    "portability": "B",
+    "review_focus": "Compute cost, Experiment safety, Result verification"
+  },
+  {
+    "name": "Robotics Agent Skills",
+    "repo": "arpitg1304/robotics-agent-skills",
+    "category": "Engineering",
+    "stars": "308",
+    "score": 80,
+    "safety": "B",
+    "docs": "A",
+    "portability": "B",
+    "review_focus": "Hardware safety, Simulation mismatch, Command review"
+  },
+  {
+    "name": "Prompt Master",
+    "repo": "nidhinjs/prompt-master",
+    "category": "Writing",
+    "stars": "10k",
+    "score": 82,
+    "safety": "A",
+    "docs": "B",
+    "portability": "A",
+    "review_focus": "Subjective quality, Prompt overfitting, No execution checks"
   },
   {
     "name": "NanoClaw",
@@ -563,13 +563,13 @@
   {
     "name": "Baoyu Skills",
     "repo": "JimLiu/baoyu-skills",
-    "category": "Marketplace",
+    "category": "Skill Packs",
     "stars": "23k",
     "score": 82,
     "safety": "B",
     "docs": "B",
     "portability": "B",
-    "review_focus": "Per-skill quality, License clarity, Install assumptions."
+    "review_focus": "Per-skill quality, License clarity, Install assumptions"
   },
   {
     "name": "Skill Seekers",
@@ -594,15 +594,15 @@
     "review_focus": "Memory leakage, Forgetting policy, User consent."
   },
   {
-    "name": "Awesome Claude Skills",
-    "repo": "travisvn/awesome-claude-skills",
-    "category": "Directory",
-    "stars": "14k",
-    "score": 83,
-    "safety": "A",
-    "docs": "A",
+    "name": "Continuous Claude v3",
+    "repo": "parcadei/Continuous-Claude-v3",
+    "category": "Context",
+    "stars": "3.9k",
+    "score": 72,
+    "safety": "C",
+    "docs": "B",
     "portability": "B",
-    "review_focus": "Duplicate directories, Link freshness, Project review."
+    "review_focus": "Hook permissions, State correctness, Claude lock-in"
   },
   {
     "name": "Open Code Review",
@@ -671,26 +671,26 @@
     "review_focus": "Dual-use boundaries, Tool assumptions, Sensitive code."
   },
   {
-    "name": "Awesome Agent Skills",
-    "repo": "heilcheng/awesome-agent-skills",
-    "category": "Directory",
-    "stars": "5.8k",
+    "name": "Compass Skills",
+    "repo": "dongshuyan/compass-skills",
+    "category": "Workflow",
+    "stars": "513",
     "score": 83,
-    "safety": "A",
-    "docs": "A",
+    "safety": "B",
+    "docs": "B",
     "portability": "A",
-    "review_focus": "Duplicate entries, Curation rules, External trust."
+    "review_focus": "Personal data, Overhead risk, Memory boundaries"
   },
   {
-    "name": "Awesome Claude Code and Skills",
-    "repo": "GetBindu/awesome-claude-code-and-skills",
-    "category": "Directory",
-    "stars": "5.4k",
-    "score": 82,
+    "name": "Code Review Skill",
+    "repo": "awesome-skills/code-review-skill",
+    "category": "Testing",
+    "stars": "1.3k",
+    "score": 88,
     "safety": "A",
     "docs": "A",
     "portability": "B",
-    "review_focus": "Link freshness, Not all installable, Project review."
+    "review_focus": "False positives, Framework freshness, Human review still needed"
   },
   {
     "name": "Anthony Fu Skills",
@@ -704,15 +704,15 @@
     "review_focus": "Personal conventions, Toolchain fit, Example coverage."
   },
   {
-    "name": "Awesome Codex Subagents",
-    "repo": "VoltAgent/awesome-codex-subagents",
-    "category": "Directory",
-    "stars": "5.5k",
-    "score": 86,
-    "safety": "A",
+    "name": "Claude Blog",
+    "repo": "AgriciDaniel/claude-blog",
+    "category": "Marketing",
+    "stars": "1.3k",
+    "score": 75,
+    "safety": "C",
     "docs": "A",
     "portability": "B",
-    "review_focus": "Subagent vs skill, Role overlap, Prompt quality."
+    "review_focus": "SEO claim checks, Utility scripts, Content originality"
   },
   {
     "name": "PM Skills",
@@ -737,15 +737,15 @@
     "review_focus": "Utility scripts, API credentials, Search freshness."
   },
   {
-    "name": "Awesome Codex Plugins",
-    "repo": "hashgraph-online/awesome-codex-plugins",
-    "category": "Directory",
-    "stars": "583",
-    "score": 84,
-    "safety": "A",
+    "name": "Deep Research Skills",
+    "repo": "Weizhena/Deep-Research-skills",
+    "category": "Research",
+    "stars": "1.5k",
+    "score": 86,
+    "safety": "B",
     "docs": "A",
-    "portability": "B",
-    "review_focus": "Plugin permissions, Install trust, Skill vs plugin."
+    "portability": "A",
+    "review_focus": "Source freshness, Citation quality, Research scope creep"
   },
   {
     "name": "OK Skills",
@@ -816,13 +816,13 @@
   {
     "name": "TerraShark",
     "repo": "LukasNiessen/terrashark",
-    "category": "Infra",
+    "category": "Infrastructure",
     "stars": "293",
     "score": 82,
     "safety": "B",
     "docs": "A",
     "portability": "B",
-    "review_focus": "Cloud credentials, Apply safety, Provider version drift."
+    "review_focus": "Cloud credentials, Apply safety, Provider version drift"
   },
   {
     "name": "SpecStory",
@@ -847,37 +847,37 @@
     "review_focus": "Authority model, Task runaway, State correctness."
   },
   {
-    "name": "Skills Manager",
-    "repo": "jiweiyeah/Skills-Manager",
-    "category": "Marketplace",
-    "stars": "869",
-    "score": 76,
+    "name": "Claude Office Skills",
+    "repo": "fivetaku/claude-office-skills",
+    "category": "Office",
+    "stars": "61",
+    "score": 77,
     "safety": "B",
-    "docs": "B",
-    "portability": "A",
-    "review_focus": "Desktop permissions, Overwrite risk, Local path access."
-  },
-  {
-    "name": "Build With Claude",
-    "repo": "davepoon/buildwithclaude",
-    "category": "Directory",
-    "stars": "3.1k",
-    "score": 83,
-    "safety": "A",
     "docs": "A",
     "portability": "B",
-    "review_focus": "Not all skills, External quality, Marketplace drift."
+    "review_focus": "Sensitive files, Formula accuracy, Not financial advice"
   },
   {
-    "name": "Skill Store",
-    "repo": "anbeime/skill",
-    "category": "Directory",
-    "stars": "3.1k",
-    "score": 80,
+    "name": "PinMe",
+    "repo": "glitternetwork/pinme",
+    "category": "Infrastructure",
+    "stars": "3.7k",
+    "score": 79,
     "safety": "B",
     "docs": "B",
     "portability": "B",
-    "review_focus": "Auto-scraped sources, Package trust, License review."
+    "review_focus": "External publish, Account credentials, Rollback plan"
+  },
+  {
+    "name": "Academic Claude Workflow",
+    "repo": "pedrohcgs/claude-code-my-workflow",
+    "category": "Science",
+    "stars": "1.4k",
+    "score": 81,
+    "safety": "B",
+    "docs": "A",
+    "portability": "B",
+    "review_focus": "Academic integrity, Data privacy, Field-specific assumptions"
   },
   {
     "name": "Markdown to WeChat Skill",
@@ -926,35 +926,35 @@
   {
     "name": "Claude Code Skills",
     "repo": "levnikolaevich/claude-code-skills",
-    "category": "Marketplace",
+    "category": "Skill Packs",
     "stars": "900",
     "score": 80,
     "safety": "B",
     "docs": "B",
     "portability": "B",
-    "review_focus": "Overlap with larger packs, Script review, Maintenance cadence."
+    "review_focus": "Overlap with larger packs, Script review, Maintenance cadence"
   },
   {
-    "name": "Agent Skill Porter",
-    "repo": "skill-mill/agent-skill-porter",
-    "category": "Marketplace",
-    "stars": "850",
-    "score": 82,
-    "safety": "B",
-    "docs": "A",
-    "portability": "A",
-    "review_focus": "Semantic loss, Path mapping, Generated diffs."
-  },
-  {
-    "name": "Awesome Claude Code Toolkit",
-    "repo": "rohitg00/awesome-claude-code-toolkit",
-    "category": "Directory",
-    "stars": "820",
-    "score": 82,
-    "safety": "A",
-    "docs": "A",
+    "name": "Codex GPT Image Skill",
+    "repo": "ningzimu/codex-gpt-image",
+    "category": "Media",
+    "stars": "37",
+    "score": 69,
+    "safety": "C",
+    "docs": "B",
     "portability": "B",
-    "review_focus": "Resource sprawl, Link freshness, Install review."
+    "review_focus": "OAuth boundaries, Generation cost, Asset rights"
+  },
+  {
+    "name": "GPT Image to PPT Skills",
+    "repo": "JuneYaooo/gpt-image2-ppt-skills",
+    "category": "Office",
+    "stars": "1k",
+    "score": 70,
+    "safety": "C",
+    "docs": "B",
+    "portability": "B",
+    "review_focus": "Template rights, Image model cost, Brand similarity"
   },
   {
     "name": "Web Quality Skills",
@@ -992,13 +992,13 @@
   {
     "name": "Terraform Skill",
     "repo": "antonbabenko/terraform-skill",
-    "category": "Infra",
+    "category": "Infrastructure",
     "stars": "1.8k",
     "score": 84,
     "safety": "B",
     "docs": "A",
     "portability": "B",
-    "review_focus": "Cloud changes, State safety, Provider drift."
+    "review_focus": "Cloud changes, State safety, Provider drift"
   },
   {
     "name": "Agent Toolkit",

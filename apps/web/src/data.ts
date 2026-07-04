@@ -16,7 +16,6 @@ export type CategoryId =
   | "marketplace"
   | "context"
   | "frontend"
-  | "directory"
   | "automation"
   | "memory"
   | "testing"
@@ -61,10 +60,9 @@ export const categoryLabels: Record<CategoryId, LocalizedText> = {
   science: { en: "Science", zh: "科学研究" },
   security: { en: "Security", zh: "安全" },
   product: { en: "Product", zh: "产品" },
-  marketplace: { en: "Marketplace", zh: "技能市场" },
+  marketplace: { en: "Skill Packs", zh: "技能包" },
   context: { en: "Context", zh: "上下文" },
   frontend: { en: "Frontend", zh: "前端" },
-  directory: { en: "Directory", zh: "目录" },
   automation: { en: "Automation", zh: "自动化" },
   memory: { en: "Memory", zh: "记忆" },
   testing: { en: "Testing", zh: "测试" },
@@ -86,10 +84,9 @@ export const categoryDescriptions: Record<CategoryId, LocalizedText> = {
   science: { en: "Scientific research and evidence-heavy domains.", zh: "科学研究和高证据要求领域。" },
   security: { en: "Security workflows with dual-use risk.", zh: "带双用途风险的安全工作流。" },
   product: { en: "PM templates, discovery, strategy, and GTM.", zh: "产品模板、发现、战略和 GTM。" },
-  marketplace: { en: "Large packs, installers, and mixed skill libraries.", zh: "大型包、安装器和混合技能库。" },
+  marketplace: { en: "Large multi-skill packs and mixed workflow libraries.", zh: "大型多技能包和混合工作流库。" },
   context: { en: "Memory, routing, hooks, and context control.", zh: "记忆、路由、hooks 和上下文控制。" },
   frontend: { en: "Frontend libraries, examples, and UI implementation.", zh: "前端库、示例和 UI 实现。" },
-  directory: { en: "Discovery lists and multi-platform indexes.", zh: "发现列表和多平台索引。" },
   automation: { en: "Agent actions, handoffs, syncing, and workflow automation.", zh: "Agent 动作、接管、同步和工作流自动化。" },
   memory: { en: "Long-term memory, session recall, and knowledge graphs.", zh: "长期记忆、会话召回和知识图谱。" },
   testing: { en: "QA, web quality, test automation, and CI evidence.", zh: "QA、网页质量、测试自动化和 CI 证据。" },
@@ -455,7 +452,7 @@ const baseSkills: SkillEntry[] = [
   },
   {
     id: "pm-skills",
-    name: "PM Skills Marketplace",
+    name: "PM Skills",
     repo: "phuryn/pm-skills",
     url: "https://github.com/phuryn/pm-skills",
     stars: "22k",
@@ -497,8 +494,8 @@ const baseSkills: SkillEntry[] = [
       zh: "大型技能库，混合了 agents、commands、scripts 和 plugins。"
     },
     signal: {
-      en: "Marketplace-scale library",
-      zh: "市场级技能库"
+      en: "Large skill library",
+      zh: "大型技能库"
     },
     platforms: ["Claude", "Codex", "Cursor", "Gemini"],
     score: 72,
@@ -710,34 +707,34 @@ const baseSkills: SkillEntry[] = [
     ]
   },
   {
-    id: "awesome-agent-skills",
-    name: "Awesome Agent Skills",
-    repo: "VoltAgent/awesome-agent-skills",
-    url: "https://github.com/VoltAgent/awesome-agent-skills",
-    stars: "27k",
-    category: "directory",
+    id: "openai-skills",
+    name: "OpenAI Skills",
+    repo: "openai/skills",
+    url: "https://github.com/openai/skills",
+    stars: "23k",
+    category: "engineering",
     summary: {
-      en: "A directory of skills for Claude Code, Codex, Gemini CLI, and Cursor.",
-      zh: "面向 Claude Code、Codex、Gemini CLI 和 Cursor 的技能目录。"
+      en: "A Codex skills catalog with concrete SKILL.md packages and curated examples.",
+      zh: "包含具体 SKILL.md 包和精选示例的 Codex Skills 目录。"
     },
     signal: {
-      en: "Discovery baseline",
-      zh: "发现基线"
+      en: "Real SKILL.md corpus",
+      zh: "真实 SKILL.md 语料"
     },
-    platforms: ["Claude", "Codex", "Cursor", "Gemini"],
-    score: 88,
+    platforms: ["Codex"],
+    score: 91,
     safety: "A",
     docs: "A",
-    portability: "A",
+    portability: "B",
     badges: [
-      { en: "Curated list", zh: "精选列表" },
-      { en: "Multi-platform", zh: "多平台" },
-      { en: "No execution detected", zh: "未发现执行行为" }
+      { en: "Official source", zh: "官方来源" },
+      { en: "44 SKILL.md files", zh: "44 个 SKILL.md" },
+      { en: "Codex-first", zh: "Codex 优先" }
     ],
     risks: [
       {
-        en: "Linked projects still need their own review",
-        zh: "链接项目仍然需要单独审查"
+        en: "Review curated skill scripts, generated paths, and Codex-specific assumptions",
+        zh: "审查精选 Skill 的脚本、生成路径和 Codex 专属假设"
       }
     ]
   },
@@ -774,34 +771,34 @@ const baseSkills: SkillEntry[] = [
     ]
   },
   {
-    id: "vercel-skills",
-    name: "Vercel Skills",
-    repo: "vercel-labs/skills",
-    url: "https://github.com/vercel-labs/skills",
-    stars: "25k",
-    category: "marketplace",
+    id: "agent-skill-creator",
+    name: "Agent Skill Creator",
+    repo: "FrancyJGLisboa/agent-skill-creator",
+    url: "https://github.com/FrancyJGLisboa/agent-skill-creator",
+    stars: "1.7k",
+    category: "workflow",
     summary: {
-      en: "An open agent-skills tool and installer built around npx skills.",
-      zh: "围绕 npx skills 构建的开放 Agent Skills 工具和安装器。"
+      en: "Turns repeatable workflows into reusable agent skills across many clients.",
+      zh: "把可重复工作流转成可跨客户端复用的 Agent Skill。"
     },
     signal: {
-      en: "Installer and discovery tool",
-      zh: "安装与发现工具"
+      en: "Workflow-to-skill",
+      zh: "工作流转 Skill"
     },
-    platforms: ["Claude", "Codex", "Cursor"],
-    score: 84,
+    platforms: ["Claude", "Codex", "Cursor", "Gemini", "Copilot"],
+    score: 83,
     safety: "B",
-    docs: "A",
+    docs: "B",
     portability: "A",
     badges: [
-      { en: "Installer", zh: "安装器" },
-      { en: "Find skills", zh: "发现 Skill" },
-      { en: "Cross-agent aim", zh: "跨 Agent 目标" }
+      { en: "Single SKILL.md", zh: "单个 SKILL.md" },
+      { en: "Skill generation", zh: "Skill 生成" },
+      { en: "Multi-platform", zh: "多平台" }
     ],
     risks: [
       {
-        en: "Review package install behavior and generated skill paths",
-        zh: "审查包安装行为和生成的 Skill 路径"
+        en: "Review generated skill quality, source licensing, and platform-specific paths",
+        zh: "审查生成 Skill 的质量、来源许可和平台路径"
       }
     ]
   },
@@ -838,98 +835,98 @@ const baseSkills: SkillEntry[] = [
     ]
   },
   {
-    id: "composio-awesome-claude-skills",
-    name: "Awesome Claude Skills",
-    repo: "ComposioHQ/awesome-claude-skills",
-    url: "https://github.com/ComposioHQ/awesome-claude-skills",
-    stars: "67k",
-    category: "directory",
+    id: "nature-skills",
+    name: "Nature Skills",
+    repo: "Yuan1z0825/nature-skills",
+    url: "https://github.com/Yuan1z0825/nature-skills",
+    stars: "26k",
+    category: "science",
     summary: {
-      en: "A large Claude Skills directory with many document and workflow examples.",
-      zh: "大型 Claude Skills 目录，包含大量文档和工作流示例。"
+      en: "Academic writing and figure skills for Nature-style scientific work.",
+      zh: "面向 Nature 风格科研写作和科研绘图的 Skill 包。"
     },
     signal: {
-      en: "Large public catalog",
-      zh: "大型公开目录"
+      en: "Academic workflow pack",
+      zh: "学术工作流包"
     },
-    platforms: ["Claude"],
-    score: 83,
+    platforms: ["Codex", "Claude"],
+    score: 82,
     safety: "B",
     docs: "A",
     portability: "B",
     badges: [
-      { en: "Many SKILL.md files", zh: "大量 SKILL.md" },
-      { en: "Document workflows", zh: "文档工作流" },
-      { en: "Catalog value", zh: "目录价值" }
+      { en: "15 SKILL.md files", zh: "15 个 SKILL.md" },
+      { en: "Academic writing", zh: "学术写作" },
+      { en: "Figure workflow", zh: "科研绘图" }
     ],
     risks: [
       {
-        en: "Review individual skills, licenses, and script assumptions separately",
-        zh: "需要逐个审查 Skill、许可证和脚本假设"
+        en: "Verify citations, journal-style claims, and whether examples fit your field",
+        zh: "核验引用、期刊风格主张，以及示例是否适合你的学科"
       }
     ]
   },
   {
-    id: "antigravity-awesome-skills",
-    name: "Antigravity Awesome Skills",
-    repo: "sickn33/antigravity-awesome-skills",
-    url: "https://github.com/sickn33/antigravity-awesome-skills",
-    stars: "42k",
-    category: "directory",
+    id: "claude-code-best-practice",
+    name: "Claude Code Best Practice",
+    repo: "shanraisshan/claude-code-best-practice",
+    url: "https://github.com/shanraisshan/claude-code-best-practice",
+    stars: "62k",
+    category: "workflow",
     summary: {
-      en: "An installable multi-agent library with many skills, plugins, and bundles.",
-      zh: "可安装的多 Agent 技能库，包含技能、插件和组合包。"
+      en: "Agentic engineering practices with concrete skills for browser and presentation work.",
+      zh: "Agentic engineering 实践，包含浏览器和演示文稿等具体 Skills。"
     },
     signal: {
-      en: "Huge installable catalog",
-      zh: "超大型可安装目录"
+      en: "Practice-backed skills",
+      zh: "实践型 Skill"
     },
-    platforms: ["Claude", "Codex", "Cursor", "Gemini", "OpenCode", "Antigravity"],
-    score: 75,
-    safety: "C",
+    platforms: ["Claude", "Codex"],
+    score: 85,
+    safety: "B",
     docs: "A",
-    portability: "A",
+    portability: "B",
     badges: [
-      { en: "Installer CLI", zh: "安装 CLI" },
-      { en: "Very large library", zh: "超大规模库" },
-      { en: "Multi-platform", zh: "多平台" }
+      { en: "9 SKILL.md files", zh: "9 个 SKILL.md" },
+      { en: "Agentic engineering", zh: "Agentic 工程" },
+      { en: "Examples", zh: "示例" }
     ],
     risks: [
       {
-        en: "High script count, bundled plugins, and per-skill provenance need review",
-        zh: "脚本很多、插件混合、单个 Skill 来源都需要审查"
+        en: "Separate durable practices from personal Claude Code conventions",
+        zh: "区分可复用工程实践和个人 Claude Code 约定"
       }
     ]
   },
   {
-    id: "agentskills-spec",
-    name: "Agent Skills Spec",
-    repo: "agentskills/agentskills",
-    url: "https://github.com/agentskills/agentskills",
-    stars: "22k",
-    category: "context",
+    id: "claude-code-java",
+    name: "Claude Code Java",
+    repo: "decebals/claude-code-java",
+    url: "https://github.com/decebals/claude-code-java",
+    stars: "671",
+    category: "engineering",
     summary: {
-      en: "Specification and documentation for the Agent Skills format.",
-      zh: "Agent Skills 格式的规范和文档。"
+      en: "Reusable AI development skills for Java projects and enterprise workflows.",
+      zh: "面向 Java 项目和企业开发流程的可复用 AI 开发 Skills。"
     },
     signal: {
-      en: "Spec-level reference",
-      zh: "规范级参考"
+      en: "Java development skills",
+      zh: "Java 开发 Skill"
     },
-    platforms: ["Claude", "Codex", "Cursor", "Gemini", "Copilot", "OpenCode"],
-    score: 92,
-    safety: "A",
+    platforms: ["Claude", "Codex"],
+    score: 82,
+    safety: "B",
     docs: "A",
-    portability: "A",
+    portability: "B",
     badges: [
-      { en: "Specification", zh: "规范" },
-      { en: "Low execution risk", zh: "执行风险低" },
-      { en: "Portability anchor", zh: "迁移锚点" }
+      { en: "18 SKILL.md files", zh: "18 个 SKILL.md" },
+      { en: "Java focus", zh: "Java 聚焦" },
+      { en: "Enterprise workflow", zh: "企业流程" }
     ],
     risks: [
       {
-        en: "Spec compliance does not prove an individual skill is safe",
-        zh: "符合规范不代表单个 Skill 一定安全"
+        en: "Check project conventions, framework versions, and generated code review gates",
+        zh: "检查项目约定、框架版本和生成代码审查门槛"
       }
     ]
   },
@@ -1222,34 +1219,34 @@ const baseSkills: SkillEntry[] = [
     ]
   },
   {
-    id: "skillshare",
-    name: "Skillshare",
-    repo: "runkids/skillshare",
-    url: "https://github.com/runkids/skillshare",
-    stars: "2.4k",
-    category: "marketplace",
+    id: "flutterguard",
+    name: "FlutterGuard",
+    repo: "anasfik/FlutterGuard",
+    url: "https://github.com/anasfik/FlutterGuard",
+    stars: "23",
+    category: "mobile",
     summary: {
-      en: "Syncs skills across multiple AI CLI tools for team sharing.",
-      zh: "在多个 AI CLI 工具之间同步 Skill，方便团队共享。"
+      en: "A Flutter APK and AAB security skill for agent-assisted mobile app review.",
+      zh: "面向 Agent 辅助移动应用审查的 Flutter APK/AAB 安全 Skill。"
     },
     signal: {
-      en: "Cross-tool sync",
-      zh: "跨工具同步"
+      en: "Flutter security review",
+      zh: "Flutter 安全审查"
     },
-    platforms: ["Claude", "Codex", "OpenClaw", "OpenCode"],
-    score: 81,
-    safety: "B",
+    platforms: ["Claude", "Codex", "OpenClaw"],
+    score: 78,
+    safety: "C",
     docs: "B",
-    portability: "A",
+    portability: "B",
     badges: [
-      { en: "Team sharing", zh: "团队共享" },
-      { en: "Cross-tool paths", zh: "跨工具路径" },
-      { en: "Sync workflow", zh: "同步工作流" }
+      { en: "Single SKILL.md", zh: "单个 SKILL.md" },
+      { en: "Mobile AppSec", zh: "移动 AppSec" },
+      { en: "Flutter focus", zh: "Flutter 聚焦" }
     ],
     risks: [
       {
-        en: "Review sync destinations, overwrite behavior, and private skills",
-        zh: "审查同步目标、覆盖行为和私有 Skill"
+        en: "Keep analysis inside authorized apps and review any reverse-engineering steps",
+        zh: "仅分析授权应用，并审查任何逆向分析步骤"
       }
     ]
   },
@@ -1318,34 +1315,34 @@ const baseSkills: SkillEntry[] = [
     ]
   },
   {
-    id: "aiskillstore-marketplace",
-    name: "AI Skill Store",
-    repo: "aiskillstore/marketplace",
-    url: "https://github.com/aiskillstore/marketplace",
-    stars: "380",
-    category: "marketplace",
+    id: "ros2-engineering-skills",
+    name: "ROS2 Engineering Skills",
+    repo: "dbwls99706/ros2-engineering-skills",
+    url: "https://github.com/dbwls99706/ros2-engineering-skills",
+    stars: "123",
+    category: "engineering",
     summary: {
-      en: "A marketplace positioning itself around security-audited skills.",
-      zh: "主打安全审计 Skill 的市场型仓库。"
+      en: "A production-grade ROS 2 development skill for robotics agents.",
+      zh: "面向机器人 Agent 的生产级 ROS 2 开发 Skill。"
     },
     signal: {
-      en: "Security-audited positioning",
-      zh: "安全审计定位"
+      en: "Robotics engineering",
+      zh: "机器人工程"
     },
     platforms: ["Claude", "Codex"],
-    score: 85,
+    score: 79,
     safety: "B",
     docs: "A",
-    portability: "A",
+    portability: "B",
     badges: [
-      { en: "Quality gates", zh: "质量门槛" },
-      { en: "Marketplace", zh: "市场" },
-      { en: "Install focus", zh: "安装导向" }
+      { en: "Single SKILL.md", zh: "单个 SKILL.md" },
+      { en: "ROS 2", zh: "ROS 2" },
+      { en: "Production guidance", zh: "生产级指导" }
     ],
     risks: [
       {
-        en: "Verify audit criteria, update cadence, and linked skill provenance",
-        zh: "核验审计标准、更新节奏和链接 Skill 来源"
+        en: "Check hardware assumptions, safety constraints, and ROS distribution versions",
+        zh: "检查硬件假设、安全约束和 ROS 发行版版本"
       }
     ]
   },
@@ -1407,29 +1404,29 @@ open-design|Open Design|nexu-io/open-design|75k|design|76|B|A|A|Claude,Codex,Cur
 ponytail|Ponytail|DietrichGebert/ponytail|73k|engineering|84|A|B|B|Claude,Codex|A coding-agent skill set that pushes agents toward smaller, simpler engineering choices.~推动编码 Agent 选择更小、更简单工程方案的技能集。|Senior-dev engineering taste~资深工程判断|Reduce over-engineering in coding-agent output~减少编码 Agent 输出里的过度工程化|Simplicity bias~偏向简单;Engineering judgment~工程判断;Low execution risk~执行风险低|Subjective taste~品味主观;Project fit~项目适配;Example evidence~示例证据
 understand-anything|Understand Anything|Egonex-AI/Understand-Anything|71k|knowledge|79|B|A|A|Claude,Codex,Cursor,Copilot,Gemini,OpenCode|Turns code into interactive knowledge graphs for exploration and Q&A.~把代码转成可探索、可问答的交互式知识图谱。|Interactive code graphs~交互式代码图谱|Explore large codebases visually and conversationally~用可视化和对话方式探索大型代码库|Graph exploration~图谱探索;Codebase Q&A~代码库问答;Multi-agent support~多 Agent 支持|Index privacy~索引隐私;Parser dependencies~解析器依赖;Large repo cost~大仓库成本
 oh-my-openagent|Oh My OpenAgent|code-yeongyu/oh-my-openagent|65k|workflow|73|B|B|B|Codex,OpenCode,Claude|A coding-agent harness and workflow pack for complex codebases.~面向复杂代码库的编码 Agent harness 和工作流包。|Agent harness workflow~Agent harness 工作流|Run more controlled agent work on complex repositories~在复杂仓库中运行更可控的 Agent 工作|Complex-codebase focus~复杂代码库聚焦;Workflow harness~工作流 harness;Token discipline~Token 纪律|Harness permissions~Harness 权限;Local commands~本地命令;Config complexity~配置复杂度
-awesome-openclaw-skills|Awesome OpenClaw Skills|VoltAgent/awesome-openclaw-skills|51k|directory|86|A|A|B|OpenClaw,Claude,Codex|A large categorized collection of OpenClaw skills from an official-style registry.~来自 OpenClaw 技能注册表的大型分类 Skill 集合。|Large registry index~大型注册表索引|Discover OpenClaw-compatible skills by category~按分类发现 OpenClaw 兼容 Skill|Large catalog~大目录;Categorized~分类清楚;Registry-derived~来自注册表|Linked repo review~链接仓库审查;Registry freshness~注册表时效;OpenClaw fit~OpenClaw 适配
-awesome-claude-code|Awesome Claude Code|hesreallyhim/awesome-claude-code|48k|directory|84|A|A|B|Claude,Codex,Cursor|A hand-picked directory of Claude Code skills, agents, plugins, and tooling.~精选 Claude Code 技能、Agent、插件和工具目录。|High-signal Claude Code index~高信号 Claude Code 索引|Find mature Claude Code ecosystem resources quickly~快速找到成熟的 Claude Code 生态资源|Hand-picked~人工精选;Broad ecosystem~生态覆盖广;Tooling links~工具链接|Not all are skills~不全是 Skill;Link rot~链接失效;Per-project review~逐项目审查
-wshobson-agents|Agents|wshobson/agents|37k|marketplace|82|B|A|A|Claude,Codex,Cursor,OpenCode,Copilot,Gemini|A multi-harness marketplace for agents, commands, and skills.~面向多种 harness 的 Agent、命令和 Skill 市场。|Multi-harness marketplace~多 harness 市场|Compare agent roles and skill packs across coding tools~跨编码工具比较 Agent 角色和 Skill 包|Multi-harness~多 harness;Role library~角色库;Broad coverage~覆盖广|Install scripts~安装脚本;Role overlap~角色重叠;License review~许可审查
-awesome-copilot|Awesome Copilot|github/awesome-copilot|36k|directory|90|A|A|B|Copilot,Claude,Codex|Community instructions, agents, skills, and configurations for GitHub Copilot.~面向 GitHub Copilot 的社区指令、Agent、Skill 和配置。|GitHub ecosystem directory~GitHub 生态目录|Find Copilot-compatible instructions and agent patterns~寻找 Copilot 兼容指令和 Agent 模式|GitHub source~GitHub 来源;Community catalog~社区目录;Copilot focus~Copilot 聚焦|Compatibility gaps~兼容差异;Linked project trust~链接项目信任;Instruction drift~指令变化
+swift-ios-skills|Swift iOS Skills|dpearson2699/swift-ios-skills|831|mobile|90|A|A|B|Claude,Codex,Cursor|Agent Skills for iOS 26 plus Swift 6.3, SwiftUI, and modern Apple frameworks.~面向 iOS 26+、Swift 6.3、SwiftUI 和现代 Apple 框架的 Agent Skills。|Broad iOS skill pack~完整 iOS Skill 包|Guide agents across SwiftUI, networking, accessibility, widgets, StoreKit, and Apple APIs~引导 Agent 处理 SwiftUI、网络、无障碍、Widget、StoreKit 和 Apple API|84 SKILL.md files~84 个 SKILL.md;Modern Apple APIs~现代 Apple API;Mobile-specific~移动端专用|SDK version drift~SDK 版本变化;Target OS fit~目标系统适配;Generated code review~生成代码审查
+aris-research-skills|ARIS Research Skills|wanshuiyin/Auto-claude-code-research-in-sleep|13k|research|73|C|B|B|Claude,Codex,OpenClaw|Lightweight Markdown skills for autonomous ML research loops, idea discovery, and experiments.~面向自主机器学习研究循环、想法发现和实验的轻量 Markdown Skills。|Autonomous research loops~自主研究循环|Coordinate cross-model review, experiment planning, and result analysis for ML research~协调跨模型审查、实验规划和机器学习研究结果分析|181 SKILL.md files~181 个 SKILL.md;ML research~机器学习研究;Markdown-only~Markdown-only|Compute cost~算力成本;Experiment safety~实验安全;Result verification~结果核验
+robotics-agent-skills|Robotics Agent Skills|arpitg1304/robotics-agent-skills|308|engineering|80|B|A|B|Claude,Codex|A robotics skill pack for ROS, Dockerized development, perception, testing, and security.~面向 ROS、Docker 开发、感知、测试和安全的机器人 Skill 包。|Robotics development pack~机器人开发包|Help agents write production-grade robotics software across ROS, testing, and deployment workflows~帮助 Agent 编写跨 ROS、测试和部署流程的生产级机器人软件|Multiple SKILL.md files~多个 SKILL.md;ROS workflows~ROS 工作流;Robotics testing~机器人测试|Hardware safety~硬件安全;Simulation mismatch~仿真差异;Command review~命令审查
+prompt-master|Prompt Master|nidhinjs/prompt-master|10k|writing|82|A|B|A|Claude|A single Claude skill for writing higher-precision prompts with retained context.~用于编写更高精度提示词并保留上下文的单一 Claude Skill。|Prompt craft skill~提示词打磨 Skill|Turn fuzzy intent into clearer prompts for other AI tools and workflows~把模糊意图转成更清楚的 AI 工具提示词和工作流输入|Single SKILL.md~单个 SKILL.md;Low direct risk~直接风险低;Prompt precision~提示词精度|Subjective quality~质量主观;Prompt overfitting~提示词过拟合;No execution checks~无执行校验
 nanoclaw|NanoClaw|nanocoai/nanoclaw|30k|automation|68|C|B|B|Claude,Codex|A containerized lightweight agent runtime with messaging integrations and memory.~带消息集成和记忆的容器化轻量 Agent runtime。|Containerized agent automation~容器化 Agent 自动化|Run agent workflows connected to messaging apps~运行连接消息应用的 Agent 工作流|Container isolation~容器隔离;Messaging integrations~消息集成;Scheduled jobs~定时任务|External messages~外部消息;Account tokens~账号 Token;Container permissions~容器权限
 cognee|Cognee|topoteretes/cognee|27k|memory|76|B|A|B|Claude,Codex,Cursor|Open-source memory infrastructure for agents using self-hosted knowledge graphs.~使用自托管知识图谱的开源 Agent 记忆基础设施。|Self-hosted agent memory~自托管 Agent 记忆|Give agents persistent long-term knowledge across sessions~让 Agent 跨会话拥有长期知识|Knowledge graph~知识图谱;Self-hosted~自托管;Persistent memory~持久记忆|PII retention~PII 保留;Database setup~数据库配置;Retrieval quality~检索质量
 baoyu-skills|Baoyu Skills|JimLiu/baoyu-skills|23k|marketplace|82|B|B|B|Claude,Codex|A Chinese-language skill collection with broad productivity and coding coverage.~覆盖生产力与编程场景的中文 Skill 集合。|Chinese skill collection~中文 Skill 集合|Find Chinese-first skill patterns and workflows~寻找中文优先的 Skill 模式和工作流|Chinese-first~中文优先;Broad workflows~工作流广;Community signal~社区信号|Per-skill quality~单技能质量;License clarity~许可清晰度;Install assumptions~安装假设
 skill-seekers|Skill Seekers|yusufkaraaslan/Skill_Seekers|14k|automation|78|B|B|B|Claude|Converts docs, repositories, and PDFs into Claude AI skills with conflict detection.~把文档、仓库和 PDF 转成 Claude AI Skills，并检测冲突。|Skill generation pipeline~Skill 生成管线|Generate skills from existing documentation sources~从已有文档来源生成 Skill|Doc-to-skill~文档转 Skill;Conflict detection~冲突检测;PDF support~PDF 支持|Generated quality~生成质量;Source licensing~来源许可;PDF privacy~PDF 隐私
 memu|memU|NevaMind-AI/memU|14k|memory|75|B|B|B|Claude,Codex|Personal memory for agents with retrieval and self-evolving skill behavior.~带检索和自进化 Skill 行为的 Agent 个人记忆。|Self-evolving memory~自进化记忆|Let agents retrieve and refine personal memory over time~让 Agent 随时间检索和改进个人记忆|Fast retrieval~快速检索;Self-evolving skills~自进化 Skill;Cost reduction~成本降低|Memory leakage~记忆泄露;Forgetting policy~遗忘策略;User consent~用户同意
-travis-awesome-claude-skills|Awesome Claude Skills|travisvn/awesome-claude-skills|14k|directory|83|A|A|B|Claude,Codex|A Claude Skills directory focused on Claude Code resources and customization.~聚焦 Claude Code 资源和自定义的 Claude Skills 目录。|Claude skill discovery~Claude Skill 发现|Browse Claude Skills and compare adjacent resources~浏览 Claude Skills 并比较相邻资源|Curated links~精选链接;Claude Code focus~Claude Code 聚焦;Resource breadth~资源广度|Duplicate directories~目录重复;Link freshness~链接时效;Project review~项目审查
+continuous-claude-v3|Continuous Claude v3|parcadei/Continuous-Claude-v3|3.9k|context|72|C|B|B|Claude|Context-management skills, hooks, ledgers, handoffs, and agent orchestration for Claude Code.~面向 Claude Code 的上下文管理 Skills、hooks、ledger、handoff 和 Agent 编排。|Hooked context system~Hook 上下文系统|Maintain task state through ledgers, handoffs, isolated context, and MCP execution patterns~通过 ledger、handoff、隔离上下文和 MCP 执行模式维持任务状态|160 SKILL.md files~160 个 SKILL.md;Handoffs~交接;Context isolation~上下文隔离|Hook permissions~Hook 权限;State correctness~状态正确性;Claude lock-in~Claude 锁定
 open-code-review|Open Code Review|alibaba/open-code-review|9.9k|engineering|71|C|A|B|Claude,Codex,Gemini|A hybrid deterministic and LLM-agent code review tool from Alibaba.~阿里开源的确定性流水线与 LLM Agent 混合代码审查工具。|Agentic code review~Agentic 代码审查|Run stricter code review with rules and LLM assistance~用规则和 LLM 辅助运行更严格的代码审查|Battle-tested~规模验证;Line comments~行级评论;Security rules~安全规则|Repo access~仓库访问;CI secrets~CI 密钥;False positives~误报
 claude-obsidian|Claude Obsidian|AgriciDaniel/claude-obsidian|8.7k|knowledge|77|B|B|B|Claude,Codex|A self-organizing AI second brain for Obsidian and Claude Code.~面向 Obsidian 和 Claude Code 的自组织 AI 第二大脑。|Obsidian knowledge agent~Obsidian 知识 Agent|Organize sources into a linked Markdown knowledge base~把来源整理成互相链接的 Markdown 知识库|Markdown ownership~Markdown 所有权;Auto-linking~自动链接;PKM workflow~PKM 工作流|Vault writes~知识库写入;Source ingestion~来源导入;Link quality~链接质量
 html-anything|HTML Anything|nexu-io/html-anything|7.5k|media|70|C|B|A|Claude,Codex,Cursor,Gemini,Copilot,OpenCode,Qwen,Aider|An agentic HTML editor for prototypes, decks, reports, posters, and social formats.~面向原型、幻灯片、报告、海报和社媒格式的 Agentic HTML 编辑器。|Agentic publishing surfaces~Agentic 发布界面|Ship polished HTML artifacts from agent workflows~通过 Agent 工作流发布精美 HTML 产物|Many surfaces~多种版式;Sandboxed preview~沙箱预览;Export options~导出选项|Publish actions~发布动作;HTML injection~HTML 注入;Local file writes~本地写文件
 refly|Refly|refly-ai/refly|7.4k|automation|73|B|B|A|Claude,Codex,Cursor|An open-source builder for agent skills, workflows, APIs, and bots.~用于构建 Agent Skills、工作流、API 和机器人的开源平台。|Skill builder platform~Skill 构建平台|Build reusable skills and workflow bots from product ideas~从产品想法构建可复用 Skill 和工作流机器人|Skill builder~Skill 构建器;API workflows~API 工作流;Bot deployment~机器人部署|External integrations~外部集成;Credential storage~凭证存储;Generated workflow drift~生成工作流漂移
 superpowers-zh|Superpowers ZH|jnMetaCode/superpowers-zh|6k|workflow|83|B|A|A|Claude,Codex,Cursor,OpenCode|A Chinese localization and adaptation of the Superpowers skill workflow.~Superpowers 技能工作流的中文本地化与改编。|Chinese workflow adaptation~中文工作流改编|Use Superpowers-style workflows in Chinese teams~让中文团队使用 Superpowers 风格工作流|Chinese docs~中文文档;Workflow method~工作流方法;Multi-platform~多平台|Upstream drift~上游变化;Installer parity~安装器一致性;Translation accuracy~翻译准确性
 trailofbits-skills|Trail of Bits Skills|trailofbits/skills|5.9k|security|79|B|A|B|Claude,Codex|Security-focused skills from Trail of Bits for audits and secure engineering.~Trail of Bits 面向审计和安全工程的安全类 Skills。|Security-audit skill pack~安全审计 Skill 包|Bring security review practices into agent-assisted engineering~把安全审查实践带入 Agent 辅助工程|Strong security source~安全来源强;Audit workflows~审计工作流;Secure engineering~安全工程|Dual-use boundaries~双用途边界;Tool assumptions~工具假设;Sensitive code~敏感代码
-heilcheng-awesome-agent-skills|Awesome Agent Skills|heilcheng/awesome-agent-skills|5.8k|directory|83|A|A|A|Claude,Codex,Cursor,Gemini|A curated list of Agent Skills and resources across multiple clients.~跨多个客户端的 Agent Skills 与资源精选目录。|Cross-client skill list~跨客户端 Skill 列表|Compare skill directories and find recurring high-signal projects~比较 Skill 目录并发现反复出现的高信号项目|Curated list~精选列表;Cross-client~跨客户端;Discovery value~发现价值|Duplicate entries~重复条目;Curation rules~收录规则;External trust~外部信任
-awesome-claude-code-and-skills|Awesome Claude Code and Skills|GetBindu/awesome-claude-code-and-skills|5.4k|directory|82|A|A|B|Claude,Codex|A directory of Claude Code resources, skills, agents, and workflow references.~Claude Code 资源、Skill、Agent 和工作流参考目录。|Claude Code resource map~Claude Code 资源地图|Find Claude Code skill and workflow references in one place~在一个地方查找 Claude Code Skill 与工作流参考|Resource map~资源地图;Skill links~Skill 链接;Workflow references~工作流参考|Link freshness~链接时效;Not all installable~不全可安装;Project review~项目审查
+compass-skills|Compass Skills|dongshuyan/compass-skills|513|workflow|83|B|B|A|Claude,Codex|A personal alignment and task-control skills system for AI agents.~面向 AI Agent 的个性化对齐和任务总控 Skills 系统。|Personal task OS~个人任务操作系统|Clarify tasks, maintain task forests, and hand off sessions with reusable skills~用可复用 Skill 澄清任务、维护任务森林并进行会话交接|4 SKILL.md files~4 个 SKILL.md;Task control~任务控制;Local-first~本地优先|Personal data~个人数据;Overhead risk~流程开销;Memory boundaries~记忆边界
+code-review-skill|Code Review Skill|awesome-skills/code-review-skill|1.3k|testing|88|A|A|B|Claude,Codex|A comprehensive modular code-review skill covering 20 plus languages and frameworks.~覆盖 20+ 语言和框架的全面模块化代码审查 Skill。|Structured review skill~结构化审查 Skill|Make agent code review more consistent across React, Vue, Rust, TypeScript, and more~让 Agent 在 React、Vue、Rust、TypeScript 等项目中的代码审查更稳定|Single SKILL.md~单个 SKILL.md;20 plus languages~20+ 语言;Review structure~审查结构|False positives~误报;Framework freshness~框架时效;Human review still needed~仍需人工审查
 antfu-skills|Anthony Fu Skills|antfu/skills|5.4k|engineering|88|A|B|B|Claude,Codex|A personal engineering skill collection from Anthony Fu.~Anthony Fu 的个人工程 Skill 集合。|High-signal practitioner skills~高信号实践者 Skill|Borrow experienced frontend and open-source engineering patterns~借鉴成熟前端和开源工程模式|Practitioner signal~实践者信号;Frontend taste~前端判断;Low direct risk~直接风险低|Personal conventions~个人约定;Toolchain fit~工具链适配;Example coverage~示例覆盖
-awesome-codex-subagents|Awesome Codex Subagents|VoltAgent/awesome-codex-subagents|5.5k|directory|86|A|A|B|Codex,Claude,Cursor|A categorized directory of specialized Codex subagents.~专门 Codex 子 Agent 的分类目录。|Subagent discovery~子 Agent 发现|Find specialist roles that can pair with skills~寻找可与 Skill 配合的专家角色|Specialist roles~专家角色;Codex focus~Codex 聚焦;Categorized~分类清楚|Subagent vs skill~子 Agent 与 Skill 边界;Role overlap~角色重叠;Prompt quality~提示词质量
+claude-blog|Claude Blog|AgriciDaniel/claude-blog|1.3k|marketing|75|C|A|B|Claude,Codex|A production-grade blog skill suite with 30 sub-skills, agents, templates, and CI gates.~生产级博客 Skill 套件，包含 30 个子 Skill、Agent、模板和 CI 门槛。|Blog delivery contract~博客交付契约|Plan, draft, audit, optimize, and ship blog content with reusable delivery gates~用可复用交付门槛规划、撰写、审计、优化和发布博客内容|30 SKILL.md files~30 个 SKILL.md;Templates~模板;CI gates~CI 门槛|SEO claim checks~SEO 主张核验;Utility scripts~工具脚本;Content originality~内容原创性
 product-on-purpose-pm-skills|PM Skills|product-on-purpose/pm-skills|4.8k|product|85|A|A|B|Claude,Codex|A product-management skill set for strategy, discovery, and execution rituals.~面向战略、发现和执行仪式的产品管理 Skill 集。|PM operating rituals~产品运营仪式|Add product discipline to agent-assisted planning~给 Agent 辅助规划加入产品纪律|PM workflows~产品工作流;Structured prompts~结构化提示;Low safety risk~安全风险低|Company context~公司上下文;Template sameness~模板同质化;Decision ownership~决策归属
 agentic-seo-skill|Agentic SEO Skill|Bhanunamikaze/Agentic-SEO-Skill|724|marketing|72|C|B|B|Claude,Codex,Antigravity|An SEO analysis skill with sub-skills, specialist agents, and optional utility scripts.~包含子 Skill、专家 Agent 和可选工具脚本的 SEO 分析 Skill。|SEO evidence collectors~SEO 证据采集器|Run SEO audits backed by optional data collectors~运行由可选数据采集器支撑的 SEO 审计|SEO sub-skills~SEO 子 Skill;Specialist agents~专家 Agent;Evidence collectors~证据采集器|Utility scripts~工具脚本;API credentials~API 凭证;Search freshness~搜索时效
-awesome-codex-plugins|Awesome Codex Plugins|hashgraph-online/awesome-codex-plugins|583|directory|84|A|A|B|Codex|A curated marketplace-style list of Codex plugins, skills, and resources.~Codex 插件、Skill 和资源的市场型精选目录。|Codex plugin marketplace~Codex 插件市场|Discover Codex-specific plugins and adjacent skills~发现 Codex 专用插件和相邻 Skill|Codex focus~Codex 聚焦;Plugin registry~插件注册表;Resource links~资源链接|Plugin permissions~插件权限;Install trust~安装信任;Skill vs plugin~Skill 与插件边界
+deep-research-skills|Deep Research Skills|Weizhena/Deep-Research-skills|1.5k|research|86|B|A|A|Claude,Codex,OpenCode|Structured deep-research skills with human-in-the-loop control for Claude Code, OpenCode, and Codex.~带人工在环控制的结构化深度研究 Skills，支持 Claude Code、OpenCode 和 Codex。|Human-in-loop research~人工在环研究|Run deep research with add-items, field expansion, source review, and controlled synthesis~通过增补条目、字段扩展、来源审查和受控综合执行深度研究|20 SKILL.md files~20 个 SKILL.md;Source review~来源审查;Human gates~人工门槛|Source freshness~来源时效;Citation quality~引用质量;Research scope creep~研究范围膨胀
 ok-skills|OK Skills|mxyhi/ok-skills|446|engineering|87|A|A|A|Codex,Claude,Cursor,OpenClaw|Curated coding-agent skills and AGENTS.md playbooks for multiple agents.~面向多个 Agent 的精选编码 Skill 和 AGENTS.md 手册。|Portable coding playbooks~可迁移编码手册|Reuse coding playbooks across SKILL.md-compatible tools~在 SKILL.md 兼容工具间复用编码手册|Portable format~可迁移格式;Coding playbooks~编码手册;AGENTS.md support~支持 AGENTS.md|Rule conflicts~规则冲突;Repo conventions~仓库约定;Maintenance cadence~维护节奏
 plinth|Plinth|jabrena/plinth|413|engineering|78|B|A|B|Claude,Codex|An AI-native Java Enterprise development workflow packaged as skills and agents.~把 Java 企业开发工作流包装成 Skills 和 Agents 的 AI-native 项目。|Enterprise Java workflow~企业 Java 工作流|Modernize Java enterprise SDLC with agent workflows~用 Agent 工作流现代化 Java 企业 SDLC|Java focus~Java 聚焦;Human-in-loop~人工在环;Enterprise SDLC~企业 SDLC|MCP servers~MCP 服务器;Enterprise credentials~企业凭证;Workflow complexity~工作流复杂度
 smart-ralph|Smart Ralph|tzachbon/smart-ralph|406|workflow|80|B|B|B|Claude|A Claude Code plugin combining spec-driven development and smart compaction.~结合规格驱动开发和智能压缩的 Claude Code 插件。|Spec workflow compaction~规格工作流压缩|Keep spec-driven agent work compact and traceable~让规格驱动 Agent 工作保持紧凑且可追溯|Spec loop~规格循环;Compaction~压缩;Claude plugin~Claude 插件|Plugin install~插件安装;Spec drift~规格漂移;Claude lock-in~Claude 锁定
@@ -1439,16 +1436,16 @@ codex-seo|Codex SEO|AgriciDaniel/codex-seo|362|marketing|71|C|B|B|Codex|A Codex-
 terrashark|TerraShark|LukasNiessen/terrashark|293|infra|82|B|A|B|Claude,Codex|A Terraform skill for grounding IaC generation in official best practices.~让 Terraform 和 IaC 生成基于官方最佳实践的 Skill。|Terraform hallucination guard~Terraform 幻觉护栏|Reduce Terraform hallucinations in agent-generated infrastructure code~减少 Agent 生成 Terraform 基础设施代码时的幻觉|Terraform focus~Terraform 聚焦;Best-practice grounding~最佳实践锚定;IaC quality~IaC 质量|Cloud credentials~云凭证;Apply safety~Apply 安全;Provider version drift~Provider 版本变化
 getspecstory|SpecStory|specstoryai/getspecstory|1.3k|knowledge|76|B|B|B|Claude,Codex,Cursor|Turns agent and IDE histories into reusable skills and shareable context.~把 Agent 和 IDE 历史转成可复用 Skill 与可分享上下文。|History-to-skill workflow~历史转 Skill 工作流|Reuse past coding conversations as future agent skills~把过去的编码对话复用成未来 Agent Skill|Conversation reuse~对话复用;Local-first extensions~本地优先扩展;Issue filing~Issue 创建|History privacy~历史隐私;Cloud sync~云同步;Sensitive logs~敏感日志
 babysitter|Babysitter|a5c-ai/babysitter|1.5k|workflow|77|B|B|B|Claude,Codex|A deterministic orchestration system for managing complex agent workforces.~用于管理复杂 Agent workforce 的确定性编排系统。|Agent workforce orchestration~Agent workforce 编排|Coordinate complex multi-agent tasks with deterministic gates~用确定性门槛协调复杂多 Agent 任务|Deterministic orchestration~确定性编排;Complex task support~复杂任务支持;Self-management~自管理|Authority model~权限模型;Task runaway~任务失控;State correctness~状态正确性
-skills-manager|Skills Manager|jiweiyeah/Skills-Manager|869|marketplace|76|B|B|A|Claude,Codex,OpenCode|A desktop app for organizing, syncing, and sharing skills across AI assistants.~用于跨 AI 助手组织、同步和分享 Skill 的桌面应用。|Desktop skill manager~桌面 Skill 管理器|Manage skills locally across multiple coding assistants~在本地跨多个编码助手管理 Skill|Desktop UI~桌面 UI;Cross-assistant sync~跨助手同步;Skill organization~Skill 组织|Desktop permissions~桌面权限;Overwrite risk~覆盖风险;Local path access~本地路径访问
-buildwithclaude|Build With Claude|davepoon/buildwithclaude|3.1k|directory|83|A|A|B|Claude,OpenClaw|A hub for Claude Skills, agents, commands, hooks, plugins, and marketplace collections.~Claude Skills、Agent、命令、Hooks、插件和市场集合的聚合站。|Claude ecosystem hub~Claude 生态聚合|Navigate Claude ecosystem resources beyond a single directory~在单一目录之外导航 Claude 生态资源|Ecosystem hub~生态聚合;Many resource types~资源类型多;Discovery value~发现价值|Not all skills~不全是 Skill;External quality~外部质量;Marketplace drift~市场变化
-anbeime-skill-store|Skill Store|anbeime/skill|3.1k|directory|80|B|B|B|Claude,Codex|A Chinese skill store collecting packaged skills across writing, coding, ML, and automation.~中文 Skill 商店，收录写作、编程、机器学习和自动化等打包技能。|Chinese packaged skill store~中文打包 Skill 商店|Browse install-ready Chinese skill packs by category~按分类浏览可安装的中文 Skill 包|Chinese catalog~中文目录;Packaged skills~打包 Skill;Broad categories~分类广|Auto-scraped sources~自动抓取来源;Package trust~包信任;License review~许可审查
+claude-office-skills|Claude Office Skills|fivetaku/claude-office-skills|61|office|77|B|A|B|Claude,Codex|Office skills for Excel and PowerPoint workflows including DCF, LBO, data cleaning, and deck refresh.~面向 Excel 和 PowerPoint 的办公 Skills，覆盖 DCF、LBO、数据清洗和 deck refresh。|Office analyst workflows~办公分析工作流|Use agent skills for spreadsheet modeling, analysis, and presentation refresh work~用 Agent Skills 处理电子表格建模、分析和演示文稿更新|Excel skills~Excel Skill;PowerPoint skills~PowerPoint Skill;Financial modeling~财务建模|Sensitive files~敏感文件;Formula accuracy~公式准确性;Not financial advice~非投资建议
+pinme|PinMe|glitternetwork/pinme|3.7k|infra|79|B|B|B|Claude,Codex|A frontend deployment workflow with Claude Code skills for auth, email, and LLM-backed publishing.~带 Claude Code Skills 的前端部署工作流，覆盖认证、邮件和 LLM 发布。|Frontend deploy skill~前端部署 Skill|Deploy frontend artifacts and related flows from agent-assisted projects~从 Agent 辅助项目部署前端产物和相关流程|5 SKILL.md files~5 个 SKILL.md;Deployment~部署;Frontend hosting~前端托管|External publish~外部发布;Account credentials~账号凭证;Rollback plan~回滚计划
+academic-claude-workflow|Academic Claude Workflow|pedrohcgs/claude-code-my-workflow|1.4k|science|81|B|A|B|Claude,Codex|A ready-to-fork academic workflow with LaTeX, Beamer, R, replication, and review skills.~可 fork 的学术工作流，包含 LaTeX、Beamer、R、复现和审查 Skills。|Academic reproducibility~学术复现工作流|Support papers, slides, R analysis, replication checks, and adversarial academic review~支持论文、幻灯片、R 分析、复现检查和对抗式学术审查|52 SKILL.md files~52 个 SKILL.md;Replication protocol~复现协议;LaTeX and R~LaTeX 和 R|Academic integrity~学术诚信;Data privacy~数据隐私;Field-specific assumptions~学科假设
 md2wechat-skill|Markdown to WeChat Skill|geekjourneyx/md2wechat-skill|3.1k|writing|72|C|B|B|Claude,Codex|A Markdown-to-WeChat publishing skill with themes, images, and multi-account support.~Markdown 到微信公众号发布 Skill，支持主题、配图和多账号。|WeChat publishing workflow~微信公众号发布工作流|Format and publish Markdown articles to WeChat~把 Markdown 文章排版并发布到微信|Publishing workflow~发布工作流;Many themes~主题丰富;Batch publish~批量发布|Account credentials~账号凭证;Publishing side effects~发布副作用;Image rights~图片权利
 oh-story-claudecode|Oh Story ClaudeCode|worldwonderer/oh-story-claudecode|3.7k|writing|73|B|B|B|Claude|A Chinese fiction-writing skill pack covering research, outlining, drafting, and covers.~中文网文和小说 Skill 包，覆盖扫榜、拆文、写作和封面。|Long-form fiction workflow~长篇小说工作流|Use agents for Chinese web-novel planning and drafting~用 Agent 做中文网文规划和写作|Genre workflow~类型文工作流;Cover pipeline~封面管线;Anti-AI editing~去 AI 味编辑|Copyright style copying~版权和风格模仿;Generated images~生成图片;Platform policy~平台规则
 contentstack-agent-skills|Contentstack Agent Skills|contentstack/contentstack-agent-skills|1k|office|76|B|B|B|Claude,Codex|Agent skills for working with Contentstack CMS and digital experience workflows.~用于处理 Contentstack CMS 与数字体验工作流的 Agent Skills。|CMS workflow skills~CMS 工作流 Skill|Let agents assist CMS content and delivery operations~让 Agent 辅助 CMS 内容和交付运营|CMS focus~CMS 聚焦;Enterprise content~企业内容;Workflow automation~工作流自动化|CMS credentials~CMS 凭证;Content publishing~内容发布;Environment targeting~环境目标
 claude-to-im-skill|Claude to IM Skill|op7418/Claude-to-IM-skill|950|automation|70|C|B|B|Claude,Codex|A skill for connecting Claude-style agent workflows to instant messaging surfaces.~把 Claude 风格 Agent 工作流连接到即时通讯界面的 Skill。|Messaging bridge~消息桥接|Bridge agent workflows into IM conversations~把 Agent 工作流桥接进即时通讯对话|IM integration~IM 集成;Notification flow~通知流程;Conversation surface~对话界面|Message leakage~消息泄露;Bot tokens~机器人 Token;External sends~外部发送
 lev-claude-code-skills|Claude Code Skills|levnikolaevich/claude-code-skills|900|marketplace|80|B|B|B|Claude,Codex|A Claude Code skills collection for coding, docs, and productivity workflows.~面向编码、文档和生产力工作流的 Claude Code Skills 集合。|Claude Code skill pack~Claude Code Skill 包|Borrow reusable Claude Code workflows for everyday work~复用日常工作的 Claude Code 工作流|Reusable workflows~可复用工作流;Coding support~编码支持;Productivity scope~生产力范围|Overlap with larger packs~与大包重叠;Script review~脚本审查;Maintenance cadence~维护节奏
-agent-skill-porter|Agent Skill Porter|skill-mill/agent-skill-porter|850|marketplace|82|B|A|A|Claude,Codex,Cursor,Gemini|A portability tool for converting or adapting skills between agent clients.~在不同 Agent 客户端间转换或适配 Skill 的可迁移工具。|Skill portability tooling~Skill 可迁移工具|Move skills between Claude, Codex, Cursor, and Gemini-style clients~在 Claude、Codex、Cursor 和 Gemini 类客户端间迁移 Skill|Portability~可迁移;Conversion workflow~转换流程;Client mapping~客户端映射|Semantic loss~语义丢失;Path mapping~路径映射;Generated diffs~生成 diff
-awesome-claude-code-toolkit|Awesome Claude Code Toolkit|rohitg00/awesome-claude-code-toolkit|820|directory|82|A|A|B|Claude,Codex|A toolkit-style list of Claude Code resources, workflows, commands, and skills.~Claude Code 资源、工作流、命令和 Skill 的工具箱式列表。|Toolkit directory~工具箱目录|Find practical Claude Code resources by workflow need~按工作流需求找到实用 Claude Code 资源|Toolkit format~工具箱格式;Workflow links~工作流链接;Practical curation~实用筛选|Resource sprawl~资源发散;Link freshness~链接时效;Install review~安装审查
+codex-gpt-image|Codex GPT Image Skill|ningzimu/codex-gpt-image|37|media|69|C|B|B|Codex,Claude,OpenClaw|A Codex OAuth based image-generation skill for gpt-image-2 workflows.~基于 Codex OAuth 的 gpt-image-2 图像生成 Skill。|Image generation skill~图像生成 Skill|Generate images from agent workflows without requiring a separate OpenAI API key~在无需单独 OpenAI API Key 的情况下从 Agent 工作流生成图片|Single SKILL.md~单个 SKILL.md;Codex OAuth~Codex OAuth;Image generation~图像生成|OAuth boundaries~OAuth 边界;Generation cost~生成成本;Asset rights~素材权利
+gpt-image2-ppt-skills|GPT Image to PPT Skills|JuneYaooo/gpt-image2-ppt-skills|1k|office|70|C|B|B|Claude,OpenClaw|A presentation skill for cloning PPTX visual layouts with gpt-image-2 and bundled styles.~用 gpt-image-2 仿制 PPTX 视觉版式并提供风格包的演示文稿 Skill。|PPT visual cloning~PPT 视觉仿版|Turn reference decks into editable presentation drafts with controlled visual styles~把参考演示文稿转成可编辑的演示草稿和受控视觉风格|Single SKILL.md~单个 SKILL.md;Presentation workflow~演示文稿工作流;Visual styles~视觉风格|Template rights~模板权利;Image model cost~图像模型成本;Brand similarity~品牌相似风险
 web-quality-skills|Web Quality Skills|addyosmani/web-quality-skills|1.8k|testing|89|A|A|B|Claude,Codex|Web quality and frontend performance skills from Addy Osmani.~Addy Osmani 的网页质量与前端性能 Skills。|Web quality expertise~网页质量专家经验|Improve agent output for performance, UX, and frontend quality~提升 Agent 输出的性能、UX 和前端质量|Performance focus~性能聚焦;Frontend quality~前端质量;Strong author signal~作者信号强|Metric context~指标上下文;Browser variance~浏览器差异;Project tradeoffs~项目取舍
 skill-scanner|Skill Scanner|cisco-ai-defense/skill-scanner|1.9k|security|83|B|A|B|Claude,Codex|A security scanner for agent skills from Cisco AI Defense.~Cisco AI Defense 出品的 Agent Skill 安全扫描器。|Skill security scanning~Skill 安全扫描|Scan skill packages for risky patterns before installation~安装前扫描 Skill 包中的风险模式|Security scanner~安全扫描器;Risk patterns~风险模式;Defense source~防御来源|False negatives~漏报;Scanner permissions~扫描器权限;Policy tuning~策略调优
 ctf-skills|CTF Skills|ljagiello/ctf-skills|1.8k|security|64|C|B|B|Claude,Codex|Capture-the-flag skills for security learning and challenge solving.~面向安全学习和 CTF 解题的技能包。|Security learning workflows~安全学习工作流|Use agents for controlled CTF practice and security education~用 Agent 做受控 CTF 练习和安全教育|CTF focus~CTF 聚焦;Learning tasks~学习任务;Structured tactics~结构化技巧|Dual-use risk~双用途风险;Lab boundaries~实验边界;Exploit commands~利用命令
@@ -1711,17 +1708,17 @@ const baseSkillInsights: Record<string, SkillInsight> = {
       { en: "Subjective taste", zh: "品味主观" }
     ]
   },
-  "awesome-agent-skills": {
-    intent: { en: "Discover skills across multiple agent clients", zh: "跨多个 Agent 客户端发现技能" },
+  "openai-skills": {
+    intent: { en: "Study installable Codex skill patterns", zh: "学习可安装的 Codex Skill 模式" },
     strengths: [
-      { en: "Curated list", zh: "精选列表" },
-      { en: "Multi-platform", zh: "多平台" },
-      { en: "Low direct risk", zh: "直接风险低" }
+      { en: "Official source", zh: "官方来源" },
+      { en: "Concrete SKILL.md files", zh: "具体 SKILL.md 文件" },
+      { en: "Curated examples", zh: "精选示例" }
     ],
     watchouts: [
-      { en: "Linked repo quality", zh: "链接仓库质量" },
-      { en: "Curation rules", zh: "收录规则" },
-      { en: "Skill vs app", zh: "Skill / App 边界" }
+      { en: "Codex-first assumptions", zh: "Codex 优先假设" },
+      { en: "Example scripts", zh: "示例脚本" },
+      { en: "Generated paths", zh: "生成路径" }
     ]
   },
   "anthropic-skills": {
@@ -1737,17 +1734,17 @@ const baseSkillInsights: Record<string, SkillInsight> = {
       { en: "License clarity", zh: "许可证清晰度" }
     ]
   },
-  "vercel-skills": {
-    intent: { en: "Install and discover agent skills from a CLI", zh: "通过 CLI 安装和发现 Agent Skills" },
+  "agent-skill-creator": {
+    intent: { en: "Convert a repeatable workflow into a skill", zh: "把可重复工作流转成 Skill" },
     strengths: [
-      { en: "npx workflow", zh: "npx 工作流" },
-      { en: "Discovery surface", zh: "发现入口" },
-      { en: "Cross-agent ambition", zh: "跨 Agent 目标" }
+      { en: "Skill generation", zh: "Skill 生成" },
+      { en: "Multi-platform", zh: "多平台" },
+      { en: "Single SKILL.md", zh: "单个 SKILL.md" }
     ],
     watchouts: [
-      { en: "Package install", zh: "包安装" },
-      { en: "Generated paths", zh: "生成路径" },
-      { en: "Trust source", zh: "来源信任" }
+      { en: "Generated quality", zh: "生成质量" },
+      { en: "Source licensing", zh: "来源许可" },
+      { en: "Platform paths", zh: "平台路径" }
     ]
   },
   "mattpocock-skills": {
@@ -1763,42 +1760,43 @@ const baseSkillInsights: Record<string, SkillInsight> = {
       { en: "Personal workflow bias", zh: "个人工作流偏好" }
     ]
   },
-  "composio-awesome-claude-skills": {
-    intent: { en: "Browse a large Claude-focused skills catalog", zh: "浏览大型 Claude Skills 目录" },
+  "nature-skills": {
+    intent: { en: "Improve academic writing and figure work", zh: "改进学术写作和科研绘图" },
     strengths: [
-      { en: "Large corpus", zh: "大规模语料" },
-      { en: "Document skills", zh: "文档 Skill" },
-      { en: "Pattern discovery", zh: "模式发现" }
+      { en: "Academic domain", zh: "学术领域" },
+      { en: "Figure workflow", zh: "科研绘图" },
+      { en: "Multiple SKILL.md files", zh: "多个 SKILL.md 文件" }
     ],
     watchouts: [
-      { en: "Per-skill review", zh: "逐个审查" },
-      { en: "Script assumptions", zh: "脚本假设" },
-      { en: "License gaps", zh: "许可缺口" }
+      { en: "Citation quality", zh: "引用质量" },
+      { en: "Field fit", zh: "学科适配" },
+      { en: "Journal-style claims", zh: "期刊风格主张" }
     ]
   },
-  "antigravity-awesome-skills": {
-    intent: { en: "Explore a very large installable skill library", zh: "探索超大型可安装 Skill 库" },
+  "claude-code-best-practice": {
+    intent: { en: "Move from vibe coding to agentic engineering", zh: "从 vibe coding 走向 agentic engineering" },
     strengths: [
-      { en: "Huge catalog", zh: "超大目录" },
-      { en: "Bundles and plugins", zh: "组合包和插件" },
-      { en: "Multi-platform", zh: "多平台" }
+      { en: "Practice-backed", zh: "实践支持" },
+      { en: "Concrete skills", zh: "具体 Skill" },
+      { en: "Engineering workflow", zh: "工程工作流" }
     ],
     watchouts: [
-      { en: "High script count", zh: "脚本数量高" },
-      { en: "Installer risk", zh: "安装器风险" },
-      { en: "Mixed provenance", zh: "来源混杂" }
+      { en: "Personal conventions", zh: "个人约定" },
+      { en: "Claude Code fit", zh: "Claude Code 适配" },
+      { en: "Process overhead", zh: "流程开销" }
     ]
   },
-  "agentskills-spec": {
-    intent: { en: "Understand the Agent Skills format itself", zh: "理解 Agent Skills 格式本身" },
+  "claude-code-java": {
+    intent: { en: "Add reusable Java development checks", zh: "加入可复用 Java 开发检查" },
     strengths: [
-      { en: "Spec reference", zh: "规范参考" },
-      { en: "Portability anchor", zh: "迁移锚点" },
-      { en: "Low execution risk", zh: "执行风险低" }
+      { en: "Java focus", zh: "Java 聚焦" },
+      { en: "Many skills", zh: "Skill 较多" },
+      { en: "Enterprise workflow", zh: "企业流程" }
     ],
     watchouts: [
-      { en: "Not a safety audit", zh: "不是安全审计" },
-      { en: "Implementation variance", zh: "实现差异" }
+      { en: "Framework versions", zh: "框架版本" },
+      { en: "Project conventions", zh: "项目约定" },
+      { en: "Generated code review", zh: "生成代码审查" }
     ]
   },
   "google-workspace-cli": {
@@ -1918,17 +1916,17 @@ const baseSkillInsights: Record<string, SkillInsight> = {
       { en: "External side effects", zh: "外部副作用" }
     ]
   },
-  "skillshare": {
-    intent: { en: "Share skills across teams and CLI tools", zh: "在团队和多个 CLI 工具间共享 Skill" },
+  "flutterguard": {
+    intent: { en: "Review Flutter mobile app packages", zh: "审查 Flutter 移动应用包" },
     strengths: [
-      { en: "Team sync", zh: "团队同步" },
-      { en: "Cross-tool support", zh: "跨工具支持" },
-      { en: "Simple workflow", zh: "流程简单" }
+      { en: "Flutter focus", zh: "Flutter 聚焦" },
+      { en: "Mobile AppSec", zh: "移动 AppSec" },
+      { en: "Single SKILL.md", zh: "单个 SKILL.md" }
     ],
     watchouts: [
-      { en: "Overwrite behavior", zh: "覆盖行为" },
-      { en: "Private skills", zh: "私有 Skill" },
-      { en: "Path mapping", zh: "路径映射" }
+      { en: "Authorized apps only", zh: "仅限授权应用" },
+      { en: "Reverse engineering", zh: "逆向分析" },
+      { en: "Sensitive binaries", zh: "敏感二进制" }
     ]
   },
   "agent-rules-books": {
@@ -1957,17 +1955,17 @@ const baseSkillInsights: Record<string, SkillInsight> = {
       { en: "Asset rights", zh: "素材权利" }
     ]
   },
-  "aiskillstore-marketplace": {
-    intent: { en: "Find marketplace skills with stated quality gates", zh: "寻找带质量门槛声明的市场 Skill" },
+  "ros2-engineering-skills": {
+    intent: { en: "Improve ROS 2 agent-assisted development", zh: "改进 ROS 2 Agent 辅助开发" },
     strengths: [
-      { en: "Audit positioning", zh: "审计定位" },
-      { en: "Marketplace curation", zh: "市场筛选" },
-      { en: "Install-ready", zh: "安装导向" }
+      { en: "ROS 2 focus", zh: "ROS 2 聚焦" },
+      { en: "Production guidance", zh: "生产级指导" },
+      { en: "Single SKILL.md", zh: "单个 SKILL.md" }
     ],
     watchouts: [
-      { en: "Audit criteria", zh: "审计标准" },
-      { en: "Update cadence", zh: "更新节奏" },
-      { en: "Linked provenance", zh: "链接来源" }
+      { en: "Hardware assumptions", zh: "硬件假设" },
+      { en: "Safety constraints", zh: "安全约束" },
+      { en: "ROS version drift", zh: "ROS 版本变化" }
     ]
   },
   "playwright-skill": {
