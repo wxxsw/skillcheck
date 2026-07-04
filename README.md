@@ -5,7 +5,7 @@
 [![CI](https://github.com/wxxsw/skillcheck/actions/workflows/ci.yml/badge.svg)](https://github.com/wxxsw/skillcheck/actions/workflows/ci.yml)
 [![Pages](https://github.com/wxxsw/skillcheck/actions/workflows/pages.yml/badge.svg)](https://github.com/wxxsw/skillcheck/actions/workflows/pages.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-171915.svg)](LICENSE)
-[![Agent Skills](https://img.shields.io/badge/reviewed_skills-40-e8f15a.svg)](#curated-skill-analysis)
+[![Agent Skills](https://img.shields.io/badge/reviewed_skills-100-e8f15a.svg)](#curated-skill-analysis)
 
 Find agent skills that are safer to install.
 
@@ -19,7 +19,7 @@ SkillCheck reviews agent skill repositories and turns them into simple scorecard
 
 | Use SkillCheck to | Status |
 | --- | --- |
-| Browse 40 reviewed agent skills | MVP in `apps/web` |
+| Browse 100 reviewed agent skills | MVP in `apps/web` |
 | Filter by goal and compare good/risk tags | Live in `apps/web` |
 | Switch the gallery between English and Chinese | Live in `apps/web` |
 | Scan local or public GitHub skill repos | MVP in `packages/cli` |
@@ -37,7 +37,7 @@ https://wxxsw.github.io/skillcheck/
 - Agent skills are becoming a new package ecosystem.
 - Most directories help you find skills. SkillCheck helps you decide whether to trust them.
 - Every entry has a score, safety grade, category, good-signal tags, risk tags, and platform signals.
-- The first corpus uses 40 real high-signal repos, not placeholder data.
+- The first corpus uses 100 real high-signal repos, not placeholder data.
 - The project is small enough to fork, extend, or turn into a badge/API later.
 
 ## Why this exists
@@ -67,7 +67,19 @@ Most skill directories optimize for more links. SkillCheck optimizes for easier 
 
 ## Curated skill analysis
 
-This project tracks 40 high-signal agent skill repos. Stars are approximate GitHub counts checked on 2026-07-04. This is not an endorsement list. It is the first corpus used to shape what SkillCheck scores.
+This project tracks 100 high-signal agent skill repos. Stars are approximate GitHub counts checked on 2026-07-04. This is not an endorsement list. It is the first corpus used to shape what SkillCheck scores. The tables below show representative entries; the full Top 100 catalog is in the live gallery and `data/skills.json`.
+
+### Top-100 selection policy
+
+The catalog is intentionally selective. A repo needs at least one strong reason to be included:
+
+- clear Agent Skill, SKILL.md, agent-command, or agent-workflow relevance
+- strong popularity or repeat appearance across skill directories
+- official, author, vendor, or security signal worth tracking
+- useful category coverage beyond generic coding prompts
+- risks that can be explained before a user clicks install
+
+The current 100 entries cover engineering, workflow, directories, marketplaces, product, marketing, research, science, security, memory, knowledge management, design, frontend, testing, mobile, infrastructure, media, writing, office automation, and data/finance.
 
 ### Methodology and workflow skills
 
@@ -147,7 +159,7 @@ This project tracks 40 high-signal agent skill repos. Stars are approximate GitH
 - A Vite/React directory site in `apps/web`
 - A Node CLI in `packages/cli`
 - A reusable scoring engine in `packages/core`
-- 40 seeded skill entries in `data/skills.json`
+- 100 seeded skill entries in `data/skills.json`
 - Scoring method docs in `docs/scoring.md`
 - GitHub Actions for CI and GitHub Pages
 

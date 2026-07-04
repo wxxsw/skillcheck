@@ -27,7 +27,7 @@ import {
   skills
 } from "./data";
 
-const platformFilters = ["Claude", "Codex", "Cursor", "Gemini", "Copilot", "OpenCode", "OpenClaw", "Antigravity"];
+const platformFilters = ["Claude", "Codex", "Cursor", "Gemini", "Copilot", "OpenCode", "OpenClaw", "Antigravity", "Aider", "Kiro", "Qwen"];
 const languageStorageKey = "skillcheck-language";
 
 const copy = {
