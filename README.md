@@ -5,7 +5,7 @@
 [![CI](https://github.com/wxxsw/skillcheck/actions/workflows/ci.yml/badge.svg)](https://github.com/wxxsw/skillcheck/actions/workflows/ci.yml)
 [![Pages](https://github.com/wxxsw/skillcheck/actions/workflows/pages.yml/badge.svg)](https://github.com/wxxsw/skillcheck/actions/workflows/pages.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-171915.svg)](LICENSE)
-[![Agent Skills](https://img.shields.io/badge/reviewed_skills-20-e8f15a.svg)](#curated-skill-analysis)
+[![Agent Skills](https://img.shields.io/badge/reviewed_skills-40-e8f15a.svg)](#curated-skill-analysis)
 
 Find agent skills that are safer to install.
 
@@ -19,7 +19,7 @@ SkillCheck reviews agent skill repositories and turns them into simple scorecard
 
 | Use SkillCheck to | Status |
 | --- | --- |
-| Browse 20 reviewed agent skills | MVP in `apps/web` |
+| Browse 40 reviewed agent skills | MVP in `apps/web` |
 | Filter by goal and compare good/risk tags | Live in `apps/web` |
 | Switch the gallery between English and Chinese | Live in `apps/web` |
 | Scan local or public GitHub skill repos | MVP in `packages/cli` |
@@ -37,7 +37,7 @@ https://wxxsw.github.io/skillcheck/
 - Agent skills are becoming a new package ecosystem.
 - Most directories help you find skills. SkillCheck helps you decide whether to trust them.
 - Every entry has a score, safety grade, category, good-signal tags, risk tags, and platform signals.
-- The first corpus uses 20 real high-signal repos, not placeholder data.
+- The first corpus uses 40 real high-signal repos, not placeholder data.
 - The project is small enough to fork, extend, or turn into a badge/API later.
 
 ## Why this exists
@@ -67,7 +67,7 @@ Most skill directories optimize for more links. SkillCheck optimizes for easier 
 
 ## Curated skill analysis
 
-This project started with 20 high-signal agent skill repos. Stars are approximate GitHub counts checked on 2026-07-04. This is not an endorsement list. It is the first corpus used to shape what SkillCheck scores.
+This project tracks 40 high-signal agent skill repos. Stars are approximate GitHub counts checked on 2026-07-04. This is not an endorsement list. It is the first corpus used to shape what SkillCheck scores.
 
 ### Methodology and workflow skills
 
@@ -109,6 +109,31 @@ This project started with 20 high-signal agent skill repos. Stars are approximat
 | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | 19k | Broad multi-domain library with agents, commands, scripts, and plugins. | Installer behavior, duplicate skill names, script execution, and per-skill license clarity. |
 | [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) | 27k | Broad multi-platform directory for Claude Code, Codex, Gemini CLI, Cursor, and more. | Platform compatibility evidence, curation rules, and whether it distinguishes skills from apps. |
 
+### Second-wave additions
+
+| Repo | Stars | Why it was added | What SkillCheck should inspect |
+| --- | ---: | --- | --- |
+| [anthropics/skills](https://github.com/anthropics/skills) | 158k | Official public example repo for Agent Skills patterns. | Example scripts, license clarity, and Claude-first assumptions. |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | 156k | Engineering skills built from real coding-agent failure modes. | Router freshness, local symlinks, and personal workflow assumptions. |
+| [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | 67k | Large Claude Skills directory with many document/workflow examples. | Per-skill safety, license coverage, and script assumptions. |
+| [sickn33/antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) | 42k | Large installable multi-agent catalog with bundles and plugins. | Installer CLI behavior, plugin provenance, and high script volume. |
+| [googleworkspace/cli](https://github.com/googleworkspace/cli) | 29k | Official Workspace automation CLI with agent skills. | OAuth scopes, admin permissions, write actions, and API side effects. |
+| [vercel-labs/skills](https://github.com/vercel-labs/skills) | 25k | Open skill installer/discovery tool. | Package installation behavior, generated paths, and trusted-source checks. |
+| [agentskills/agentskills](https://github.com/agentskills/agentskills) | 22k | Format specification and documentation for Agent Skills. | Boundary between spec compliance and runtime safety. |
+| [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | 11k | Research system for optimizing reusable natural-language skills. | Training data, evaluation harnesses, scripts, and transferability. |
+| [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs) | 10k | AI research and engineering skill library. | Experiment scripts, compute cost, citation quality, and benchmark evidence. |
+| [Jeffallan/claude-skills](https://github.com/Jeffallan/claude-skills) | 10k | Full-stack development skill pack. | Framework freshness, examples, Claude-specific wording, and helper scripts. |
+| [deanpeters/Product-Manager-Skills](https://github.com/deanpeters/Product-Manager-Skills) | 5.6k | Product-management methods packaged as reusable skills. | Template specificity, company context requirements, and decision-quality guardrails. |
+| [Agents365-ai/drawio-skill](https://github.com/Agents365-ai/drawio-skill) | 5.1k | Diagram generation from natural language and codebase context. | Export scripts, generated files, asset licensing, and diagram accuracy. |
+| [twostraws/SwiftUI-Agent-Skill](https://github.com/twostraws/SwiftUI-Agent-Skill) | 4.3k | Specialized SwiftUI agent skill for Apple app development. | SwiftUI version drift, Apple API changes, and project assumptions. |
+| [SamurAIGPT/Generative-Media-Skills](https://github.com/SamurAIGPT/Generative-Media-Skills) | 3.7k | Multimodal image, video, and audio skill pack. | Paid APIs, media rights, prompt provenance, and generation cost. |
+| [browser-act/skills](https://github.com/browser-act/skills) | 3.6k | Browser automation skills with human handoff and parallel sessions. | Account risk, credentials, anti-bot boundaries, and external side effects. |
+| [runkids/skillshare](https://github.com/runkids/skillshare) | 2.4k | Syncs skills across multiple AI CLI tools for teams. | Sync destinations, overwrites, private skills, and path mapping. |
+| [ciembor/agent-rules-books](https://github.com/ciembor/agent-rules-books) | 2.1k | Engineering rules distilled from classic software books. | Interpretation quality, copyright boundaries, and benchmark limitations. |
+| [zanwei/design-dna](https://github.com/zanwei/design-dna) | 975 | Extracts reusable UI style direction from references. | Screenshot privacy, URL fetching, asset rights, and reproducibility. |
+| [aiskillstore/marketplace](https://github.com/aiskillstore/marketplace) | 380 | Marketplace positioned around security-audited skills. | Audit criteria, update cadence, linked-skill provenance, and install flow. |
+| [testdino-hq/playwright-skill](https://github.com/testdino-hq/playwright-skill) | 297 | Focused Playwright testing best-practices skill. | Playwright version drift, project fixtures, CI differences, and examples. |
+
 ### Patterns from the review
 
 - Good skill repos package repeatable workflows, not just clever prompts.
@@ -122,7 +147,7 @@ This project started with 20 high-signal agent skill repos. Stars are approximat
 - A Vite/React directory site in `apps/web`
 - A Node CLI in `packages/cli`
 - A reusable scoring engine in `packages/core`
-- 20 seeded skill entries in `data/skills.json`
+- 40 seeded skill entries in `data/skills.json`
 - Scoring method docs in `docs/scoring.md`
 - GitHub Actions for CI and GitHub Pages
 

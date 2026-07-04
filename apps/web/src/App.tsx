@@ -27,7 +27,7 @@ import {
   skills
 } from "./data";
 
-const platformFilters = ["Claude", "Codex", "Cursor", "Gemini", "Copilot", "OpenCode", "OpenClaw"];
+const platformFilters = ["Claude", "Codex", "Cursor", "Gemini", "Copilot", "OpenCode", "OpenClaw", "Antigravity"];
 const languageStorageKey = "skillcheck-language";
 
 const copy = {
@@ -45,7 +45,7 @@ const copy = {
       eyebrow: "Agent skills, reviewed before install",
       title: "Find skills you can trust.",
       lede: "SkillCheck reviews agent skill repos and shows the risks, docs, platform support, and proof in one simple scorecard.",
-      browse: "Browse 20 reviewed skills",
+      browse: (count: number) => `Browse ${count} reviewed skills`,
       star: "Star the project",
       trust: ["Risk scan", "Human review", "Works across agents"]
     },
@@ -149,7 +149,7 @@ const copy = {
       eyebrow: "安装前先审查 Agent Skill",
       title: "找到更值得信任的 Skill。",
       lede: "SkillCheck 会审阅 Agent Skill 仓库，把风险、文档、平台支持和证据整理成一张简单评分卡。",
-      browse: "浏览 20 个已审阅技能",
+      browse: (count: number) => `浏览 ${count} 个已审阅技能`,
       star: "给项目 Star",
       trust: ["风险扫描", "人工审查", "跨 Agent 可用"]
     },
@@ -303,7 +303,7 @@ export default function App() {
           <p className="lede">{t.hero.lede}</p>
           <div className="heroActions">
             <a className="primaryAction" href="#directory">
-              {t.hero.browse}
+              {t.hero.browse(skills.length)}
               <ArrowUpRight size={17} aria-hidden="true" />
             </a>
             <a className="secondaryAction" href="https://github.com/wxxsw/skillcheck" target="_blank" rel="noreferrer">

@@ -716,6 +716,646 @@ export const skills: SkillEntry[] = [
         zh: "链接项目仍然需要单独审查"
       }
     ]
+  },
+  {
+    id: "anthropic-skills",
+    name: "Anthropic Skills",
+    repo: "anthropics/skills",
+    url: "https://github.com/anthropics/skills",
+    stars: "158k",
+    category: "marketplace",
+    summary: {
+      en: "The public example repository for Anthropic's Agent Skills system.",
+      zh: "Anthropic 官方 Agent Skills 示例仓库。"
+    },
+    signal: {
+      en: "Official reference examples",
+      zh: "官方参考示例"
+    },
+    platforms: ["Claude"],
+    score: 90,
+    safety: "B",
+    docs: "A",
+    portability: "B",
+    badges: [
+      { en: "Official source", zh: "官方来源" },
+      { en: "Many examples", zh: "示例丰富" },
+      { en: "Script review", zh: "脚本审查" }
+    ],
+    risks: [
+      {
+        en: "Some examples include scripts, assets, or tool assumptions",
+        zh: "部分示例包含脚本、素材或工具假设"
+      }
+    ]
+  },
+  {
+    id: "vercel-skills",
+    name: "Vercel Skills",
+    repo: "vercel-labs/skills",
+    url: "https://github.com/vercel-labs/skills",
+    stars: "25k",
+    category: "marketplace",
+    summary: {
+      en: "An open agent-skills tool and installer built around npx skills.",
+      zh: "围绕 npx skills 构建的开放 Agent Skills 工具和安装器。"
+    },
+    signal: {
+      en: "Installer and discovery tool",
+      zh: "安装与发现工具"
+    },
+    platforms: ["Claude", "Codex", "Cursor"],
+    score: 84,
+    safety: "B",
+    docs: "A",
+    portability: "A",
+    badges: [
+      { en: "Installer", zh: "安装器" },
+      { en: "Find skills", zh: "发现 Skill" },
+      { en: "Cross-agent aim", zh: "跨 Agent 目标" }
+    ],
+    risks: [
+      {
+        en: "Review package install behavior and generated skill paths",
+        zh: "审查包安装行为和生成的 Skill 路径"
+      }
+    ]
+  },
+  {
+    id: "mattpocock-skills",
+    name: "Matt Pocock Skills",
+    repo: "mattpocock/skills",
+    url: "https://github.com/mattpocock/skills",
+    stars: "156k",
+    category: "engineering",
+    summary: {
+      en: "Engineering skills focused on common coding-agent failure modes.",
+      zh: "聚焦编程 Agent 常见失败模式的工程技能。"
+    },
+    signal: {
+      en: "Practitioner workflow library",
+      zh: "实践者工作流库"
+    },
+    platforms: ["Claude", "Codex"],
+    score: 88,
+    safety: "B",
+    docs: "A",
+    portability: "B",
+    badges: [
+      { en: "Engineering taste", zh: "工程判断" },
+      { en: "Router skill", zh: "路由 Skill" },
+      { en: "Low script count", zh: "脚本较少" }
+    ],
+    risks: [
+      {
+        en: "Check router freshness and whether local symlinks are used",
+        zh: "检查路由是否及时更新，以及是否使用本地符号链接"
+      }
+    ]
+  },
+  {
+    id: "composio-awesome-claude-skills",
+    name: "Awesome Claude Skills",
+    repo: "ComposioHQ/awesome-claude-skills",
+    url: "https://github.com/ComposioHQ/awesome-claude-skills",
+    stars: "67k",
+    category: "directory",
+    summary: {
+      en: "A large Claude Skills directory with many document and workflow examples.",
+      zh: "大型 Claude Skills 目录，包含大量文档和工作流示例。"
+    },
+    signal: {
+      en: "Large public catalog",
+      zh: "大型公开目录"
+    },
+    platforms: ["Claude"],
+    score: 83,
+    safety: "B",
+    docs: "A",
+    portability: "B",
+    badges: [
+      { en: "Many SKILL.md files", zh: "大量 SKILL.md" },
+      { en: "Document workflows", zh: "文档工作流" },
+      { en: "Catalog value", zh: "目录价值" }
+    ],
+    risks: [
+      {
+        en: "Review individual skills, licenses, and script assumptions separately",
+        zh: "需要逐个审查 Skill、许可证和脚本假设"
+      }
+    ]
+  },
+  {
+    id: "antigravity-awesome-skills",
+    name: "Antigravity Awesome Skills",
+    repo: "sickn33/antigravity-awesome-skills",
+    url: "https://github.com/sickn33/antigravity-awesome-skills",
+    stars: "42k",
+    category: "directory",
+    summary: {
+      en: "An installable multi-agent library with many skills, plugins, and bundles.",
+      zh: "可安装的多 Agent 技能库，包含技能、插件和组合包。"
+    },
+    signal: {
+      en: "Huge installable catalog",
+      zh: "超大型可安装目录"
+    },
+    platforms: ["Claude", "Codex", "Cursor", "Gemini", "OpenCode", "Antigravity"],
+    score: 75,
+    safety: "C",
+    docs: "A",
+    portability: "A",
+    badges: [
+      { en: "Installer CLI", zh: "安装 CLI" },
+      { en: "Very large library", zh: "超大规模库" },
+      { en: "Multi-platform", zh: "多平台" }
+    ],
+    risks: [
+      {
+        en: "High script count, bundled plugins, and per-skill provenance need review",
+        zh: "脚本很多、插件混合、单个 Skill 来源都需要审查"
+      }
+    ]
+  },
+  {
+    id: "agentskills-spec",
+    name: "Agent Skills Spec",
+    repo: "agentskills/agentskills",
+    url: "https://github.com/agentskills/agentskills",
+    stars: "22k",
+    category: "context",
+    summary: {
+      en: "Specification and documentation for the Agent Skills format.",
+      zh: "Agent Skills 格式的规范和文档。"
+    },
+    signal: {
+      en: "Spec-level reference",
+      zh: "规范级参考"
+    },
+    platforms: ["Claude", "Codex", "Cursor", "Gemini", "Copilot", "OpenCode"],
+    score: 92,
+    safety: "A",
+    docs: "A",
+    portability: "A",
+    badges: [
+      { en: "Specification", zh: "规范" },
+      { en: "Low execution risk", zh: "执行风险低" },
+      { en: "Portability anchor", zh: "迁移锚点" }
+    ],
+    risks: [
+      {
+        en: "Spec compliance does not prove an individual skill is safe",
+        zh: "符合规范不代表单个 Skill 一定安全"
+      }
+    ]
+  },
+  {
+    id: "google-workspace-cli",
+    name: "Google Workspace CLI",
+    repo: "googleworkspace/cli",
+    url: "https://github.com/googleworkspace/cli",
+    stars: "29k",
+    category: "workflow",
+    summary: {
+      en: "A Google Workspace command-line tool that includes AI agent skills.",
+      zh: "包含 AI Agent Skills 的 Google Workspace 命令行工具。"
+    },
+    signal: {
+      en: "Workspace automation",
+      zh: "办公套件自动化"
+    },
+    platforms: ["Claude", "Codex", "Gemini"],
+    score: 72,
+    safety: "C",
+    docs: "A",
+    portability: "B",
+    badges: [
+      { en: "Official Google", zh: "Google 官方" },
+      { en: "Workspace APIs", zh: "Workspace API" },
+      { en: "CLI surface", zh: "CLI 接口" }
+    ],
+    risks: [
+      {
+        en: "Review OAuth scopes, admin permissions, and write actions",
+        zh: "审查 OAuth scope、管理员权限和写操作"
+      }
+    ]
+  },
+  {
+    id: "skillopt",
+    name: "SkillOpt",
+    repo: "microsoft/SkillOpt",
+    url: "https://github.com/microsoft/SkillOpt",
+    stars: "11k",
+    category: "research",
+    summary: {
+      en: "A research system for optimizing reusable natural-language skills.",
+      zh: "用于优化可复用自然语言 Skill 的研究系统。"
+    },
+    signal: {
+      en: "Skill optimization research",
+      zh: "Skill 优化研究"
+    },
+    platforms: ["Claude", "Codex", "Gemini"],
+    score: 78,
+    safety: "B",
+    docs: "B",
+    portability: "B",
+    badges: [
+      { en: "Research code", zh: "研究代码" },
+      { en: "Validation gates", zh: "验证门槛" },
+      { en: "Reusable skill artifacts", zh: "可复用 Skill 产物" }
+    ],
+    risks: [
+      {
+        en: "Check training data, evaluation harness, and script execution",
+        zh: "检查训练数据、评测流程和脚本执行"
+      }
+    ]
+  },
+  {
+    id: "ai-research-skills",
+    name: "AI Research SKILLs",
+    repo: "Orchestra-Research/AI-Research-SKILLs",
+    url: "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+    stars: "10k",
+    category: "research",
+    summary: {
+      en: "A research and engineering skill library for AI research agents.",
+      zh: "面向 AI 研究 Agent 的研究与工程技能库。"
+    },
+    signal: {
+      en: "AI research workflows",
+      zh: "AI 研究工作流"
+    },
+    platforms: ["Claude", "Codex", "Gemini"],
+    score: 80,
+    safety: "B",
+    docs: "A",
+    portability: "B",
+    badges: [
+      { en: "Research library", zh: "研究库" },
+      { en: "Many skills", zh: "Skill 较多" },
+      { en: "Benchmark potential", zh: "适合 Benchmark" }
+    ],
+    risks: [
+      {
+        en: "Review experiment scripts, compute cost, and citation quality",
+        zh: "审查实验脚本、算力成本和引用质量"
+      }
+    ]
+  },
+  {
+    id: "jeffallan-claude-skills",
+    name: "Full-Stack Claude Skills",
+    repo: "Jeffallan/claude-skills",
+    url: "https://github.com/Jeffallan/claude-skills",
+    stars: "10k",
+    category: "engineering",
+    summary: {
+      en: "A full-stack developer skill pack for common implementation work.",
+      zh: "面向常见全栈实现工作的开发者 Skill 包。"
+    },
+    signal: {
+      en: "Full-stack coverage",
+      zh: "全栈覆盖"
+    },
+    platforms: ["Claude"],
+    score: 83,
+    safety: "B",
+    docs: "B",
+    portability: "B",
+    badges: [
+      { en: "Developer skills", zh: "开发者技能" },
+      { en: "Full-stack", zh: "全栈" },
+      { en: "Practical scope", zh: "实用范围" }
+    ],
+    risks: [
+      {
+        en: "Check framework freshness, examples, and script helpers",
+        zh: "检查框架时效性、示例和辅助脚本"
+      }
+    ]
+  },
+  {
+    id: "product-manager-skills",
+    name: "Product Manager Skills",
+    repo: "deanpeters/Product-Manager-Skills",
+    url: "https://github.com/deanpeters/Product-Manager-Skills",
+    stars: "5.6k",
+    category: "product",
+    summary: {
+      en: "A product-management skills framework built on battle-tested methods.",
+      zh: "基于成熟方法论的产品管理 Skills 框架。"
+    },
+    signal: {
+      en: "PM method library",
+      zh: "产品方法库"
+    },
+    platforms: ["Claude", "Codex"],
+    score: 86,
+    safety: "A",
+    docs: "A",
+    portability: "B",
+    badges: [
+      { en: "Product methods", zh: "产品方法" },
+      { en: "Low execution risk", zh: "执行风险低" },
+      { en: "Structured outputs", zh: "结构化产出" }
+    ],
+    risks: [
+      {
+        en: "Watch for generic PM templates without company context",
+        zh: "注意缺少公司上下文的通用产品模板"
+      }
+    ]
+  },
+  {
+    id: "swiftui-agent-skill",
+    name: "SwiftUI Agent Skill",
+    repo: "twostraws/SwiftUI-Agent-Skill",
+    url: "https://github.com/twostraws/SwiftUI-Agent-Skill",
+    stars: "4.3k",
+    category: "frontend",
+    summary: {
+      en: "A SwiftUI-focused agent skill for modern Apple app development.",
+      zh: "面向现代 Apple 应用开发的 SwiftUI Agent Skill。"
+    },
+    signal: {
+      en: "Specialized platform guidance",
+      zh: "专门平台指导"
+    },
+    platforms: ["Claude", "Codex", "Cursor", "Gemini"],
+    score: 90,
+    safety: "A",
+    docs: "A",
+    portability: "A",
+    badges: [
+      { en: "SwiftUI focus", zh: "SwiftUI 聚焦" },
+      { en: "Strong author signal", zh: "作者信号强" },
+      { en: "Low execution risk", zh: "执行风险低" }
+    ],
+    risks: [
+      {
+        en: "Keep guidance aligned with current SwiftUI and iOS versions",
+        zh: "让建议跟当前 SwiftUI 和 iOS 版本保持一致"
+      }
+    ]
+  },
+  {
+    id: "drawio-skill",
+    name: "Draw.io Skill",
+    repo: "Agents365-ai/drawio-skill",
+    url: "https://github.com/Agents365-ai/drawio-skill",
+    stars: "5.1k",
+    category: "media",
+    summary: {
+      en: "Generates draw.io diagrams from natural language and codebase context.",
+      zh: "从自然语言和代码库上下文生成 draw.io 图表。"
+    },
+    signal: {
+      en: "Diagram generation",
+      zh: "图表生成"
+    },
+    platforms: ["Claude", "Codex", "Cursor", "Gemini"],
+    score: 76,
+    safety: "B",
+    docs: "A",
+    portability: "B",
+    badges: [
+      { en: "Diagram export", zh: "图表导出" },
+      { en: "Vision self-check", zh: "视觉自检" },
+      { en: "Asset library", zh: "素材库" }
+    ],
+    risks: [
+      {
+        en: "Review export scripts, generated files, and asset licensing",
+        zh: "审查导出脚本、生成文件和素材许可"
+      }
+    ]
+  },
+  {
+    id: "generative-media-skills",
+    name: "Generative Media Skills",
+    repo: "SamurAIGPT/Generative-Media-Skills",
+    url: "https://github.com/SamurAIGPT/Generative-Media-Skills",
+    stars: "3.7k",
+    category: "media",
+    summary: {
+      en: "Multimodal image, video, and audio generation skills for agents.",
+      zh: "面向 Agent 的图像、视频和音频生成 Skill 包。"
+    },
+    signal: {
+      en: "Multimodal media creation",
+      zh: "多模态媒体创作"
+    },
+    platforms: ["Claude", "Cursor", "Gemini"],
+    score: 69,
+    safety: "C",
+    docs: "B",
+    portability: "B",
+    badges: [
+      { en: "Image/video/audio", zh: "图像/视频/音频" },
+      { en: "External APIs", zh: "外部 API" },
+      { en: "Creative workflows", zh: "创作工作流" }
+    ],
+    risks: [
+      {
+        en: "Review paid API usage, media rights, and generation cost",
+        zh: "审查付费 API、媒体权利和生成成本"
+      }
+    ]
+  },
+  {
+    id: "browser-act-skills",
+    name: "Browser Act Skills",
+    repo: "browser-act/skills",
+    url: "https://github.com/browser-act/skills",
+    stars: "3.6k",
+    category: "security",
+    summary: {
+      en: "Browser automation skills with human handoff and parallel sessions.",
+      zh: "带人工接管和平行会话的浏览器自动化 Skills。"
+    },
+    signal: {
+      en: "Browser automation",
+      zh: "浏览器自动化"
+    },
+    platforms: ["Claude", "Codex", "Cursor"],
+    score: 66,
+    safety: "C",
+    docs: "B",
+    portability: "B",
+    badges: [
+      { en: "Browser control", zh: "浏览器控制" },
+      { en: "Human handoff", zh: "人工接管" },
+      { en: "Parallel sessions", zh: "并行会话" }
+    ],
+    risks: [
+      {
+        en: "Anti-bot, account, credential, and external side-effect risk",
+        zh: "反爬、账号、凭证和外部副作用风险"
+      }
+    ]
+  },
+  {
+    id: "skillshare",
+    name: "Skillshare",
+    repo: "runkids/skillshare",
+    url: "https://github.com/runkids/skillshare",
+    stars: "2.4k",
+    category: "marketplace",
+    summary: {
+      en: "Syncs skills across multiple AI CLI tools for team sharing.",
+      zh: "在多个 AI CLI 工具之间同步 Skill，方便团队共享。"
+    },
+    signal: {
+      en: "Cross-tool sync",
+      zh: "跨工具同步"
+    },
+    platforms: ["Claude", "Codex", "OpenClaw", "OpenCode"],
+    score: 81,
+    safety: "B",
+    docs: "B",
+    portability: "A",
+    badges: [
+      { en: "Team sharing", zh: "团队共享" },
+      { en: "Cross-tool paths", zh: "跨工具路径" },
+      { en: "Sync workflow", zh: "同步工作流" }
+    ],
+    risks: [
+      {
+        en: "Review sync destinations, overwrite behavior, and private skills",
+        zh: "审查同步目标、覆盖行为和私有 Skill"
+      }
+    ]
+  },
+  {
+    id: "agent-rules-books",
+    name: "Agent Rules Books",
+    repo: "ciembor/agent-rules-books",
+    url: "https://github.com/ciembor/agent-rules-books",
+    stars: "2.1k",
+    category: "engineering",
+    summary: {
+      en: "Rules and skills distilled from classic software engineering books.",
+      zh: "从经典软件工程书籍提炼出的规则和 Skills。"
+    },
+    signal: {
+      en: "Book-backed engineering rules",
+      zh: "书籍支持的工程规则"
+    },
+    platforms: ["Claude", "Codex", "Cursor"],
+    score: 89,
+    safety: "A",
+    docs: "A",
+    portability: "A",
+    badges: [
+      { en: "Book-derived", zh: "来自书籍" },
+      { en: "Compact variants", zh: "紧凑版本" },
+      { en: "Low execution risk", zh: "执行风险低" }
+    ],
+    risks: [
+      {
+        en: "Rules are interpretations, not official publisher material",
+        zh: "规则是二次提炼，不是出版社官方材料"
+      }
+    ]
+  },
+  {
+    id: "design-dna",
+    name: "Design DNA",
+    repo: "zanwei/design-dna",
+    url: "https://github.com/zanwei/design-dna",
+    stars: "975",
+    category: "design",
+    summary: {
+      en: "Turns reference UI screenshots and URLs into reusable design DNA.",
+      zh: "把参考 UI 截图和 URL 转成可复用的 Design DNA。"
+    },
+    signal: {
+      en: "Reference-driven UI generation",
+      zh: "参考驱动 UI 生成"
+    },
+    platforms: ["Claude", "Codex", "Cursor"],
+    score: 78,
+    safety: "B",
+    docs: "B",
+    portability: "B",
+    badges: [
+      { en: "Visual extraction", zh: "视觉提取" },
+      { en: "Design tokens", zh: "设计 Token" },
+      { en: "URL input", zh: "URL 输入" }
+    ],
+    risks: [
+      {
+        en: "Review screenshot privacy, URL fetching, and asset rights",
+        zh: "审查截图隐私、URL 抓取和素材权利"
+      }
+    ]
+  },
+  {
+    id: "aiskillstore-marketplace",
+    name: "AI Skill Store",
+    repo: "aiskillstore/marketplace",
+    url: "https://github.com/aiskillstore/marketplace",
+    stars: "380",
+    category: "marketplace",
+    summary: {
+      en: "A marketplace positioning itself around security-audited skills.",
+      zh: "主打安全审计 Skill 的市场型仓库。"
+    },
+    signal: {
+      en: "Security-audited positioning",
+      zh: "安全审计定位"
+    },
+    platforms: ["Claude", "Codex"],
+    score: 85,
+    safety: "B",
+    docs: "A",
+    portability: "A",
+    badges: [
+      { en: "Quality gates", zh: "质量门槛" },
+      { en: "Marketplace", zh: "市场" },
+      { en: "Install focus", zh: "安装导向" }
+    ],
+    risks: [
+      {
+        en: "Verify audit criteria, update cadence, and linked skill provenance",
+        zh: "核验审计标准、更新节奏和链接 Skill 来源"
+      }
+    ]
+  },
+  {
+    id: "playwright-skill",
+    name: "Playwright Skill",
+    repo: "testdino-hq/playwright-skill",
+    url: "https://github.com/testdino-hq/playwright-skill",
+    stars: "297",
+    category: "engineering",
+    summary: {
+      en: "A focused Playwright best-practices skill for test automation.",
+      zh: "聚焦 Playwright 最佳实践的测试自动化 Skill。"
+    },
+    signal: {
+      en: "Testing best practices",
+      zh: "测试最佳实践"
+    },
+    platforms: ["Claude", "Codex", "Cursor"],
+    score: 87,
+    safety: "A",
+    docs: "A",
+    portability: "B",
+    badges: [
+      { en: "Testing focus", zh: "测试聚焦" },
+      { en: "Playwright", zh: "Playwright" },
+      { en: "Low direct risk", zh: "直接风险低" }
+    ],
+    risks: [
+      {
+        en: "Keep examples current with Playwright and project test setup",
+        zh: "让示例跟 Playwright 和项目测试配置保持一致"
+      }
+    ]
   }
 ];
 
@@ -972,6 +1612,265 @@ export const skillInsights: Record<string, SkillInsight> = {
       { en: "Linked repo quality", zh: "链接仓库质量" },
       { en: "Curation rules", zh: "收录规则" },
       { en: "Skill vs app", zh: "Skill / App 边界" }
+    ]
+  },
+  "anthropic-skills": {
+    intent: { en: "Study official Agent Skills patterns", zh: "学习官方 Agent Skills 模式" },
+    strengths: [
+      { en: "Official reference", zh: "官方参考" },
+      { en: "Example variety", zh: "示例多样" },
+      { en: "Canonical format", zh: "格式规范" }
+    ],
+    watchouts: [
+      { en: "Example scripts", zh: "示例脚本" },
+      { en: "Claude-first assumptions", zh: "Claude 优先假设" },
+      { en: "License clarity", zh: "许可证清晰度" }
+    ]
+  },
+  "vercel-skills": {
+    intent: { en: "Install and discover agent skills from a CLI", zh: "通过 CLI 安装和发现 Agent Skills" },
+    strengths: [
+      { en: "npx workflow", zh: "npx 工作流" },
+      { en: "Discovery surface", zh: "发现入口" },
+      { en: "Cross-agent ambition", zh: "跨 Agent 目标" }
+    ],
+    watchouts: [
+      { en: "Package install", zh: "包安装" },
+      { en: "Generated paths", zh: "生成路径" },
+      { en: "Trust source", zh: "来源信任" }
+    ]
+  },
+  "mattpocock-skills": {
+    intent: { en: "Fix practical coding-agent failure modes", zh: "修正常见编程 Agent 失败模式" },
+    strengths: [
+      { en: "Practitioner taste", zh: "实践者判断" },
+      { en: "Focused engineering", zh: "工程聚焦" },
+      { en: "Router discipline", zh: "路由纪律" }
+    ],
+    watchouts: [
+      { en: "Router freshness", zh: "路由时效" },
+      { en: "Local symlinks", zh: "本地符号链接" },
+      { en: "Personal workflow bias", zh: "个人工作流偏好" }
+    ]
+  },
+  "composio-awesome-claude-skills": {
+    intent: { en: "Browse a large Claude-focused skills catalog", zh: "浏览大型 Claude Skills 目录" },
+    strengths: [
+      { en: "Large corpus", zh: "大规模语料" },
+      { en: "Document skills", zh: "文档 Skill" },
+      { en: "Pattern discovery", zh: "模式发现" }
+    ],
+    watchouts: [
+      { en: "Per-skill review", zh: "逐个审查" },
+      { en: "Script assumptions", zh: "脚本假设" },
+      { en: "License gaps", zh: "许可缺口" }
+    ]
+  },
+  "antigravity-awesome-skills": {
+    intent: { en: "Explore a very large installable skill library", zh: "探索超大型可安装 Skill 库" },
+    strengths: [
+      { en: "Huge catalog", zh: "超大目录" },
+      { en: "Bundles and plugins", zh: "组合包和插件" },
+      { en: "Multi-platform", zh: "多平台" }
+    ],
+    watchouts: [
+      { en: "High script count", zh: "脚本数量高" },
+      { en: "Installer risk", zh: "安装器风险" },
+      { en: "Mixed provenance", zh: "来源混杂" }
+    ]
+  },
+  "agentskills-spec": {
+    intent: { en: "Understand the Agent Skills format itself", zh: "理解 Agent Skills 格式本身" },
+    strengths: [
+      { en: "Spec reference", zh: "规范参考" },
+      { en: "Portability anchor", zh: "迁移锚点" },
+      { en: "Low execution risk", zh: "执行风险低" }
+    ],
+    watchouts: [
+      { en: "Not a safety audit", zh: "不是安全审计" },
+      { en: "Implementation variance", zh: "实现差异" }
+    ]
+  },
+  "google-workspace-cli": {
+    intent: { en: "Automate Google Workspace from agents", zh: "让 Agent 自动化 Google Workspace" },
+    strengths: [
+      { en: "Official Google", zh: "Google 官方" },
+      { en: "Workspace coverage", zh: "办公覆盖广" },
+      { en: "CLI automation", zh: "CLI 自动化" }
+    ],
+    watchouts: [
+      { en: "OAuth scopes", zh: "OAuth scope" },
+      { en: "Admin permissions", zh: "管理员权限" },
+      { en: "Write actions", zh: "写操作" }
+    ]
+  },
+  "skillopt": {
+    intent: { en: "Research how reusable skills can be optimized", zh: "研究可复用 Skill 如何优化" },
+    strengths: [
+      { en: "Research-backed", zh: "研究支持" },
+      { en: "Validation gates", zh: "验证门槛" },
+      { en: "Skill artifacts", zh: "Skill 产物" }
+    ],
+    watchouts: [
+      { en: "Experiment scripts", zh: "实验脚本" },
+      { en: "Training data", zh: "训练数据" },
+      { en: "Benchmark transfer", zh: "Benchmark 迁移性" }
+    ]
+  },
+  "ai-research-skills": {
+    intent: { en: "Give agents AI research and engineering workflows", zh: "给 Agent 配 AI 研究和工程工作流" },
+    strengths: [
+      { en: "Research workflow", zh: "研究工作流" },
+      { en: "Many skills", zh: "Skill 较多" },
+      { en: "Engineering depth", zh: "工程深度" }
+    ],
+    watchouts: [
+      { en: "Compute cost", zh: "算力成本" },
+      { en: "Citation quality", zh: "引用质量" },
+      { en: "Experiment scripts", zh: "实验脚本" }
+    ]
+  },
+  "jeffallan-claude-skills": {
+    intent: { en: "Use broad full-stack development playbooks", zh: "使用广覆盖全栈开发手册" },
+    strengths: [
+      { en: "Full-stack scope", zh: "全栈范围" },
+      { en: "Developer-friendly", zh: "开发者友好" },
+      { en: "Practical tasks", zh: "任务实用" }
+    ],
+    watchouts: [
+      { en: "Framework drift", zh: "框架变化" },
+      { en: "Example freshness", zh: "示例时效" },
+      { en: "Claude-specific wording", zh: "Claude 特定表述" }
+    ]
+  },
+  "product-manager-skills": {
+    intent: { en: "Use PM methods without building a PM process from scratch", zh: "复用产品方法而不是从零搭流程" },
+    strengths: [
+      { en: "Battle-tested methods", zh: "成熟方法" },
+      { en: "Structured outputs", zh: "结构化产出" },
+      { en: "Low safety risk", zh: "安全风险低" }
+    ],
+    watchouts: [
+      { en: "Generic templates", zh: "通用模板" },
+      { en: "Needs company context", zh: "需要公司上下文" },
+      { en: "Decision quality", zh: "决策质量" }
+    ]
+  },
+  "swiftui-agent-skill": {
+    intent: { en: "Guide agents through modern SwiftUI implementation", zh: "指导 Agent 做现代 SwiftUI 实现" },
+    strengths: [
+      { en: "SwiftUI focus", zh: "SwiftUI 聚焦" },
+      { en: "Strong author signal", zh: "作者信号强" },
+      { en: "Cross-agent format", zh: "跨 Agent 格式" }
+    ],
+    watchouts: [
+      { en: "Version drift", zh: "版本变化" },
+      { en: "Apple API changes", zh: "Apple API 变化" },
+      { en: "Project context", zh: "项目上下文" }
+    ]
+  },
+  "drawio-skill": {
+    intent: { en: "Generate architecture and workflow diagrams", zh: "生成架构图和流程图" },
+    strengths: [
+      { en: "Diagram export", zh: "图表导出" },
+      { en: "Vision self-check", zh: "视觉自检" },
+      { en: "Codebase diagrams", zh: "代码库图表" }
+    ],
+    watchouts: [
+      { en: "Generated files", zh: "生成文件" },
+      { en: "Export scripts", zh: "导出脚本" },
+      { en: "Asset licensing", zh: "素材许可" }
+    ]
+  },
+  "generative-media-skills": {
+    intent: { en: "Create images, video, and audio through agent workflows", zh: "通过 Agent 工作流生成图像、视频和音频" },
+    strengths: [
+      { en: "Multimodal", zh: "多模态" },
+      { en: "Creative pipeline", zh: "创作管线" },
+      { en: "Many media skills", zh: "媒体 Skill 多" }
+    ],
+    watchouts: [
+      { en: "Paid APIs", zh: "付费 API" },
+      { en: "Media rights", zh: "媒体权利" },
+      { en: "Generation cost", zh: "生成成本" }
+    ]
+  },
+  "browser-act-skills": {
+    intent: { en: "Run browser automation with agent assistance", zh: "用 Agent 辅助运行浏览器自动化" },
+    strengths: [
+      { en: "Browser control", zh: "浏览器控制" },
+      { en: "Human handoff", zh: "人工接管" },
+      { en: "Parallel sessions", zh: "并行会话" }
+    ],
+    watchouts: [
+      { en: "Account risk", zh: "账号风险" },
+      { en: "Credentials", zh: "凭证" },
+      { en: "External side effects", zh: "外部副作用" }
+    ]
+  },
+  "skillshare": {
+    intent: { en: "Share skills across teams and CLI tools", zh: "在团队和多个 CLI 工具间共享 Skill" },
+    strengths: [
+      { en: "Team sync", zh: "团队同步" },
+      { en: "Cross-tool support", zh: "跨工具支持" },
+      { en: "Simple workflow", zh: "流程简单" }
+    ],
+    watchouts: [
+      { en: "Overwrite behavior", zh: "覆盖行为" },
+      { en: "Private skills", zh: "私有 Skill" },
+      { en: "Path mapping", zh: "路径映射" }
+    ]
+  },
+  "agent-rules-books": {
+    intent: { en: "Apply classic software-engineering book ideas in agent work", zh: "把经典软件工程书思想用于 Agent 工作" },
+    strengths: [
+      { en: "Book-backed", zh: "书籍支持" },
+      { en: "Compact variants", zh: "紧凑版本" },
+      { en: "Tool-agnostic", zh: "工具无关" }
+    ],
+    watchouts: [
+      { en: "Interpretive rules", zh: "二次解读规则" },
+      { en: "Copyright boundaries", zh: "版权边界" },
+      { en: "Not a benchmark", zh: "不是正式 Benchmark" }
+    ]
+  },
+  "design-dna": {
+    intent: { en: "Extract reusable style direction from reference UIs", zh: "从参考 UI 提取可复用风格方向" },
+    strengths: [
+      { en: "Visual tokens", zh: "视觉 Token" },
+      { en: "Reference matching", zh: "参考匹配" },
+      { en: "UI generation", zh: "UI 生成" }
+    ],
+    watchouts: [
+      { en: "Screenshot privacy", zh: "截图隐私" },
+      { en: "URL fetching", zh: "URL 抓取" },
+      { en: "Asset rights", zh: "素材权利" }
+    ]
+  },
+  "aiskillstore-marketplace": {
+    intent: { en: "Find marketplace skills with stated quality gates", zh: "寻找带质量门槛声明的市场 Skill" },
+    strengths: [
+      { en: "Audit positioning", zh: "审计定位" },
+      { en: "Marketplace curation", zh: "市场筛选" },
+      { en: "Install-ready", zh: "安装导向" }
+    ],
+    watchouts: [
+      { en: "Audit criteria", zh: "审计标准" },
+      { en: "Update cadence", zh: "更新节奏" },
+      { en: "Linked provenance", zh: "链接来源" }
+    ]
+  },
+  "playwright-skill": {
+    intent: { en: "Improve Playwright test automation guidance", zh: "提升 Playwright 测试自动化指导" },
+    strengths: [
+      { en: "Testing focus", zh: "测试聚焦" },
+      { en: "Specific tool", zh: "具体工具" },
+      { en: "Low direct risk", zh: "直接风险低" }
+    ],
+    watchouts: [
+      { en: "Version drift", zh: "版本变化" },
+      { en: "Project fixtures", zh: "项目 fixture" },
+      { en: "CI differences", zh: "CI 差异" }
     ]
   }
 };
