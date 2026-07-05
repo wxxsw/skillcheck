@@ -13,7 +13,7 @@ SkillCheck reviews agent skill repositories and turns them into plain scorecards
 
 > Like `npm audit`, but for AI agent skills.
 
-**Live gallery:** https://wxxsw.github.io/skillcheck/
+**Live gallery:** https://gesen.me/skillcheck/
 
 ## TL;DR
 
