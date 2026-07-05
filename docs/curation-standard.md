@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This document defines how SkillCheck decides whether a repository belongs in the main catalog.
+This document explains how SkillCheck decides whether a repository belongs in the main catalog.
 
-The main catalog is a product surface, not raw research notes. Users should be able to click an entry and find a real skill, skill pack, command pack, or repeatable agent workflow.
+The main catalog is a product surface, not raw research notes. A user should be able to click an entry and find a real skill, skill pack, command pack, or repeatable agent workflow.
 
 ## Main Catalog Target
 
@@ -32,7 +32,7 @@ Strong positive signals:
 - visible license
 - recent maintenance
 - portable structure across more than one agent client
-- low ambiguity about what the skill touches
+- clear boundaries around what the skill touches
 - evidence that the skill improves a real workflow
 
 ## Exclude
@@ -92,7 +92,7 @@ Each catalog entry should have:
 
 ## Tag Standards
 
-Good-signal tags should tell the user why the entry is promising.
+Good-signal tags should tell the user why the entry is worth a closer look.
 
 Examples:
 

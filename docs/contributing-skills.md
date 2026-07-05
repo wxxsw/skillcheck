@@ -18,7 +18,7 @@ Each submitted skill should include:
 
 ## Not accepted in the main catalog
 
-These can be useful research sources, but they should not be submitted as catalog entries:
+These can be useful for research, but they should not be submitted as catalog entries:
 
 - pure `awesome-*` lists
 - link directories

@@ -2,7 +2,7 @@
 
 SkillCheck uses static checks to produce an initial trust report for an agent skill repository.
 
-The current score starts at 100 and subtracts points for missing trust signals or risky behavior patterns. The result is designed to be explainable, not perfect.
+The current score starts at 100 and subtracts points for missing trust signals or risky behavior patterns. The result should be easy to explain. It is not meant to be perfect.
 
 ## Safety
 
@@ -46,7 +46,7 @@ The scanner currently recognizes Claude, Codex, Cursor, Gemini, Copilot, and Ope
 
 ## Known Limits
 
-SkillCheck is not a sandbox, malware detector, or formal security audit. Static checks miss behavior that is hidden, obfuscated, downloaded at runtime, or delegated to dependencies. The score should guide review, not replace it.
+SkillCheck is not a sandbox, malware detector, or formal security audit. Static checks can miss behavior that is hidden, obfuscated, downloaded at runtime, or delegated to dependencies. Use the score to guide review, not replace it.
 
 ## Future Evidence Layer
 

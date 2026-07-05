@@ -2,7 +2,7 @@
 
 ## One-Line Goal
 
-SkillCheck helps people find AI agent skills that are actually useful and safer to install.
+SkillCheck helps people decide which AI agent skills are worth inspecting and safer to install.
 
 ## Why This Exists
 
@@ -12,9 +12,9 @@ Most directories answer:
 
 > What exists?
 
-SkillCheck answers:
+SkillCheck asks:
 
-> Should I trust this enough to inspect or install it?
+> What should I check before I trust this enough to install it?
 
 ## Vision
 
@@ -22,12 +22,12 @@ SkillCheck should become a lightweight trust layer for agent skills.
 
 The long-term product should help users:
 
-- discover high-quality real skills, not just high-star lists
+- discover real skills, not just high-star lists
 - understand what a skill can do before installing it
 - compare safety, documentation, portability, and evidence
 - see risks early: scripts, hooks, MCP servers, credentials, file writes, publishing, browser automation, and external APIs
 - browse in English or Chinese without losing meaning
-- eventually use reproducible scans, badges, compatibility tests, and benchmarks
+- use reproducible scans, badges, compatibility tests, and benchmarks as the evidence layer matures
 
 ## Positioning
 
@@ -37,7 +37,7 @@ It is closer to:
 
 - `npm audit` for agent skills
 - a curated trust dashboard for reusable agent workflows
-- a review checklist for people before they give an agent more power
+- a review checklist before people give an agent more power
 
 ## Current Product Surface
 
@@ -52,7 +52,7 @@ It is closer to:
 
 The catalog target is 100 entries.
 
-The catalog should contain real, inspectable skills or skill packs. Strong entries usually include one or more of:
+The catalog should contain real, inspectable skills or skill packs. Strong entries usually have at least one of:
 
 - concrete `SKILL.md` files
 - commands or workflows meant for agent clients

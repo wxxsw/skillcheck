@@ -7,9 +7,9 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-171915.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/reviewed_skills-100-e8f15a.svg)](#curated-skill-analysis)
 
-Find agent skills that are safer to install.
+Find agent skills you can inspect before you install them.
 
-SkillCheck reviews agent skill repositories and turns them into simple scorecards: what the skill does, what it may touch, how portable it is, and what a human should check before installing it.
+SkillCheck reviews agent skill repositories and turns them into plain scorecards: what the skill does, what it may touch, how portable it looks, and what a human should check before giving it access.
 
 > Like `npm audit`, but for AI agent skills.
 
@@ -32,13 +32,13 @@ The HTML gallery is hosted at:
 https://wxxsw.github.io/skillcheck/
 ```
 
-## Why Star
+## Why star
 
-- Agent skills are becoming a new package ecosystem.
-- Most directories help you find skills. SkillCheck helps you decide whether to trust them.
-- Every entry has a score, safety grade, category, good-signal tags, risk tags, and platform signals.
-- The first corpus uses 100 real high-signal repos, not placeholder data.
-- The project is small enough to fork, extend, or turn into a badge/API later.
+- Agent skills are starting to look like packages: easy to copy, harder to trust.
+- Most directories stop at discovery. SkillCheck focuses on the next question: what should I inspect before I install this?
+- Every entry shows a score, safety grade, category, good signals, risks, and platform hints.
+- The first corpus uses 100 real repos, not placeholder rows.
+- The codebase is small enough to fork, audit, or grow into a badge/API later.
 
 ## Why this exists
 
@@ -46,7 +46,7 @@ An agent skill can be a simple Markdown instruction. It can also install depende
 
 Most directories answer: "What exists?"
 
-SkillCheck answers:
+SkillCheck asks:
 
 - Should I install this?
 - What could it touch on my machine?
@@ -55,26 +55,30 @@ SkillCheck answers:
 
 ## What makes it different
 
-Most skill directories optimize for more links. SkillCheck optimizes for easier review.
+The point is not to collect every link. It is to make the install decision slower in the right places.
 
 | Instead of | SkillCheck focuses on |
 | --- | --- |
 | More links | Fewer, inspected entries |
 | Stars only | Safety, docs, portability, and evidence |
 | Platform-specific claims | Cross-agent compatibility signals |
-| Trusting install scripts | Calling out commands, hooks, APIs, and credentials |
+| Trusting install scripts | Calling out commands, hooks, APIs, credentials, and file writes |
 | Static curation | Scans, badges, and benchmarks over time |
 
 ## Curated skill analysis
 
-This project tracks 100 high-signal agent skill repos. Stars are approximate GitHub counts checked on 2026-07-04. This is not an endorsement list. It is the first corpus used to shape what SkillCheck scores. Pure awesome lists, link directories, and ecosystem hubs are useful research sources, but they are excluded from the main catalog. The tables below show representative entries; the full Top 100 catalog is in the live gallery and `data/skills.json`.
+This project tracks 100 reviewed agent skill repos. Stars are approximate GitHub counts checked on 2026-07-04.
+
+This is not an endorsement list. It is the first corpus used to shape SkillCheck's scoring model. Pure awesome lists, link directories, and ecosystem hubs can be useful research sources, but they stay out of the main catalog.
+
+The tables below show representative entries. The full Top 100 catalog is in the live gallery and `data/skills.json`.
 
 ### Top-100 selection policy
 
-The catalog is intentionally selective. A repo needs at least one strong reason to be included:
+A repo gets in only when there is something concrete to inspect:
 
 - clear Agent Skill, SKILL.md, agent-command, or agent-workflow relevance
-- strong popularity after the repo is verified to contain concrete skills, SKILL.md files, command packs, or agent workflows
+- strong popularity after the repo is verified to contain concrete skills, `SKILL.md` files, command packs, or agent workflows
 - official, author, vendor, or security signal worth tracking
 - useful category coverage beyond generic coding prompts
 - risks that can be explained before a user clicks install
@@ -151,9 +155,9 @@ The current 100 entries cover engineering, workflow, product, marketing, researc
 
 - Good skill repos package repeatable workflows, not just clever prompts.
 - Domain skills need source checks: citations, freshness, data licenses, and disclaimers.
-- Risk rises when a skill includes installers, hooks, MCP servers, browser automation, cloud APIs, or credentials.
-- Multi-platform support matters, but many repos still claim compatibility without tests.
-- The missing layer is trust metadata: safety, portability, maintenance, examples, and evidence.
+- Installers, hooks, MCP servers, browser automation, cloud APIs, and credentials all raise the review bar.
+- Multi-platform support helps, but many repos still claim compatibility without tests.
+- Users need trust metadata before install: safety, portability, maintenance, examples, and evidence.
 
 ## What is included
 
@@ -242,7 +246,7 @@ Read the details in [docs/scoring.md](docs/scoring.md).
 
 ## Project Status
 
-This is an MVP. The scanner is intentionally conservative and static. A warning does not mean a skill is malicious. It means someone should review that behavior before installing it into an agent runtime.
+This is an MVP. The scanner is conservative and static. A warning means "look here before installing," not "this skill is malicious."
 
 ## License
 
