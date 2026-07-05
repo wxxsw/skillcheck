@@ -133,6 +133,9 @@ Star 数为 2026-07-04 附近的近似值。这个列表不是背书，而是 Sk
 - `packages/cli`：Node CLI
 - `packages/core`：可复用评分引擎
 - `data/skills.json`：100 个初始技能条目
+- `AGENTS.md`：持久项目上下文，供后续新对话读取
+- `docs/project-brief.md`：产品目标和愿景
+- `docs/curation-standard.md`：收录规范和每周维护流程
 - `docs/scoring.md`：评分方法文档
 - GitHub Actions：CI 与 GitHub Pages 发布
 

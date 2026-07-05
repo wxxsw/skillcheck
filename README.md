@@ -161,6 +161,9 @@ The current 100 entries cover engineering, workflow, product, marketing, researc
 - A Node CLI in `packages/cli`
 - A reusable scoring engine in `packages/core`
 - 100 seeded skill entries in `data/skills.json`
+- Durable project context in `AGENTS.md`
+- Product goal and vision in `docs/project-brief.md`
+- Curation rules in `docs/curation-standard.md`
 - Scoring method docs in `docs/scoring.md`
 - GitHub Actions for CI and GitHub Pages
 

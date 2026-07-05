@@ -2,6 +2,8 @@
 
 SkillCheck prefers fewer, better entries.
 
+Before submitting a repository, read [docs/curation-standard.md](curation-standard.md). The main catalog is for real skills and skill packs, not discovery-only lists.
+
 ## Entry requirements
 
 Each submitted skill should include:
@@ -13,6 +15,18 @@ Each submitted skill should include:
 - License
 - Risk notes
 - At least one example task
+
+## Not accepted in the main catalog
+
+These can be useful research sources, but they should not be submitted as catalog entries:
+
+- pure `awesome-*` lists
+- link directories
+- ecosystem hubs
+- store or marketplace pages
+- plugin indexes
+- generic resource lists
+- repos where the actual skill is not inspectable
 
 ## Review principles
 
@@ -28,15 +42,23 @@ Reviewers should ask:
 
 - Engineering
 - Frontend
-- Backend
 - Data
 - Security
 - Product
 - Research
 - Writing
-- Enterprise
-- Directory
-- Rules
+- Science
+- Workflow
+- Knowledge
+- Memory
+- Design
+- Testing
+- Mobile
+- Infrastructure
+- Media
+- Office
+- Automation
+- Skill Packs
 
 ## Badge proposal
 
