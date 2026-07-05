@@ -5,7 +5,7 @@
 [![CI](https://github.com/wxxsw/skillcheck/actions/workflows/ci.yml/badge.svg)](https://github.com/wxxsw/skillcheck/actions/workflows/ci.yml)
 [![Pages](https://github.com/wxxsw/skillcheck/actions/workflows/pages.yml/badge.svg)](https://github.com/wxxsw/skillcheck/actions/workflows/pages.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-171915.svg)](LICENSE)
-[![Agent Skills](https://img.shields.io/badge/reviewed_skills-100-e8f15a.svg)](#curated-skill-analysis)
+[![Agent Skills](https://img.shields.io/badge/reviewed_skills-100-e8f15a.svg)](#reviewed-catalog)
 
 Find agent skills you can inspect before you install them.
 
@@ -25,12 +25,6 @@ SkillCheck reviews agent skill repositories and turns them into plain scorecards
 | Scan local or public GitHub skill repos | MVP in `packages/cli` |
 | See safety, docs, and portability signals | MVP in `packages/core` |
 | Host the HTML gallery on GitHub Pages | Live via the `gh-pages` branch |
-
-The HTML gallery is hosted at:
-
-```txt
-https://wxxsw.github.io/skillcheck/
-```
 
 ## Why star
 
@@ -65,99 +59,13 @@ The point is not to collect every link. It is to make the install decision slowe
 | Trusting install scripts | Calling out commands, hooks, APIs, credentials, and file writes |
 | Static curation | Scans, badges, and benchmarks over time |
 
-## Curated skill analysis
+## Reviewed catalog
 
 This project tracks 100 reviewed agent skill repos. Stars are approximate GitHub counts checked on 2026-07-04.
 
-This is not an endorsement list. It is the first corpus used to shape SkillCheck's scoring model. Pure awesome lists, link directories, and ecosystem hubs can be useful research sources, but they stay out of the main catalog.
+This is not an endorsement list. It is a browsable review surface for people who want a quick read before they install a skill.
 
-The tables below show representative entries. The full Top 100 catalog is in the live gallery and `data/skills.json`.
-
-### Top-100 selection policy
-
-A repo gets in only when there is something concrete to inspect:
-
-- clear Agent Skill, SKILL.md, agent-command, or agent-workflow relevance
-- strong popularity after the repo is verified to contain concrete skills, `SKILL.md` files, command packs, or agent workflows
-- official, author, vendor, or security signal worth tracking
-- useful category coverage beyond generic coding prompts
-- risks that can be explained before a user clicks install
-
-The current 100 entries cover engineering, workflow, product, marketing, research, science, security, memory, knowledge management, design, frontend, testing, mobile, infrastructure, media, writing, office automation, and data/finance.
-
-### Methodology and workflow skills
-
-| Repo | Stars | What makes it interesting | What SkillCheck should inspect |
-| --- | ---: | --- | --- |
-| [obra/superpowers](https://github.com/obra/superpowers) | 245k | Treats skills as a software-development methodology, not one-off prompts. | Shell scripts, installer behavior, local file changes, and whether the methodology is portable. |
-| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 68k | Production-oriented engineering skills from a recognizable practitioner. | Whether each skill has examples, concrete triggers, and safe execution boundaries. |
-| [OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files) | 24k | Uses durable Markdown plans to survive context loss and long-running tasks. | File write scope, plan-location defaults, and whether completion gates are deterministic. |
-| [gotalab/cc-sdd](https://github.com/gotalab/cc-sdd) | 3.5k | Brings spec-driven development into agent workflows across many clients. | Whether generated tasks remain traceable to approved specs and whether it assumes one agent runtime. |
-| [mksglu/context-mode](https://github.com/mksglu/context-mode) | 18k | Optimizes context windows with memory, routing, MCP, and hooks. | Hooks, sandboxing claims, persistence locations, and cross-platform configuration risk. |
-
-### Engineering and context skills
-
-| Repo | Stars | What makes it interesting | What SkillCheck should inspect |
-| --- | ---: | --- | --- |
-| [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) | 77k | Turns repos, schemas, docs, and media into a queryable code knowledge graph. | Tree-sitter/parsing dependencies, local indexing footprint, network usage, and data retention. |
-| [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | 55k | Narrow, memorable promise: improve AI design taste and reduce generic output. | Whether guidance is concrete enough to test, and whether examples prove better outputs. |
-| [Nutlope/hallmark](https://github.com/Nutlope/hallmark) | 3.5k | Focused anti-slop design skill for Claude Code, Cursor, and Codex. | Scope clarity, portability, and whether it avoids vague aesthetic rules. |
-| [greensock/gsap-skills](https://github.com/greensock/gsap-skills) | 10k | Official vendor skills for a specific frontend animation library. | Version alignment, API references, example coverage, and whether claims come from official docs. |
-| [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) | 39k | Teaches agents to work with Obsidian's open formats and CLI. | Vault write behavior, Markdown/JSON Canvas handling, and permission boundaries. |
-
-### Domain skill packs
-
-| Repo | Stars | What makes it interesting | What SkillCheck should inspect |
-| --- | ---: | --- | --- |
-| [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | 48k | Research skill built around recency across Reddit, X, YouTube, HN, Polymarket, and web sources. | External calls, API keys, source attribution, rate limits, and freshness claims. |
-| [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | 36k | Marketing, CRO, copywriting, SEO, analytics, and growth workflows in one pack. | Whether outputs are templates or executable workflows, plus analytics/API credential handling. |
-| [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) | 32k | Video-production system with pipelines, tools, and hundreds of agent skills. | Heavy dependencies, media-generation APIs, license compatibility, and local/remote asset handling. |
-| [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | 30k | Scientific skill library spanning biology, chemistry, medicine, and drug discovery. | Citation requirements, database provenance, domain disclaimers, and benchmark evidence. |
-| [mukul975/Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | 24k | Large cybersecurity skill set mapped to MITRE/NIST-style frameworks. | Dual-use risk, dangerous command patterns, authorization language, and safe-lab assumptions. |
-| [phuryn/pm-skills](https://github.com/phuryn/pm-skills) | 22k | Product-management skills from discovery through GTM and growth. | Template quality, output structure, and whether skills name the inputs they require. |
-| [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) | 10k | SEO skill suite with sub-skills, sub-agents, reporting, and optional external services. | Google/DataForSEO/Firecrawl credentials, report generation, and source freshness. |
-| [teng-lin/notebooklm-py](https://github.com/teng-lin/notebooklm-py) | 17k | Unofficial NotebookLM API plus CLI and agentic skill surface. | Unofficial API fragility, auth handling, account risk, and data export behavior. |
-
-### Skill packs and tooling
-
-| Repo | Stars | What makes it interesting | What SkillCheck should inspect |
-| --- | ---: | --- | --- |
-| [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | 19k | Broad multi-domain library with agents, commands, scripts, and plugins. | Installer behavior, duplicate skill names, script execution, and per-skill license clarity. |
-| [openai/skills](https://github.com/openai/skills) | 23k | Codex skills catalog with concrete SKILL.md packages and curated examples. | Codex-specific assumptions, scripts, generated paths, and whether examples are portable. |
-| [FrancyJGLisboa/agent-skill-creator](https://github.com/FrancyJGLisboa/agent-skill-creator) | 1.7k | Turns repeatable workflows into reusable agent skills. | Generated skill quality, source licensing, and platform-specific paths. |
-
-### Second-wave additions
-
-| Repo | Stars | Why it was added | What SkillCheck should inspect |
-| --- | ---: | --- | --- |
-| [anthropics/skills](https://github.com/anthropics/skills) | 158k | Official public example repo for Agent Skills patterns. | Example scripts, license clarity, and Claude-first assumptions. |
-| [mattpocock/skills](https://github.com/mattpocock/skills) | 156k | Engineering skills built from real coding-agent failure modes. | Router freshness, local symlinks, and personal workflow assumptions. |
-| [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) | 62k | Agentic engineering practices with concrete skills for browser and presentation work. | Whether practices are reusable beyond personal Claude Code conventions. |
-| [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills) | 26k | Academic writing and figure skills for Nature-style scientific work. | Citation quality, journal-style claims, and field fit. |
-| [googleworkspace/cli](https://github.com/googleworkspace/cli) | 29k | Official Workspace automation CLI with agent skills. | OAuth scopes, admin permissions, write actions, and API side effects. |
-| [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | 11k | Research system for optimizing reusable natural-language skills. | Training data, evaluation harnesses, scripts, and transferability. |
-| [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs) | 10k | AI research and engineering skill library. | Experiment scripts, compute cost, citation quality, and benchmark evidence. |
-| [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) | 13k | Markdown skill pack for autonomous ML research loops and cross-model review. | Compute cost, experiment safety, and result verification. |
-| [Jeffallan/claude-skills](https://github.com/Jeffallan/claude-skills) | 10k | Full-stack development skill pack. | Framework freshness, examples, Claude-specific wording, and helper scripts. |
-| [deanpeters/Product-Manager-Skills](https://github.com/deanpeters/Product-Manager-Skills) | 5.6k | Product-management methods packaged as reusable skills. | Template specificity, company context requirements, and decision-quality guardrails. |
-| [Agents365-ai/drawio-skill](https://github.com/Agents365-ai/drawio-skill) | 5.1k | Diagram generation from natural language and codebase context. | Export scripts, generated files, asset licensing, and diagram accuracy. |
-| [twostraws/SwiftUI-Agent-Skill](https://github.com/twostraws/SwiftUI-Agent-Skill) | 4.3k | Specialized SwiftUI agent skill for Apple app development. | SwiftUI version drift, Apple API changes, and project assumptions. |
-| [dpearson2699/swift-ios-skills](https://github.com/dpearson2699/swift-ios-skills) | 831 | Broad iOS 26+, Swift, SwiftUI, and Apple-framework skill pack. | SDK version drift, target OS fit, and generated-code review. |
-| [SamurAIGPT/Generative-Media-Skills](https://github.com/SamurAIGPT/Generative-Media-Skills) | 3.7k | Multimodal image, video, and audio skill pack. | Paid APIs, media rights, prompt provenance, and generation cost. |
-| [browser-act/skills](https://github.com/browser-act/skills) | 3.6k | Browser automation skills with human handoff and parallel sessions. | Account risk, credentials, anti-bot boundaries, and external side effects. |
-| [awesome-skills/code-review-skill](https://github.com/awesome-skills/code-review-skill) | 1.3k | Single modular code-review skill covering many languages and frameworks. | False positives, framework freshness, and human review gates. |
-| [ciembor/agent-rules-books](https://github.com/ciembor/agent-rules-books) | 2.1k | Engineering rules distilled from classic software books. | Interpretation quality, copyright boundaries, and benchmark limitations. |
-| [decebals/claude-code-java](https://github.com/decebals/claude-code-java) | 671 | Java and enterprise-development skills for agent-assisted projects. | Framework versions, project conventions, and generated-code review. |
-| [zanwei/design-dna](https://github.com/zanwei/design-dna) | 975 | Extracts reusable UI style direction from references. | Screenshot privacy, URL fetching, asset rights, and reproducibility. |
-| [testdino-hq/playwright-skill](https://github.com/testdino-hq/playwright-skill) | 297 | Focused Playwright testing best-practices skill. | Playwright version drift, project fixtures, CI differences, and examples. |
-
-### Patterns from the review
-
-- Good skill repos package repeatable workflows, not just clever prompts.
-- Domain skills need source checks: citations, freshness, data licenses, and disclaimers.
-- Installers, hooks, MCP servers, browser automation, cloud APIs, and credentials all raise the review bar.
-- Multi-platform support helps, but many repos still claim compatibility without tests.
-- Users need trust metadata before install: safety, portability, maintenance, examples, and evidence.
+The live gallery includes the full catalog with summaries, categories, scores, platform hints, and review tags. The source data is in `data/skills.json`.
 
 ## What is included
 
@@ -165,10 +73,6 @@ The current 100 entries cover engineering, workflow, product, marketing, researc
 - A Node CLI in `packages/cli`
 - A reusable scoring engine in `packages/core`
 - 100 seeded skill entries in `data/skills.json`
-- Durable project context in `AGENTS.md`
-- Product goal and vision in `docs/project-brief.md`
-- Curation rules in `docs/curation-standard.md`
-- Scoring method docs in `docs/scoring.md`
 - GitHub Actions for CI and GitHub Pages
 
 ## Quick start
@@ -227,26 +131,27 @@ Findings
   This skill includes script files. Review them before installation.
 ```
 
-## Scoring dimensions
+## Scorecard
 
-- Safety: command execution, network access, secrets, file writes, and helper scripts
-- Documentation: canonical `SKILL.md`, frontmatter, trigger description, README, examples, and license
-- Portability: Claude, Codex, Cursor, Gemini, Copilot, and OpenCode support signals
-- Evidence: manual review notes today, reproducible benchmark traces later
+Each skill card gives a compact view of safety, documentation, portability, and evidence. The scanner is intentionally conservative: a warning means "look here before installing," not "this skill is malicious."
 
-Read the details in [docs/scoring.md](docs/scoring.md).
+For local checks, use the CLI:
+
+```bash
+npm run scan -- owner/repo
+```
 
 ## Roadmap
 
 - Add a GitHub Action that comments on pull requests adding new skills
 - Add a badge endpoint for `SkillCheck: A / 92`
-- Add reproducible before/after benchmarks for the top 50 skills
+- Add reproducible benchmark evidence for selected skills
 - Add semantic search by "what I want my agent to do"
-- Add a curated unsafe-pattern corpus for better static checks
+- Improve static checks for higher-risk skill behavior
 
 ## Project Status
 
-This is an MVP. The scanner is conservative and static. A warning means "look here before installing," not "this skill is malicious."
+This is an MVP. Treat its output as a review aid, not a security audit.
 
 ## License
 
